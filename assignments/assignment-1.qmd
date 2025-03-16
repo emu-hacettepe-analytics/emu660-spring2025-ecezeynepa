@@ -25,40 +25,152 @@ The session concludes with a Q&A segment, where students ask for guidance on spe
 
 ## (b) **Explore Statistical Summaries with Custom Functions and Iteration Methods:**
 
-
-
-data(mtcars)
-
-
+```{r echo=TRUE, results='show'}
+# compute_stats fonksiyonunu tanımla
 compute_stats <- function(x) {
   stats <- list(
-    mean = mean(x, na.rm = TRUE),
-    median = median(x, na.rm = TRUE),
-    variance = var(x, na.rm = TRUE),
-    IQR = IQR(x, na.rm = TRUE),
-    min = min(x, na.rm = TRUE),
-    max = max(x, na.rm = TRUE)
+    mean = mean(x, na.rm = TRUE),       # Ortalama
+    median = median(x, na.rm = TRUE),   # Medyan
+    variance = var(x, na.rm = TRUE),    # Varyans
+    IQR = IQR(x, na.rm = TRUE),         # Çeyrekler Arası Aralık
+    min = min(x, na.rm = TRUE),         # Minimum Değer
+    max = max(x, na.rm = TRUE)          # Maksimum Değer
   )
   return(stats)
 }
 
+# compute_stats fonksiyonunun örnek kullanımını düzenli şekilde göstermek
+stats_mpg <- compute_stats(mtcars$mpg)
 
+# Sonuçları düzenli şekilde yazdır
+stats_mpg_df <- data.frame(
+  Mean = stats_mpg$mean,
+  Median = stats_mpg$median,
+  Variance = stats_mpg$variance,
+  IQR = stats_mpg$IQR,
+  Min = stats_mpg$min,
+  Max = stats_mpg$max
+)
+
+stats_mpg_df
+
+```
+
+```{r echo=TRUE, results='show'}
+# Boş bir data frame oluştur
+results <- data.frame()
+
+# For döngüsü ile tüm sayısal sütunlara compute_stats fonksiyonunu uygula
 for (col in colnames(mtcars)) {
-  if (is.numeric(mtcars[[col]])) {
-    cat("\n", col, "İstatistikleri:\n")
-    print(compute_stats(mtcars[[col]]))
+  if (is.numeric(mtcars[[col]])) {  # Sadece sayısal sütunları işle
+    stats <- compute_stats(mtcars[[col]])  # compute_stats fonksiyonunu uygula
+    stats <- unlist(stats)  # İstatistikleri düz bir vektöre çevir
+    results <- rbind(results, stats)  # Sonuçları data frame'e ekle
   }
 }
 
+# Sütun isimlerini düzenle
+colnames(results) <- c("Mean", "Median", "Variance", "IQR", "Min", "Max")
+rownames(results) <- colnames(mtcars)[sapply(mtcars, is.numeric)]
 
-sapply_results <- sapply(mtcars, function(x) {
-  if (is.numeric(x)) compute_stats(x) else NULL
-})
-print(sapply_results)
+# Sonuçları yazdır
+results
+
+```
+## (c) **NA VALUES**
+
+```{r echo=TRUE, results='show'}
+
+ library(dslabs)
+data("na_example")
+na_example
+
+```
+```{r echo=TRUE, results='show'}
+# NA değerlerinin toplam sayısını hesapla
+total_na_count <- sum(is.na(na_example))
+
+# NA değerlerinin indeks pozisyonlarını bul
+na_positions <- which(is.na(na_example), arr.ind = TRUE)
+
+# Sonuçları yazdır
+cat("Toplam NA değeri sayısı: ", total_na_count, "\n")
+cat("NA değerlerinin indeks pozisyonları:\n")
+print(na_positions)
+```
+```{r}
+cat("NA değerlerini, NA olmayan ve 2 dışında rastgele bir değerle değiştirme:\n")
+
+# Orijinal veri kümesini kopyala
+na_example_random_imputed <- na_example  
+
+# NA olmayan ve 2'ye eşit olmayan değerleri al
+non_na_values <- na_example_random_imputed[!is.na(na_example_random_imputed) & na_example_random_imputed != 2]  
+
+# Rastgele bir değer seç
+random_value <- sample(non_na_values, 1)  
+
+# Tüm NA'ları bu rastgele seçilen değer ile değiştir
+na_example_random_imputed[is.na(na_example_random_imputed)] <- random_value
+
+# Seçilen rastgele değeri ekrana yazdır
+cat("Seçilen rastgele değer: ", random_value, "\n")
+
+# Sonuçları yazdır
+na_example_random_imputed
 
 
-apply_results <- apply(mtcars, 2, function(x) {
-  if (is.numeric(x)) compute_stats(x) else NULL
-})
-print(apply_results)
+
+```
+
+
+```{r}
+# Orijinal veri setindeki NA olmayan değerlerin medyanını hesapla
+original_median <- median(na_example, na.rm = TRUE)
+
+# NA değerlerini bu medyan ile değiştir
+na_example_median_imputed <- na_example  # Orijinal veri setini kopyala
+na_example_median_imputed[is.na(na_example_median_imputed)] <- original_median
+
+# Sonuçları yazdır
+cat("Orijinal veri setindeki NA olmayan değerlerin medyanı: ", original_median, "\n")
+na_example_median_imputed
+
+
+```
+
+```{r}
+#| echo: false
+# Orijinal veri setinin ortalama ve standart sapmasını hesapla (NA'lar hariç)
+original_mean <- mean(na_example, na.rm = TRUE)
+original_sd <- sd(na_example, na.rm = TRUE)
+
+# Rastgele seçilen değerle doldurulmuş veri setinin ortalama ve standart sapması
+random_imputed_mean <- mean(na_example_random_imputed)
+random_imputed_sd <- sd(na_example_random_imputed)
+
+# Medyan ile doldurulmuş veri setinin ortalama ve standart sapması
+median_imputed_mean <- mean(na_example_median_imputed)
+median_imputed_sd <- sd(na_example_median_imputed)
+
+# Sonuçları ekrana yazdır (sadece çıktılar görünecek)
+cat("\nİstatistiksel Karşılaştırma:\n")
+cat("Orijinal Veri Seti (NA'lar Hariç):\n")
+cat("Ortalama:", original_mean, "\n")
+cat("Standart Sapma:", original_sd, "\n\n")
+
+cat("Rastgele Değerle Doldurulmuş Veri Seti:\n")
+cat("Ortalama:", random_imputed_mean, "\n")
+cat("Standart Sapma:", random_imputed_sd, "\n\n")
+
+cat("Medyan ile Doldurulmuş Veri Seti:\n")
+cat("Ortalama:", median_imputed_mean, "\n")
+cat("Standart Sapma:", median_imputed_sd, "\n")
+
+```
+
+Comparison
+The method of filling with random values can produce different results each time it is run. The median filling method, on the other hand, is more consistent.
+
+
 

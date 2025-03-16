@@ -1,17 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to My Analytics Lab",
-    "section": "",
-    "text": "Hello!! My name is xxx xxxx.\nThis is my personal webpage.\nPlease stay tuned to follow my works on data analytics, blog posts, and more.\n\n\n\n Back to top"
-  },
-  {
     "objectID": "project.html",
     "href": "project.html",
     "title": "Project X",
     "section": "",
-    "text": "Welcome to my project page.\nKeep an eye on this space to stay updated with my project activities.\n(The titles below are provided as examples; please feel free to adjust them as necessary.)"
+    "text": "Welcome to my/our project page.\nKeep an eye on this space to stay updated with my project activities.\n(The titles below are provided as examples; please feel free to adjust them as necessary.)"
   },
   {
     "objectID": "project.html#data-source",
@@ -70,52 +63,11 @@
     "text": "3.4 Results\nxxxxxx"
   },
   {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "My Assignments",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to My Analytics Lab",
     "section": "",
-    "text": "On this page, I showcase the assignment I conducted for the [term and year, e.g. Spring 2024] EMU660 Decision Making with Analytics course.\nPlease use left menu to navigate through my assignments.\n\n\n\n Back to top",
-    "crumbs": [
-      "My Assignments"
-    ]
-  },
-  {
-    "objectID": "about.html#employements",
-    "href": "about.html#employements",
-    "title": "About Me",
-    "section": "Employements",
-    "text": "Employements\n\nFirm xxx, position xx, year xxx\nFirm yyy, position yyy, year yyy"
-  },
-  {
-    "objectID": "about.html#internships",
-    "href": "about.html#internships",
-    "title": "About Me",
-    "section": "Internships",
-    "text": "Internships\n\nFirm aaa, position xx, year xxx\nFirm bbb, position yyy, year yyy"
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "My Blog",
-    "section": "",
-    "text": "This page is under construction.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "docs/assignments/assignment-1.html",
-    "href": "docs/assignments/assignment-1.html",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "1 + 1\n\n[1] 2\n\n\nMy first assignment has two parts."
-  },
-  {
-    "objectID": "assignments/assignment-1.html",
-    "href": "assignments/assignment-1.html",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "1 + 1\n\n[1] 2\n\n\nMy first assignment has two parts.",
-    "crumbs": [
-      "Assignment 1"
-    ]
+    "text": "Hello!! My name is Ece Zeynep\nThis is my personal webpage.\nPlease stay tuned to follow my works on data analytics, blog posts, and more.\n\n\n\n Back to top"
   },
   {
     "objectID": "assignments/assignment-2.html",
@@ -126,5 +78,80 @@
     "crumbs": [
       "Assignment 2"
     ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "You can download my CV from the link below:\n[Download CV’yi İndir ]"
+  },
+  {
+    "objectID": "about.html#download-my-cv",
+    "href": "about.html#download-my-cv",
+    "title": "About Me",
+    "section": "",
+    "text": "You can download my CV from the link below:\n[Download CV’yi İndir ]"
+  },
+  {
+    "objectID": "about.html#internships",
+    "href": "about.html#internships",
+    "title": "About Me",
+    "section": "Internships",
+    "text": "Internships\n\nTaha Group, Intern, 2021\nVESTEL, Intern, 2022"
+  },
+  {
+    "objectID": "about.html#graduation-projects",
+    "href": "about.html#graduation-projects",
+    "title": "About Me",
+    "section": "Graduation Projects",
+    "text": "Graduation Projects\n\n“Koltuk ambarının planlanması, tasarımı, yerleşimi ve üretim verimliliği geliştirme”, ASTOR A.Ş., 2022-2023"
+  },
+  {
+    "objectID": "assignments/assignment-1.html",
+    "href": "assignments/assignment-1.html",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "My first assignment has three parts.\n\n\nMr. Baydoğan discusses data science and industrial engineering through real-life applications. He presents various real-world problems and explains the data analysis process step by step, using concrete examples to illustrate each stage.\nOne of the key topics covered is the difference between traditional machine learning and deep learning. Baydoğan highlights their distinct features and applications, emphasizing when and why deep learning might be preferable.\nHe provides detailed case studies, such as:\n\nElectricity markets: How predictive models help balance electricity supply and demand.\nLumber industry: Using data-driven methods to predict wood curvature and optimize production.\nE-commerce ranking algorithms: How machine learning can optimize revenue by improving product rankings on online marketplaces.\nPhysics-informed machine learning: Integrating scientific principles with AI models for better predictions.\nMachine learning for optimization: Applying ML techniques to enhance decision-making in industrial processes.\n\nThe session concludes with a Q&A segment, where students ask for guidance on specializing in data science. Baydoğan emphasizes the importance of practice, suggesting that real-world applications, projects, and continuous learning are key to mastering the field. He also recommends “An Introduction to Statistical Learning” as a fundamental resource for beginners looking to develop a strong foundation in machine learning and data analysis.\n\n\n\ndata(mtcars)\ncompute_stats &lt;- function(x) { stats &lt;- list( mean = mean(x, na.rm = TRUE), median = median(x, na.rm = TRUE), variance = var(x, na.rm = TRUE), IQR = IQR(x, na.rm = TRUE), min = min(x, na.rm = TRUE), max = max(x, na.rm = TRUE) ) return(stats) }\nfor (col in colnames(mtcars)) { if (is.numeric(mtcars[[col]])) { cat(“”, col, “İstatistikleri:”) print(compute_stats(mtcars[[col]])) } }\nsapply_results &lt;- sapply(mtcars, function(x) { if (is.numeric(x)) compute_stats(x) else NULL }) print(sapply_results)\napply_results &lt;- apply(mtcars, 2, function(x) { if (is.numeric(x)) compute_stats(x) else NULL }) print(apply_results)",
+    "crumbs": [
+      "Assignment 1"
+    ]
+  },
+  {
+    "objectID": "assignments/assignment-1.html#a-a-brief-summary-about-veri-bilimi-ve-endüstri-mühendisliği-üzerine-sohbetler---mustafa-baydoğan-erdi-daşdemir",
+    "href": "assignments/assignment-1.html#a-a-brief-summary-about-veri-bilimi-ve-endüstri-mühendisliği-üzerine-sohbetler---mustafa-baydoğan-erdi-daşdemir",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Mr. Baydoğan discusses data science and industrial engineering through real-life applications. He presents various real-world problems and explains the data analysis process step by step, using concrete examples to illustrate each stage.\nOne of the key topics covered is the difference between traditional machine learning and deep learning. Baydoğan highlights their distinct features and applications, emphasizing when and why deep learning might be preferable.\nHe provides detailed case studies, such as:\n\nElectricity markets: How predictive models help balance electricity supply and demand.\nLumber industry: Using data-driven methods to predict wood curvature and optimize production.\nE-commerce ranking algorithms: How machine learning can optimize revenue by improving product rankings on online marketplaces.\nPhysics-informed machine learning: Integrating scientific principles with AI models for better predictions.\nMachine learning for optimization: Applying ML techniques to enhance decision-making in industrial processes.\n\nThe session concludes with a Q&A segment, where students ask for guidance on specializing in data science. Baydoğan emphasizes the importance of practice, suggesting that real-world applications, projects, and continuous learning are key to mastering the field. He also recommends “An Introduction to Statistical Learning” as a fundamental resource for beginners looking to develop a strong foundation in machine learning and data analysis.",
+    "crumbs": [
+      "Assignment 1"
+    ]
+  },
+  {
+    "objectID": "assignments/assignment-1.html#b-explore-statistical-summaries-with-custom-functions-and-iteration-methods",
+    "href": "assignments/assignment-1.html#b-explore-statistical-summaries-with-custom-functions-and-iteration-methods",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "data(mtcars)\ncompute_stats &lt;- function(x) { stats &lt;- list( mean = mean(x, na.rm = TRUE), median = median(x, na.rm = TRUE), variance = var(x, na.rm = TRUE), IQR = IQR(x, na.rm = TRUE), min = min(x, na.rm = TRUE), max = max(x, na.rm = TRUE) ) return(stats) }\nfor (col in colnames(mtcars)) { if (is.numeric(mtcars[[col]])) { cat(“”, col, “İstatistikleri:”) print(compute_stats(mtcars[[col]])) } }\nsapply_results &lt;- sapply(mtcars, function(x) { if (is.numeric(x)) compute_stats(x) else NULL }) print(sapply_results)\napply_results &lt;- apply(mtcars, 2, function(x) { if (is.numeric(x)) compute_stats(x) else NULL }) print(apply_results)",
+    "crumbs": [
+      "Assignment 1"
+    ]
+  },
+  {
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "My Assignments",
+    "section": "",
+    "text": "On this page, I showcase the assignment I conducted for the [term and year, e.g. Spring 2024-2025] EMU660 Decision Making with Analytics course.\nPlease use left menu to navigate through my assignments.\n\n\n\n Back to top",
+    "crumbs": [
+      "My Assignments"
+    ]
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "This page is under construction.\n\n\n\n Back to top"
   }
 ]

@@ -1,15 +1,64 @@
 ---
 title: "Assignment 1"
+output: html_document
 ---
 
 # Assignment 1
 
-```{r}
-1 + 1
-```
+My first assignment has three parts.
 
-My first assignment has two parts.
+## (a) **a brief summary about “Veri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler - Mustafa Baydoğan & Erdi Daşdemir**
 
-## (a)
+Mr. Baydoğan discusses data science and industrial engineering through real-life applications. He presents various real-world problems and explains the data analysis process step by step, using concrete examples to illustrate each stage.
 
-## (b)
+One of the key topics covered is the difference between traditional machine learning and deep learning. Baydoğan highlights their distinct features and applications, emphasizing when and why deep learning might be preferable.
+
+He provides detailed case studies, such as:
+
+-   **Electricity markets:** How predictive models help balance electricity supply and demand.
+-   **Lumber industry:** Using data-driven methods to predict wood curvature and optimize production.
+-   **E-commerce ranking algorithms:** How machine learning can optimize revenue by improving product rankings on online marketplaces.
+-   **Physics-informed machine learning:** Integrating scientific principles with AI models for better predictions.
+-   **Machine learning for optimization:** Applying ML techniques to enhance decision-making in industrial processes.
+
+The session concludes with a Q&A segment, where students ask for guidance on specializing in data science. Baydoğan emphasizes the importance of practice, suggesting that real-world applications, projects, and continuous learning are key to mastering the field. He also recommends *"An Introduction to Statistical Learning"* as a fundamental resource for beginners looking to develop a strong foundation in machine learning and data analysis.
+
+## (b) **Explore Statistical Summaries with Custom Functions and Iteration Methods:**
+
+
+
+data(mtcars)
+
+
+compute_stats <- function(x) {
+  stats <- list(
+    mean = mean(x, na.rm = TRUE),
+    median = median(x, na.rm = TRUE),
+    variance = var(x, na.rm = TRUE),
+    IQR = IQR(x, na.rm = TRUE),
+    min = min(x, na.rm = TRUE),
+    max = max(x, na.rm = TRUE)
+  )
+  return(stats)
+}
+
+
+for (col in colnames(mtcars)) {
+  if (is.numeric(mtcars[[col]])) {
+    cat("\n", col, "İstatistikleri:\n")
+    print(compute_stats(mtcars[[col]]))
+  }
+}
+
+
+sapply_results <- sapply(mtcars, function(x) {
+  if (is.numeric(x)) compute_stats(x) else NULL
+})
+print(sapply_results)
+
+
+apply_results <- apply(mtcars, 2, function(x) {
+  if (is.numeric(x)) compute_stats(x) else NULL
+})
+print(apply_results)
+

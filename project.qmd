@@ -19,23 +19,20 @@ Bu projede, Türkiye'deki orman yangınlarının zaman içindeki değişimi, bö
 
 ## Problem Tanımı
 
-Türkiye’de orman yangınları hem çevresel hem de ekonomik ciddi sonuçlar doğurmaktadır. Bu çalışma ile:
-- 1988–2023 yılları arasındaki yangın nedenlerinin ve yanan alanların değişimi,
-- 2023 yılına özel bölgesel ve niteliksel yangın dağılımları,
-- Yangın sonrası silvikültürel uygulamalar analiz edilecektir.
+Türkiye’de orman yangınları hem çevresel hem de ekonomik ciddi sonuçlar doğurmaktadır. Bu çalışma ile: - 1988–2023 yılları arasındaki yangın nedenlerinin ve yanan alanların değişimi, - 2023 yılına özel bölgesel ve niteliksel yangın dağılımları, - Yangın sonrası silvikültürel uygulamalar analiz edilecektir.
 
 ## Bu Veriyi Seçme Nedenimiz
 
-- Türkiye'ye özgü ve güncel veriler sunması,
-- Çok yıllı ve çok boyutlu veri yapısına sahip olması,
-- R ile kapsamlı veri ön işleme, analiz ve görselleştirme fırsatı sağlaması.
+-   Türkiye'ye özgü ve güncel veriler sunması,
+-   Çok yıllı ve çok boyutlu veri yapısına sahip olması,
+-   R ile kapsamlı veri ön işleme, analiz ve görselleştirme fırsatı sağlaması.
 
 ## Hedeflerimiz
 
-- Yangın nedenlerinin yıllar içerisindeki değişimini incelemek,
-- Bölge müdürlüklerine göre yangın sayısı ve yanan alanı karşılaştırmak,
-- 2023 yılı yangınlarının etkilerini değerlendirmek,
-- Bulguları grafik ve tablolarla sunmak ve politika önerileri geliştirmek.
+-   Yangın nedenlerinin yıllar içerisindeki değişimini incelemek,
+-   Bölge müdürlüklerine göre yangın sayısı ve yanan alanı karşılaştırmak,
+-   2023 yılı yangınlarının etkilerini değerlendirmek,
+-   Bulguları grafik ve tablolarla sunmak ve politika önerileri geliştirmek,
 
 # Veri
 
@@ -43,8 +40,8 @@ Türkiye’de orman yangınları hem çevresel hem de ekonomik ciddi sonuçlar d
 
 Veriler, **Orman Genel Müdürlüğü (OGM)** tarafından yayımlanan resmi Excel dosyalarından alınmıştır.
 
-- [Orman Genel Müdürlüğü Resmi Web Sitesi](https://www.ogm.gov.tr)
-- Veri dosyaları: Çeşitli Excel (.xlsx) formatındadır.
+-   [Orman Genel Müdürlüğü Resmi Web Sitesi](https://www.ogm.gov.tr)
+-   Veri dosyaları: Çeşitli Excel (.xlsx) formatındadır.
 
 ## Veriye Erişim
 
@@ -53,21 +50,20 @@ Veriler, **Orman Genel Müdürlüğü (OGM)** tarafından yayımlanan resmi Exce
 👉 [Yangın Verileri RData Dosyası](https://github.com/ecezeynepa/yangin_verileri/blob/main/yangin_verileri.RData)
 
 ## Verinin Genel Özellikleri
-- 🔥 1988–2023 yılları arasında yangın nedenleri, sayıları ve yanan alan (hektar)
 
-- 📍 2004–2023 yılları arasında bölge müdürlüklerine göre yangın sayısı ve alanı
+-   🔥 1988–2023 yılları arasında yangın nedenleri, sayıları ve yanan alan (hektar)
 
-- 📊 2023 yılına özel analizler:
-  
-  - 🏙️ İl bazında yangın sayısı
-  
-  - 🌲 Orman vasfına göre yanan alan türleri
-  
-  - 🚒 Yangın nedenlerinin detaylı sınıflandırması
-  
-  - 🌱 Yangın sonrası silvikültürel işlemler
+-   📍 2004–2023 yılları arasında bölge müdürlüklerine göre yangın sayısı ve alanı
 
+-   📊 2023 yılına özel analizler:
 
+    -   🏙️ İl bazında yangın sayısı
+
+    -   🌲 Orman vasfına göre yanan alan türleri
+
+    -   🚒 Yangın nedenlerinin detaylı sınıflandırması
+
+    -   🌱 Yangın sonrası silvikültürel işlemler
 
 Çalışmada kullanılan veri setleri şunlardır:
 
@@ -106,35 +102,31 @@ save(iller_2023, orman_yanginlari, vasfina_2023, silvikulturel_2023,
 
 ```
 
-
 ## Veriyi Seçme Sebebi
 
-- Türkiye'ye özgü, resmi ve güvenilir bir kaynak olması,
-- Uzun yıllara yayılan ve çok yönlü analiz yapmaya elverişli veri içeriği sunması,
-- R programlama dili ile ileri veri analizleri ve modelleme çalışmalarına uygunluk sağlaması.
+-   Türkiye'ye özgü, resmi ve güvenilir bir kaynak olması,
+-   Uzun yıllara yayılan ve çok yönlü analiz yapmaya elverişli veri içeriği sunması,
+-   R programlama dili ile ileri veri analizleri ve modelleme çalışmalarına uygunluk sağlaması.
 
 ## Veri Ön İşleme
 
 Verileri R ortamına aktarırken aşağıdaki adımlar uygulanmıştır:
 
-1. **Dosya İsimlerini Düzenleme:** TR'de dosya isimlerinde Türkçe karakterler (ç, ğ, ü, ö, ş, ı) bazen hata oluşturduğundan dolayı dosya isimlerindeki Türkçe karakterleri İngilizce karakterlere çevrildi.
-Örneğin: "bölge_mudurluklerine_sayisal_olarak_2004_2023.xlsx" dosyasını "bolge_mudurluklerine_sayisal_olarak_2004_2023.xlsx" olarak değiştirildi.
+1.  **Dosya İsimlerini Düzenleme:** TR'de dosya isimlerinde Türkçe karakterler (ç, ğ, ü, ö, ş, ı) bazen hata oluşturduğundan dolayı dosya isimlerindeki Türkçe karakterleri İngilizce karakterlere çevrildi. Örneğin: "bölge_mudurluklerine_sayisal_olarak_2004_2023.xlsx" dosyasını "bolge_mudurluklerine_sayisal_olarak_2004_2023.xlsx" olarak değiştirildi.
 
-2. **Veri Temizleme:** Excel dosyalarındaki gereksiz açıklamalar, görseller, boş satırlar gibi analizle ilgisi olmayan içerikleri silindi. Böylece veri setlerinin doğrudan okunabilir ve işlenebilir hale gelmesini sağlandı.
-3. **Sütun İsimlerini Düzenleme:** o	Sütun isimlerindeki Türkçe karakterleri İngilizce karakterlerle değiştirdim (Şehir yerine Sehir, Bölge yerine Bolge gibi).
-o	Ayrıca sütun adlarını daha açıklayıcı hale getirdim.
-Örneğin: yangın sebeplerine göre ihmal, kaza, kasıt ana kategorilerini detaylandırarak şu şekilde isimlendirdim:
-	ihmal_copluk, ihmal_avcilik
-	kaza_trafik, kaza_enerji
-	kasit_yangin, kasit_aniz
+2.  **Veri Temizleme:** Excel dosyalarındaki gereksiz açıklamalar, görseller, boş satırlar gibi analizle ilgisi olmayan içerikleri silindi. Böylece veri setlerinin doğrudan okunabilir ve işlenebilir hale gelmesini sağlandı.
 
-4. **Veri Yapısını Düzenleme:** Aynı kategorideki veriler bir araya getirildi.
-5. **Veri İçe Aktarma:** `read.xlsx()` fonksiyonu ile xlsx paketinden veriler aktarıldı (`encoding = "UTF-8"` kullanıldı).
-6. **Planlanan İleri Ön İşleme Adımları:**
-   - Veri tiplerinin düzenlenmesi (character, numeric vs.),
-   - Eksik verileri (NA) belirleyip, gerekirse temizlemek,
-   - Kategorik değişkenlerin faktör (factor) formatına çevrilmesi.
+3.  **Sütun İsimlerini Düzenleme:** o Sütun isimlerindeki Türkçe karakterleri İngilizce karakterlerle değiştirdim (Şehir yerine Sehir, Bölge yerine Bolge gibi). o Ayrıca sütun adlarını daha açıklayıcı hale getirdim. Örneğin: yangın sebeplerine göre ihmal, kaza, kasıt ana kategorilerini detaylandırarak şu şekilde isimlendirdim:  ihmal_copluk, ihmal_avcilik  kaza_trafik, kaza_enerji  kasit_yangin, kasit_aniz
 
+4.  **Veri Yapısını Düzenleme:** Aynı kategorideki veriler bir araya getirildi.
+
+5.  **Veri İçe Aktarma:** `read.xlsx()` fonksiyonu ile xlsx paketinden veriler aktarıldı (`encoding = "UTF-8"` kullanıldı).
+
+6.  **Planlanan İleri Ön İşleme Adımları:**
+
+    -   Veri tiplerinin düzenlenmesi (character, numeric vs.),
+    -   Eksik verileri (NA) belirleyip, gerekirse temizlemek,
+    -   Kategorik değişkenlerin faktör (factor) formatına çevrilmesi.
 
 # Analiz
 
@@ -158,4 +150,4 @@ Elde edilen bulgular grafikler ve tablolarla sunulacaktır.
 
 Çalışmadan elde edilen temel bulgular özetlenecek ve politika yapıcılar için öneriler geliştirilecektir.
 
- **Not:** Bu projede belirli kod bloklarının hazırlanması ve veri yükleme yöntemlerinin düzenlenmesi aşamasında ChatGPT'den destek alınmıştır.  
+**Not:** Bu projede belirli kod bloklarının hazırlanması ve veri yükleme yöntemlerinin düzenlenmesi aşamasında ChatGPT'den destek alınmıştır.

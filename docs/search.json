@@ -2,9 +2,9 @@
   {
     "objectID": "project.html",
     "href": "project.html",
-    "title": "Project X",
+    "title": "PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)",
     "section": "",
-    "text": "Welcome to my/our project page.\nKeep an eye on this space to stay updated with my project activities.\n(The titles below are provided as examples; please feel free to adjust them as necessary.)"
+    "text": "Bu sayfa, Türkiye’deki orman yangınlarının nedenleri, dağılımı ve sonuçları üzerine yapılan veri analizi projesini sunmaktadır.\nGelişmeler için bu alanı takip edebilirsiniz."
   },
   {
     "objectID": "project.html#data-source",
@@ -163,5 +163,194 @@
     "title": "My Blog",
     "section": "",
     "text": "This page is under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "project.html#problem-tanm",
+    "href": "project.html#problem-tanm",
+    "title": "T??rkiye’de Orman Yang??nlar?? Analizi (1988???2023)",
+    "section": "1.1 Problem Tan??m??",
+    "text": "1.1 Problem Tan??m??\nT??rkiye???de orman yang??nlar?? hem ??evresel hem de ekonomik ciddi sonu??lar do??urmaktad??r. Bu ??al????ma ile: - 1988???2023 y??llar?? aras??ndaki yang??n nedenlerinin ve yanan alanlar??n de??i??imi, - 2023 y??l??na ??zel b??lgesel ve niteliksel yang??n da????l??mlar??, - Yang??n sonras?? silvik??lt??rel uygulamalar analiz edilecektir."
+  },
+  {
+    "objectID": "project.html#bu-veriyi-seme-nedenimiz",
+    "href": "project.html#bu-veriyi-seme-nedenimiz",
+    "title": "T�rkiye’de Orman Yanginlari Analizi (1988�2023)",
+    "section": "1.2 Bu Veriyi Se�me Nedenimiz",
+    "text": "1.2 Bu Veriyi Se�me Nedenimiz\n\nT�rkiye’ye �zg� ve g�ncel veriler sunmasi,\n�ok yilli ve �ok boyutlu veri yapisina sahip olmasi,\nR ile kapsamli veri �n isleme, analiz ve g�rsellestirme firsati saglamasi."
+  },
+  {
+    "objectID": "project.html#hedeflerimiz",
+    "href": "project.html#hedeflerimiz",
+    "title": "PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)",
+    "section": "1.3 Hedeflerimiz",
+    "text": "1.3 Hedeflerimiz\n\nYangın nedenlerinin yıllar içerisindeki değişimini incelemek,\nBölge müdürlüklerine göre yangın sayısı ve yanan alanı karşılaştırmak,\n2023 yılı yangınlarının etkilerini değerlendirmek,\nBulguları grafik ve tablolarla sunmak ve politika önerileri geliştirmek."
+  },
+  {
+    "objectID": "project.html#veri-kayna",
+    "href": "project.html#veri-kayna",
+    "title": "T??rkiye’de Orman Yang??nlar?? Analizi (1988???2023)",
+    "section": "2.1 2.1 Veri Kayna????",
+    "text": "2.1 2.1 Veri Kayna????\nVeriler, Orman Genel M??d??rl?????? (OGM) taraf??ndan yay??mlanan resmi Excel dosyalar??ndan al??nm????t??r.\n\nOrman Genel M??d??rl?????? Resmi Web Sitesi\nVeri dosyalar??: ??e??itli Excel (.xlsx) format??ndad??r."
+  },
+  {
+    "objectID": "project.html#veriye-eriim",
+    "href": "project.html#veriye-eriim",
+    "title": "T??rkiye’de Orman Yang??nlar?? Analizi (1988???2023)",
+    "section": "2.2 2.2 Veriye Eri??im",
+    "text": "2.2 2.2 Veriye Eri??im\n??lgili .RData dosyas??na a??a????daki ba??lant??dan ula??abilirsiniz:\n???? Yang??n Verileri RData Dosyas??"
+  },
+  {
+    "objectID": "project.html#verinin-genel-zellikleri",
+    "href": "project.html#verinin-genel-zellikleri",
+    "title": "T�rkiye’de Orman Yanginlari Analizi (1988�2023)",
+    "section": "2.3 2.3 Verinin Genel �zellikleri",
+    "text": "2.3 2.3 Verinin Genel �zellikleri\n�alismada kullanilan veri setleri sunlardir:\n\n2.3.1 Dataset 1: iller_2023\n\nI�erik: 2023 yilina ait iller bazinda yangin sayisi ve yanan alan (hektar).\nS�tunlar:\n\nCity: Il ismi\nNumber_of_Fires: Yangin adedi\nBurned_Area: Yanan alan (hektar)\n\nVeri Yapisi: 81 il verisi, eksik veri bulunmamaktadir.\n\n\n\n2.3.2 Dataset 2: orman_yanginlari1988_2023\n\nI�erik: 1988-2023 yillari arasindaki T�rkiye genelindeki orman yangin verileri.\nS�tunlar:\n\nYear: Yil\nRegion: B�lge\nNumber_of_Fires: Yangin sayisi\nBurned_Area: Yanan alan\n\nVeri Yapisi: 36 yillik s�reyi kapsar. Eksik veri bulunmamaktadir.\n\n\n\n2.3.3 Dataset 3: sebep_mudurluk_sayisal_2023\n\nI�erik: 2023 yilina ait yangin nedenlerine g�re m�d�rl�k bazli yangin sayilari.\nS�tunlar:\n\nReason: Yangin nedeni\nNumber_of_Fires: Yangin adedi\n\nA�iklama: “Ihmal”, “Kaza”, “Kasit” gibi ana kategoriler altinda 14 alt neden bulunmaktadir.\n\n\n\n2.3.4 Diger Datasetler\n\nsilvikulturel_2023: Yangin sonrasi silvik�lt�rel islemler verisi.\nsebep_mudurluk_alan_2023: 2023 yilinda m�d�rl�k bazli yanan alan verisi.\nbolge_mudurluklerine_sayisal_olarak_2004_2023: 2004�2023 yillari arasi b�lge m�d�rl�klerine g�re yangin sayisi.\nbolge_mudurluklerine_alan_olarak_2004_2023: 2004�2023 yillari arasi b�lge m�d�rl�klerine g�re yanan alan."
+  },
+  {
+    "objectID": "project.html#veriyi-seme-sebebi",
+    "href": "project.html#veriyi-seme-sebebi",
+    "title": "T�rkiye’de Orman Yanginlari Analizi (1988�2023)",
+    "section": "2.4 2.4 Veriyi Se�me Sebebi",
+    "text": "2.4 2.4 Veriyi Se�me Sebebi\n\nT�rkiye’ye �zg�, resmi ve g�venilir bir kaynak olmasi,\nUzun yillara yayilan ve �ok y�nl� analiz yapmaya elverisli veri i�erigi sunmasi,\nR programlama dili ile ileri veri analizleri ve modelleme �alismalarina uygunluk saglamasi."
+  },
+  {
+    "objectID": "project.html#veri-n-leme",
+    "href": "project.html#veri-n-leme",
+    "title": "T??rkiye’de Orman Yang??nlar?? Analizi (1988???2023)",
+    "section": "2.5 2.5 Veri ??n ????leme",
+    "text": "2.5 2.5 Veri ??n ????leme\nVerileri R ortam??na aktar??rken a??a????daki ad??mlar uygulanm????t??r:\n\nDosya ??simlerini D??zenleme: T??rk??e karakterler ??ngilizce karakterlere ??evrildi.\nVeri Temizleme: Excel dosyalar??ndaki gereksiz a????klamalar, g??rseller ve bo?? sat??rlar silindi.\nS??tun ??simlerini D??zenleme: S??tun isimleri hem ??ngilizcele??tirildi hem de a????klay??c?? hale getirildi.\nVeri Yap??s??n?? D??zenleme: Ayn?? kategorideki veriler bir araya getirildi.\nVeri ????e Aktarma: read.xlsx() fonksiyonu ile xlsx paketinden veriler aktar??ld?? (encoding = \"UTF-8\" kullan??ld??).\nPlanlanan ??leri ??n ????leme Ad??mlar??:\n\nVeri tiplerinin d??zenlenmesi (character, numeric vs.),\nEksik verilerin belirlenmesi ve i??lenmesi,\nKategorik de??i??kenlerin fakt??r (factor) format??na ??evrilmesi."
+  },
+  {
+    "objectID": "project.html#keifsel-veri-analizi-exploratory-data-analysis",
+    "href": "project.html#keifsel-veri-analizi-exploratory-data-analysis",
+    "title": "T??rkiye’de Orman Yang??nlar?? Analizi (1988???2023)",
+    "section": "3.1 3.1 Ke??ifsel Veri Analizi (Exploratory Data Analysis)",
+    "text": "3.1 3.1 Ke??ifsel Veri Analizi (Exploratory Data Analysis)\nVeri setlerindeki genel e??ilimler, da????l??mlar ve ili??kiler incelenecektir."
+  },
+  {
+    "objectID": "project.html#trend-analizi",
+    "href": "project.html#trend-analizi",
+    "title": "PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)",
+    "section": "3.2 Trend Analizi",
+    "text": "3.2 Trend Analizi\nZaman içinde yangınların sayısı ve yanan alanların değişim trendleri analiz edilecektir."
+  },
+  {
+    "objectID": "project.html#modelleme",
+    "href": "project.html#modelleme",
+    "title": "PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)",
+    "section": "3.3 Modelleme",
+    "text": "3.3 Modelleme\nGerekirse yangın nedenleri ve etkileri üzerine istatistiksel modeller kurulacaktır."
+  },
+  {
+    "objectID": "project.html#sonular",
+    "href": "project.html#sonular",
+    "title": "T�rkiye’de Orman Yanginlari Analizi (1988�2023)",
+    "section": "3.4 3.4 Sonu�lar",
+    "text": "3.4 3.4 Sonu�lar\nElde edilen bulgular grafikler ve tablolarla sunulacaktir."
+  },
+  {
+    "objectID": "project.html#problem-tanımı",
+    "href": "project.html#problem-tanımı",
+    "title": "PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)",
+    "section": "1.1 Problem Tanımı",
+    "text": "1.1 Problem Tanımı\nTürkiye’de orman yangınları hem çevresel hem de ekonomik ciddi sonuçlar doğurmaktadır. Bu çalışma ile: - 1988–2023 yılları arasındaki yangın nedenlerinin ve yanan alanların değişimi, - 2023 yılına özel bölgesel ve niteliksel yangın dağılımları, - Yangın sonrası silvikültürel uygulamalar analiz edilecektir."
+  },
+  {
+    "objectID": "project.html#bu-veriyi-seçme-nedenimiz",
+    "href": "project.html#bu-veriyi-seçme-nedenimiz",
+    "title": "PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)",
+    "section": "1.2 Bu Veriyi Seçme Nedenimiz",
+    "text": "1.2 Bu Veriyi Seçme Nedenimiz\n\nTürkiye’ye özgü ve güncel veriler sunması,\nÇok yıllı ve çok boyutlu veri yapısına sahip olması,\nR ile kapsamlı veri ön işleme, analiz ve görselleştirme fırsatı sağlaması."
+  },
+  {
+    "objectID": "project.html#veri-kaynağı",
+    "href": "project.html#veri-kaynağı",
+    "title": "PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)",
+    "section": "2.1 Veri Kaynağı",
+    "text": "2.1 Veri Kaynağı\nVeriler, Orman Genel Müdürlüğü (OGM) tarafından yayımlanan resmi Excel dosyalarından alınmıştır.\n\nOrman Genel Müdürlüğü Resmi Web Sitesi\nVeri dosyaları: Çeşitli Excel (.xlsx) formatındadır."
+  },
+  {
+    "objectID": "project.html#veriye-erişim",
+    "href": "project.html#veriye-erişim",
+    "title": "PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)",
+    "section": "2.2 Veriye Erişim",
+    "text": "2.2 Veriye Erişim\nİlgili .RData dosyasına aşağıdaki bağlantıdan ulaşabilirsiniz:\n👉 Yangın Verileri RData Dosyası"
+  },
+  {
+    "objectID": "project.html#verinin-genel-özellikleri",
+    "href": "project.html#verinin-genel-özellikleri",
+    "title": "PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)",
+    "section": "2.3 Verinin Genel Özellikleri",
+    "text": "2.3 Verinin Genel Özellikleri\n\n🔥 1988–2023 yılları arasında yangın nedenleri, sayıları ve yanan alan (hektar)\n📍 2004–2023 yılları arasında bölge müdürlüklerine göre yangın sayısı ve alanı\n📊 2023 yılına özel analizler:\n\n🏙️ İl bazında yangın sayısı\n🌲 Orman vasfına göre yanan alan türleri\n🚒 Yangın nedenlerinin detaylı sınıflandırması\n🌱 Yangın sonrası silvikültürel işlemler\n\n\nÇalışmada kullanılan veri setleri şunlardır:\n\n\nKod\n# Gerekli paketleri yükle ve çağır\nlibrary(readxl)\n\n# Çalışma dizinini ayarla\nsetwd(\"C:/Users/aktas/OneDrive/yangin_verisi\")\n\n# Verileri oku (uyarıları engellemek için .name_repair = \"minimal\" ekledik)\niller_2023 &lt;- read_excel(\"iller_2023.xlsx\", .name_repair = \"minimal\")\norman_yanginlari &lt;- read_excel(\"orman_yanginlari1988_2023.xlsx\", skip = 3, range = cell_rows(1:40), .name_repair = \"minimal\")\nvasfina_2023 &lt;- read_excel(\"vasfina_2023.xlsx\", .name_repair = \"minimal\")\nsilvikulturel_2023 &lt;- read_excel(\"silvikulturel_2023.xlsx\", .name_repair = \"minimal\")\nsebep_mudurluk_sayisal_2023 &lt;- read_excel(\"sebep_mudurluk_sayisal_2023.xlsx\", .name_repair = \"minimal\")\nsebep_mudurluk_alan_2023 &lt;- read_excel(\"sebep_mudurluk_alan_2023.xlsx\", .name_repair = \"minimal\")\nbolge_mudurluklerine_sayisal &lt;- read_excel(\"bolge_mudurluklerine_sayisal_olarak_2004_2023.xlsx\", .name_repair = \"minimal\")\nbolge_mudurluklerine_alan &lt;- read_excel(\"bolge_mudurluklerine_alan_olarak_2004_2023.xlsx\", .name_repair = \"minimal\")\n\n# Verilerin yapısını kontrol et\nstr(iller_2023)\n\n\ntibble [82 × 3] (S3: tbl_df/tbl/data.frame)\n $ sehir : chr [1:82] \"Türkiye\" \"İstanbul\" \"Tekirdağ\" \"Edirne\" ...\n $ adet  : chr [1:82] \"2579\" \"84\" \"16\" \"29\" ...\n $ hektar: chr [1:82] \"15520.1\" \"78.09\" \"121.07\" \"61.61\" ...\n\n\nKod\nstr(orman_yanginlari)\n\n\ntibble [39 × 11] (S3: tbl_df/tbl/data.frame)\n $ yil                     : num [1:39] 1988 1989 1990 1991 1992 ...\n $ hektar                  : chr [1:39] \"18210\" \"13099\" \"13742\" \"8081\" ...\n $ adet                    : chr [1:39] \"1372\" \"1633\" \"1750\" \"1481\" ...\n $ kasit_adet              : chr [1:39] \"-\" \"-\" \"-\" \"-\" ...\n $ kasit_hektar            : chr [1:39] \"-\" \"-\" \"-\" \"-\" ...\n $ ihmal_kaza_adet         : chr [1:39] \"-\" \"-\" \"-\" \"-\" ...\n $ ihmal_kaza_hektar       : chr [1:39] \"-\" \"-\" \"-\" \"-\" ...\n $ dogal_adet              : chr [1:39] \"-\" \"-\" \"-\" \"-\" ...\n $ dogal_hektar            : chr [1:39] \"-\" \"-\" \"-\" \"-\" ...\n $ sebebi_bilinmeyen_ adet : chr [1:39] \"-\" \"-\" \"-\" \"-\" ...\n $ sebebi_bilinmeyen_hektar: chr [1:39] \"-\" \"-\" \"-\" \"-\" ...\n\n\nKod\nstr(vasfina_2023)\n\n\ntibble [32 × 10] (S3: tbl_df/tbl/data.frame)\n $ orman_bolge_mudurlugu   : chr [1:32] \"Toplam-Total\" \"Adana\" \"Amasya\" \"Ankara\" ...\n $ hektar                  : num [1:32] 15520 346 89 257 386 ...\n $ normal_koru             : num [1:32] 10656 262.2 50.7 102.9 326.8 ...\n $ bosluklu_kapali_koru    : chr [1:32] \"3212.1\" \"80.400000000000006\" \"21.4\" \"84.4\" ...\n $ normal_bataklik         : chr [1:32] \"99.3\" \"-\" \"-\" \"-\" ...\n $ bosluklı_kapali_bataklik: chr [1:32] \"199.3\" \"-\" \"-\" \"-\" ...\n $ makilik                 : chr [1:32] \"401\" \"0.57899999999999996\" \"-\" \"6.2930000000000001\" ...\n $ agaclandirma_sahasi     : chr [1:32] \"205.3\" \"-\" \"2.2999999999999998\" \"2.4\" ...\n $ milli_park              : chr [1:32] \"406.5\" \"-\" \"-\" \"-\" ...\n $ orman_topragi           : chr [1:32] \"340\" \"-\" \"6.1560000000000006\" \"25.86375\" ...\n\n\nKod\nstr(silvikulturel_2023)\n\n\ntibble [32 × 9] (S3: tbl_df/tbl/data.frame)\n $ orman_bolge_mudurlugu                                     : chr [1:32] \"Toplaml\" \"Adana\" \"Amasya\" \"Ankara\" ...\n $ toplam_alan                                               : num [1:32] 15520 346.1 88.8 257.2 385.6 ...\n $ ortu_yangina_maruz_olup_zarar_gormeyen_alan               : num [1:32] 3139.31 64.03 63.82 161.46 3.65 ...\n $ dogal_genclestirme_hazirligi_yapilan_alan                 : chr [1:32] \"3015.1859999999997\" \"2.58\" \"-\" \"70.096000000000004\" ...\n $ sunu_genclestirme_programina_alinan_alan                  : chr [1:32] \"2252.4400000000005\" \"2.41\" \"-\" \"-\" ...\n $ rehabilitasyon                                            : chr [1:32] \"-\" \"-\" \"-\" \"-\" ...\n $ agaclandirma_programina_alinan_alan                       : chr [1:32] \"1911.1200000000001\" \"-\" \"-\" \"-\" ...\n $ yapilacak_teknik_islem_olmadigindan_korumaya_alinacak_alan: chr [1:32] \"1173.0114999999987\" \"56.478000000000009\" \"4.4939999999999998\" \"-\" ...\n $ gelecek_yillara_birakilan_alan                            : chr [1:32] \"4029.1800000000003\" \"220.58\" \"20.47\" \"25.61\" ...\n\n\nKod\nstr(sebep_mudurluk_sayisal_2023)\n\n\ntibble [32 × 21] (S3: tbl_df/tbl/data.frame)\n $ orman_bolge_mudurlugu: chr [1:32] \"Toplam-Total\" \"Adana\" \"Amasya\" \"Ankara\" ...\n $ ihmal_aniz           : chr [1:32] \"137\" \"4\" \"13\" \"2\" ...\n $ ihmal_copluk         : chr [1:32] \"36\" \"-\" \"2\" \"-\" ...\n $ ihmal_avcilik        : chr [1:32] \"2\" \"-\" \"-\" \"-\" ...\n $ ihmal_coban_atesi    : chr [1:32] \"81\" \"2\" \"24\" \"-\" ...\n $ ihmal_sigara         : chr [1:32] \"56\" \"-\" \"4\" \"-\" ...\n $ ihmal_piknik         : chr [1:32] \"9\" \"1\" \"-\" \"-\" ...\n $ ihmal_diger          : chr [1:32] \"602\" \"11\" \"25\" \"6\" ...\n $                      : logi [1:32] NA NA NA NA NA NA ...\n $ kasit_teror          : chr [1:32] \"4\" \"-\" \"-\" \"-\" ...\n $ kasit_kundaklama     : chr [1:32] \"5\" \"-\" \"-\" \"-\" ...\n $ kasit_acma           : chr [1:32] \"1\" \"-\" \"-\" \"-\" ...\n $ kasit_diger          : chr [1:32] \"82\" \"5\" \"-\" \"1\" ...\n $                      : logi [1:32] NA NA NA NA NA NA ...\n $ kaza_enerji          : chr [1:32] \"142\" \"7\" \"4\" \"2\" ...\n $ kaza_trafik          : chr [1:32] \"22\" \"1\" \"-\" \"-\" ...\n $ kaza_diger           : chr [1:32] \"46\" \"3\" \"1\" \"2\" ...\n $                      : logi [1:32] NA NA NA NA NA NA ...\n $                      : chr [1:32] \"955\" \"76\" \"-\" \"29\" ...\n $                      : chr [1:32] \"399\" \"22\" \"4\" \"11\" ...\n $                      : num [1:32] 2579 132 77 53 162 ...\n\n\nKod\nstr(sebep_mudurluk_alan_2023)\n\n\ntibble [32 × 20] (S3: tbl_df/tbl/data.frame)\n $ orman_bolge_mudurlugu: chr [1:32] \"Toplam-Total\" \"Adana\" \"Amasya\" \"Ankara\" ...\n $ ihmal_aniz           : chr [1:32] \"912.89789999999994\" \"1.073\" \"11.11\" \"9.0969999999999995\" ...\n $ ihmal_copluk         : chr [1:32] \"29.986000000000001\" \"-\" \"1.21\" \"-\" ...\n $ ihmal_avcilik        : chr [1:32] \"2.0510000000000002\" \"-\" \"-\" \"-\" ...\n $ ihmal_coban_atesi    : chr [1:32] \"81.492999999999995\" \"-\" \"33.119999999999997\" \"-\" ...\n $ ihmal_sigara         : chr [1:32] \"339.00229999999993\" \"-\" \"2.66\" \"-\" ...\n $ ihmal_piknik         : chr [1:32] \"34.343000000000004\" \"1.1000000000000001\" \"-\" \"-\" ...\n $ ihmal_diger          : chr [1:32] \"1896.5705000000003\" \"47.838000000000001\" \"38.4\" \"30.056000000000001\" ...\n $                      : logi [1:32] NA NA NA NA NA NA ...\n $ kasit_teror          : chr [1:32] \"0.54400000000000004\" \"-\" \"-\" \"-\" ...\n $ kasit_kundaklama     : chr [1:32] \"-\" \"-\" \"-\" \"-\" ...\n $ kasit_acma           : chr [1:32] \"-\" \"-\" \"-\" \"-\" ...\n $ kasit_diger          : chr [1:32] \"662\" \"1.7782\" \"-\" \"2\" ...\n $                      : logi [1:32] NA NA NA NA NA NA ...\n $ kaza_enerji          : chr [1:32] \"4536.0315999999984\" \"0.96799999999999997\" \"1.4\" \"0.54\" ...\n $ kaza_trafik          : chr [1:32] \"1330.4659999999999\" \"-\" \"-\" \"-\" ...\n $ kaza_diger           : chr [1:32] \"2096.7660000000001\" \"36.393999999999998\" \"-\" \"57.625\" ...\n $                      : chr [1:32] \"3233\" \"255.5265\" \"-\" \"69.510000000000005\" ...\n $                      : chr [1:32] \"364.98099999999994\" \"0.90200000000000002\" \"0.78\" \"88.838999999999999\" ...\n $                      : num [1:32] 15520.5 346.1 88.8 257.2 385.6 ...\n\n\nKod\nstr(bolge_mudurluklerine_sayisal)\n\n\ntibble [32 × 21] (S3: tbl_df/tbl/data.frame)\n $ orman_bolge_mudurlugu: chr [1:32] \"Toplam-Total\" \"Adana\" \"Amasya\" \"Ankara\" ...\n $ 2004                 : chr [1:32] \"1762\" \"89\" \"68\" \"59\" ...\n $ 2005                 : chr [1:32] \"1530\" \"64\" \"52\" \"47\" ...\n $ 2006                 : chr [1:32] \"2227\" \"105\" \"116\" \"76\" ...\n $ 2007                 : chr [1:32] \"2829\" \"123\" \"165\" \"95\" ...\n $ 2008                 : chr [1:32] \"2135\" \"107\" \"63\" \"38\" ...\n $ 2009                 : chr [1:32] \"1792\" \"83\" \"74\" \"84\" ...\n $ 2010                 : chr [1:32] \"1861\" \"84\" \"104\" \"57\" ...\n $ 2011                 : chr [1:32] \"1954\" \"88\" \"93\" \"73\" ...\n $ 2012                 : chr [1:32] \"2450\" \"101\" \"95\" \"113\" ...\n $ 2013                 : chr [1:32] \"3755\" \"173\" \"144\" \"233\" ...\n $ 2014                 : chr [1:32] \"2149\" \"81\" \"84\" \"46\" ...\n $ 2015                 : chr [1:32] \"2150\" \"176\" \"60\" \"43\" ...\n $ 2016                 : chr [1:32] \"3188\" \"183\" \"121\" \"125\" ...\n $ 2017                 : chr [1:32] \"2411\" \"151\" \"79\" \"98\" ...\n $ 2018                 : chr [1:32] \"2167\" \"124\" \"86\" \"46\" ...\n $ 2019                 : chr [1:32] \"2688\" \"174\" \"81\" \"55\" ...\n $ 2020                 : chr [1:32] \"3399\" \"186\" \"158\" \"67\" ...\n $ 2021                 : chr [1:32] \"2793\" \"190\" \"81\" \"46\" ...\n $ 2022                 : num [1:32] 2160 108 47 33 179 12 91 20 80 131 ...\n $ 2023                 : num [1:32] 2579 132 77 53 162 ...\n\n\nKod\nstr(bolge_mudurluklerine_alan)\n\n\ntibble [32 × 21] (S3: tbl_df/tbl/data.frame)\n $ orman_bolge_mudurlugu: chr [1:32] \"Toplam\" \"Adana\" \"Amasya\" \"Ankara\" ...\n $ 2004                 : chr [1:32] \"4876\" \"397\" \"108\" \"173\" ...\n $ 2005                 : chr [1:32] \"2820.8180000000007\" \"94\" \"31.8\" \"41.97\" ...\n $ 2006                 : chr [1:32] \"7761.3\" \"443.2\" \"93.4\" \"313.5\" ...\n $ 2007                 : chr [1:32] \"11664.624899999999\" \"704.43\" \"413.41199999999998\" \"80.430000000000007\" ...\n $ 2008                 : chr [1:32] \"29749\" \"415\" \"46\" \"63\" ...\n $ 2009                 : chr [1:32] \"4678.0949999999993\" \"183.18\" \"84.826999999999998\" \"65.064999999999998\" ...\n $ 2010                 : chr [1:32] \"3317\" \"237\" \"306\" \"43\" ...\n $ 2011                 : chr [1:32] \"3612\" \"222.45\" \"158.07\" \"165.30199999999999\" ...\n $ 2012                 : chr [1:32] \"10454.636999999999\" \"916.31\" \"139.13999999999999\" \"158.488\" ...\n $ 2013                 : chr [1:32] \"11456.491\" \"874.92\" \"279.52\" \"176.542\" ...\n $ 2014                 : chr [1:32] \"3117\" \"144.78\" \"200.57\" \"35.93\" ...\n $ 2015                 : chr [1:32] \"3219\" \"402\" \"119\" \"15\" ...\n $ 2016                 : chr [1:32] \"9156\" \"177\" \"390\" \"414\" ...\n $ 2017                 : chr [1:32] \"11993\" \"162\" \"137\" \"92\" ...\n $ 2018                 : chr [1:32] \"5644\" \"163\" \"52\" \"80\" ...\n $ 2019                 : chr [1:32] \"11332\" \"159.0787\" \"150.99\" \"69.599999999999994\" ...\n $ 2020                 : chr [1:32] \"20971\" \"2775.5371\" \"562.47000000000014\" \"781.13000000000011\" ...\n $ 2021                 : chr [1:32] \"139503\" \"7698.6\" \"80.8\" \"25.914000000000001\" ...\n $ 2022                 : num [1:32] 12799 486.49 59.15 4.94 200.69 ...\n $ 2023                 : num [1:32] 15520 346 89 257 386 ...\n\n\nKod\n# Verileri kaydet\nsave(iller_2023, orman_yanginlari, vasfina_2023, silvikulturel_2023,\n     sebep_mudurluk_sayisal_2023, sebep_mudurluk_alan_2023,\n     bolge_mudurluklerine_sayisal, bolge_mudurluklerine_alan,\n     file = \"C:/Users/aktas/OneDrive/yangin_verisi/yangin_verileri.RData\")"
+  },
+  {
+    "objectID": "project.html#veriyi-seçme-sebebi",
+    "href": "project.html#veriyi-seçme-sebebi",
+    "title": "PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)",
+    "section": "2.4 Veriyi Seçme Sebebi",
+    "text": "2.4 Veriyi Seçme Sebebi\n\nTürkiye’ye özgü, resmi ve güvenilir bir kaynak olması,\nUzun yıllara yayılan ve çok yönlü analiz yapmaya elverişli veri içeriği sunması,\nR programlama dili ile ileri veri analizleri ve modelleme çalışmalarına uygunluk sağlaması."
+  },
+  {
+    "objectID": "project.html#veri-ön-işleme",
+    "href": "project.html#veri-ön-işleme",
+    "title": "PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)",
+    "section": "2.5 Veri Ön İşleme",
+    "text": "2.5 Veri Ön İşleme\nVerileri R ortamına aktarırken aşağıdaki adımlar uygulanmıştır:\n\nDosya İsimlerini Düzenleme: TR’de dosya isimlerinde Türkçe karakterler (ç, ğ, ü, ö, ş, ı) bazen hata oluşturduğundan dolayı dosya isimlerindeki Türkçe karakterleri İngilizce karakterlere çevrildi. Örneğin: “bölge_mudurluklerine_sayisal_olarak_2004_2023.xlsx” dosyasını “bolge_mudurluklerine_sayisal_olarak_2004_2023.xlsx” olarak değiştirildi.\nVeri Temizleme: Excel dosyalarındaki gereksiz açıklamalar, görseller, boş satırlar gibi analizle ilgisi olmayan içerikleri silindi. Böylece veri setlerinin doğrudan okunabilir ve işlenebilir hale gelmesini sağlandı.\nSütun İsimlerini Düzenleme: o Sütun isimlerindeki Türkçe karakterleri İngilizce karakterlerle değiştirdim (Şehir yerine Sehir, Bölge yerine Bolge gibi). o Ayrıca sütun adlarını daha açıklayıcı hale getirdim. Örneğin: yangın sebeplerine göre ihmal, kaza, kasıt ana kategorilerini detaylandırarak şu şekilde isimlendirdim:  ihmal_copluk, ihmal_avcilik  kaza_trafik, kaza_enerji  kasit_yangin, kasit_aniz\nVeri Yapısını Düzenleme: Aynı kategorideki veriler bir araya getirildi.\nVeri İçe Aktarma: read.xlsx() fonksiyonu ile xlsx paketinden veriler aktarıldı (encoding = \"UTF-8\" kullanıldı).\nPlanlanan İleri Ön İşleme Adımları:\n\nVeri tiplerinin düzenlenmesi (character, numeric vs.),\nEksik verileri (NA) belirleyip, gerekirse temizlemek,\nKategorik değişkenlerin faktör (factor) formatına çevrilmesi."
+  },
+  {
+    "objectID": "project.html#keşifsel-veri-analizi-exploratory-data-analysis",
+    "href": "project.html#keşifsel-veri-analizi-exploratory-data-analysis",
+    "title": "PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)",
+    "section": "3.1 Keşifsel Veri Analizi (Exploratory Data Analysis)",
+    "text": "3.1 Keşifsel Veri Analizi (Exploratory Data Analysis)\nVeri setlerindeki genel eğilimler, dağılımlar ve ilişkiler incelenecektir."
+  },
+  {
+    "objectID": "project.html#sonuçlar",
+    "href": "project.html#sonuçlar",
+    "title": "PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)",
+    "section": "3.4 Sonuçlar",
+    "text": "3.4 Sonuçlar\nElde edilen bulgular grafikler ve tablolarla sunulacaktır."
+  },
+  {
+    "objectID": "project.html#problem-tanimi",
+    "href": "project.html#problem-tanimi",
+    "title": "T�rkiye’de Orman Yanginlari Analizi (1988�2023)",
+    "section": "1.1 Problem Tanimi",
+    "text": "1.1 Problem Tanimi\nT�rkiye�de orman yanginlari hem �evresel hem de ekonomik ciddi sonu�lar dogurmaktadir. Bu �alisma ile: - 1988�2023 yillari arasindaki yangin nedenlerinin ve yanan alanlarin degisimi, - 2023 yilina �zel b�lgesel ve niteliksel yangin dagilimlari, - Yangin sonrasi silvik�lt�rel uygulamalar analiz edilecektir."
+  },
+  {
+    "objectID": "project.html#veri-kaynagi",
+    "href": "project.html#veri-kaynagi",
+    "title": "T�rkiye’de Orman Yanginlari Analizi (1988�2023)",
+    "section": "2.1 2.1 Veri Kaynagi",
+    "text": "2.1 2.1 Veri Kaynagi\nVeriler, Orman Genel M�d�rl�g� (OGM) tarafindan yayimlanan resmi Excel dosyalarindan alinmistir.\n\nOrman Genel M�d�rl�g� Resmi Web Sitesi\nVeri dosyalari: �esitli Excel (.xlsx) formatindadir."
+  },
+  {
+    "objectID": "project.html#veriye-erisim",
+    "href": "project.html#veriye-erisim",
+    "title": "T�rkiye’de Orman Yanginlari Analizi (1988�2023)",
+    "section": "2.2 2.2 Veriye Erisim",
+    "text": "2.2 2.2 Veriye Erisim\nIlgili .RData dosyasina asagidaki baglantidan ulasabilirsiniz:\n???? Yangin Verileri RData Dosyasi"
+  },
+  {
+    "objectID": "project.html#veri-n-isleme",
+    "href": "project.html#veri-n-isleme",
+    "title": "T�rkiye’de Orman Yanginlari Analizi (1988�2023)",
+    "section": "2.5 2.5 Veri �n Isleme",
+    "text": "2.5 2.5 Veri �n Isleme\nVerileri R ortamina aktarirken asagidaki adimlar uygulanmistir:\n\nDosya Isimlerini D�zenleme: T�rk�e karakterler Ingilizce karakterlere �evrildi.\nVeri Temizleme: Excel dosyalarindaki gereksiz a�iklamalar, g�rseller ve bos satirlar silindi.\nS�tun Isimlerini D�zenleme: S�tun isimleri hem Ingilizcelestirildi hem de a�iklayici hale getirildi.\nVeri Yapisini D�zenleme: Ayni kategorideki veriler bir araya getirildi.\nVeri I�e Aktarma: read.xlsx() fonksiyonu ile xlsx paketinden veriler aktarildi (encoding = \"UTF-8\" kullanildi).\nPlanlanan Ileri �n Isleme Adimlari:\n\nVeri tiplerinin d�zenlenmesi (character, numeric vs.),\nEksik verilerin belirlenmesi ve islenmesi,\nKategorik degiskenlerin fakt�r (factor) formatina �evrilmesi."
+  },
+  {
+    "objectID": "project.html#kesifsel-veri-analizi-exploratory-data-analysis",
+    "href": "project.html#kesifsel-veri-analizi-exploratory-data-analysis",
+    "title": "T�rkiye’de Orman Yanginlari Analizi (1988�2023)",
+    "section": "3.1 3.1 Kesifsel Veri Analizi (Exploratory Data Analysis)",
+    "text": "3.1 3.1 Kesifsel Veri Analizi (Exploratory Data Analysis)\nVeri setlerindeki genel egilimler, dagilimlar ve iliskiler incelenecektir."
+  },
+  {
+    "objectID": "project.html#örnek-veri-setleri-.collapsetrue",
+    "href": "project.html#örnek-veri-setleri-.collapsetrue",
+    "title": "PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)",
+    "section": "2.4 Örnek Veri Setleri {.collapse=true}",
+    "text": "2.4 Örnek Veri Setleri {.collapse=true}\n\n2.4.1 Veri Seti 1: sebep_mudurluk_sayisal_2023 {.collapse=true}\n\n\n2.4.2 Veri Seti 3: sebep_mudurluk_sayisal_2023 {.collapse=true}\n\n\nKod\nif (exists(\"sebep_mudurluk_sayisal_2023\")) {\n  head(sebep_mudurluk_sayisal_2023)\n} else {\n  cat(\"sebep_mudurluk_sayisal_2023 veri seti bulunamadı.\")\n}\n\n\nsebep_mudurluk_sayisal_2023 veri seti bulunamadı.\n\n\n\n\n2.4.3 Veri Seti 2: silvikulturel_2023 {.collapse=true}\n\n\n2.4.4 Veri Seti 3: sebep_mudurluk_alan_2023 {.collapse=true}"
   }
 ]

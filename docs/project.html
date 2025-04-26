@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project X – Ece Zeynep’s Analytics Lab</title>
+<title>PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023) – Ece Zeynep's Analytics Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -55,17 +89,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Sonuç yok",
+    "search-matching-documents-text": "eşleşen belgeler",
+    "search-copy-link-title": "Aramak için bağlantıyı kopyalayın",
+    "search-hide-matches-text": "Ek eşleşmeleri gizle",
+    "search-more-match-text": "bu belgede daha fazla eşleşme",
+    "search-more-matches-text": "bu belgede daha fazla eşleşmeler",
+    "search-clear-button-title": "Temizle",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "İptal et",
+    "search-submit-button-title": "Göndermek",
+    "search-label": "Aramak"
   }
 }</script>
 
@@ -84,8 +118,8 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Ece Zeynep’s Analytics Lab</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Aramak"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Gezinmeyi değiştir" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -122,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
             <div class="quarto-navbar-tools tools-wide">
     <a href="https://github.com/ecezeynepa" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
     <a href="https://www.linkedin.com/in/ece-zeynep-akta%C5%9F-506a86208/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Karanlık modu değiştir"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -132,25 +166,31 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Bu sayfada</h2>
    
   <ul>
-  <li><a href="#project-overview-and-scope" id="toc-project-overview-and-scope" class="nav-link active" data-scroll-target="#project-overview-and-scope">1. Project Overview and Scope</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">2. Data</a>
+  <li><a href="#proje-tanımı-ve-kapsamı" id="toc-proje-tanımı-ve-kapsamı" class="nav-link active" data-scroll-target="#proje-tanımı-ve-kapsamı"><span class="header-section-number">1</span> Proje Tanımı ve Kapsamı</a>
   <ul class="collapse">
-  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">2.1 Data Source</a></li>
-  <li><a href="#general-information-about-data" id="toc-general-information-about-data" class="nav-link" data-scroll-target="#general-information-about-data">2.2 General Information About Data</a></li>
-  <li><a href="#reason-of-choice" id="toc-reason-of-choice" class="nav-link" data-scroll-target="#reason-of-choice">2.3 Reason of Choice</a></li>
-  <li><a href="#preprocessing" id="toc-preprocessing" class="nav-link" data-scroll-target="#preprocessing">2.4 Preprocessing</a></li>
+  <li><a href="#problem-tanımı" id="toc-problem-tanımı" class="nav-link" data-scroll-target="#problem-tanımı"><span class="header-section-number">1.1</span> Problem Tanımı</a></li>
+  <li><a href="#bu-veriyi-seçme-nedenimiz" id="toc-bu-veriyi-seçme-nedenimiz" class="nav-link" data-scroll-target="#bu-veriyi-seçme-nedenimiz"><span class="header-section-number">1.2</span> Bu Veriyi Seçme Nedenimiz</a></li>
+  <li><a href="#hedeflerimiz" id="toc-hedeflerimiz" class="nav-link" data-scroll-target="#hedeflerimiz"><span class="header-section-number">1.3</span> Hedeflerimiz</a></li>
   </ul></li>
-  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">3. Analysis</a>
+  <li><a href="#veri" id="toc-veri" class="nav-link" data-scroll-target="#veri"><span class="header-section-number">2</span> Veri</a>
   <ul class="collapse">
-  <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">3.1 Exploratory Data Analysis</a></li>
-  <li><a href="#trend-analysis" id="toc-trend-analysis" class="nav-link" data-scroll-target="#trend-analysis">3.2 Trend Analysis</a></li>
-  <li><a href="#model-fitting" id="toc-model-fitting" class="nav-link" data-scroll-target="#model-fitting">3.3 Model Fitting</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">3.4 Results</a></li>
+  <li><a href="#veri-kaynağı" id="toc-veri-kaynağı" class="nav-link" data-scroll-target="#veri-kaynağı"><span class="header-section-number">2.1</span> Veri Kaynağı</a></li>
+  <li><a href="#veriye-erişim" id="toc-veriye-erişim" class="nav-link" data-scroll-target="#veriye-erişim"><span class="header-section-number">2.2</span> Veriye Erişim</a></li>
+  <li><a href="#verinin-genel-özellikleri" id="toc-verinin-genel-özellikleri" class="nav-link" data-scroll-target="#verinin-genel-özellikleri"><span class="header-section-number">2.3</span> Verinin Genel Özellikleri</a></li>
+  <li><a href="#veriyi-seçme-sebebi" id="toc-veriyi-seçme-sebebi" class="nav-link" data-scroll-target="#veriyi-seçme-sebebi"><span class="header-section-number">2.4</span> Veriyi Seçme Sebebi</a></li>
+  <li><a href="#veri-ön-işleme" id="toc-veri-ön-işleme" class="nav-link" data-scroll-target="#veri-ön-işleme"><span class="header-section-number">2.5</span> Veri Ön İşleme</a></li>
   </ul></li>
-  <li><a href="#results-and-key-takeaways" id="toc-results-and-key-takeaways" class="nav-link" data-scroll-target="#results-and-key-takeaways">4. Results and Key Takeaways</a></li>
+  <li><a href="#analiz" id="toc-analiz" class="nav-link" data-scroll-target="#analiz"><span class="header-section-number">3</span> Analiz</a>
+  <ul class="collapse">
+  <li><a href="#keşifsel-veri-analizi-exploratory-data-analysis" id="toc-keşifsel-veri-analizi-exploratory-data-analysis" class="nav-link" data-scroll-target="#keşifsel-veri-analizi-exploratory-data-analysis"><span class="header-section-number">3.1</span> Keşifsel Veri Analizi (Exploratory Data Analysis)</a></li>
+  <li><a href="#trend-analizi" id="toc-trend-analizi" class="nav-link" data-scroll-target="#trend-analizi"><span class="header-section-number">3.2</span> Trend Analizi</a></li>
+  <li><a href="#modelleme" id="toc-modelleme" class="nav-link" data-scroll-target="#modelleme"><span class="header-section-number">3.3</span> Modelleme</a></li>
+  <li><a href="#sonuçlar" id="toc-sonuçlar" class="nav-link" data-scroll-target="#sonuçlar"><span class="header-section-number">3.4</span> Sonuçlar</a></li>
+  </ul></li>
+  <li><a href="#sonuçlar-ve-öneriler" id="toc-sonuçlar-ve-öneriler" class="nav-link" data-scroll-target="#sonuçlar-ve-öneriler"><span class="header-section-number">4</span> Sonuçlar ve Öneriler</a></li>
   </ul>
 </nav>
 </nav>
@@ -163,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project X</h1>
+<h1 class="title">PROJE: Türkiye’de Orman Yangınları Analizi (1988–2023)</h1>
 </div>
 
 
@@ -180,61 +220,316 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to my/our project page.</p>
-<p>Keep an eye on this space to stay updated with my project activities.</p>
-<p>(The titles below are provided as examples; please feel free to adjust them as necessary.)</p>
-<section id="project-overview-and-scope" class="level1">
-<h1>1. Project Overview and Scope</h1>
-<p>xxxxxx</p>
+<p>Bu sayfa, Türkiye’deki orman yangınlarının nedenleri, dağılımı ve sonuçları üzerine yapılan veri analizi projesini sunmaktadır.</p>
+<p>Gelişmeler için bu alanı takip edebilirsiniz.</p>
+<section id="proje-tanımı-ve-kapsamı" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Proje Tanımı ve Kapsamı</h1>
+<p>Bu projede, Türkiye’deki orman yangınlarının zaman içindeki değişimi, bölgesel dağılımı ve yangın sonrası uygulamalar analiz edilecektir. Çalışmanın amacı, yangınların nedenlerini ve etkilerini daha iyi anlayarak politika önerileri geliştirmektir.</p>
+<section id="problem-tanımı" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="problem-tanımı"><span class="header-section-number">1.1</span> Problem Tanımı</h2>
+<p>Türkiye’de orman yangınları hem çevresel hem de ekonomik ciddi sonuçlar doğurmaktadır. Bu çalışma ile: - 1988–2023 yılları arasındaki yangın nedenlerinin ve yanan alanların değişimi, - 2023 yılına özel bölgesel ve niteliksel yangın dağılımları, - Yangın sonrası silvikültürel uygulamalar analiz edilecektir.</p>
 </section>
-<section id="data" class="level1">
-<h1>2. Data</h1>
-<p>xxxxxx</p>
-<section id="data-source" class="level2">
-<h2 class="anchored" data-anchor-id="data-source">2.1 Data Source</h2>
-<p>xxxxxx</p>
+<section id="bu-veriyi-seçme-nedenimiz" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="bu-veriyi-seçme-nedenimiz"><span class="header-section-number">1.2</span> Bu Veriyi Seçme Nedenimiz</h2>
+<ul>
+<li>Türkiye’ye özgü ve güncel veriler sunması,</li>
+<li>Çok yıllı ve çok boyutlu veri yapısına sahip olması,</li>
+<li>R ile kapsamlı veri ön işleme, analiz ve görselleştirme fırsatı sağlaması.</li>
+</ul>
 </section>
-<section id="general-information-about-data" class="level2">
-<h2 class="anchored" data-anchor-id="general-information-about-data">2.2 General Information About Data</h2>
-<p>xxxxxx</p>
-</section>
-<section id="reason-of-choice" class="level2">
-<h2 class="anchored" data-anchor-id="reason-of-choice">2.3 Reason of Choice</h2>
-<p>xxxxxx</p>
-</section>
-<section id="preprocessing" class="level2">
-<h2 class="anchored" data-anchor-id="preprocessing">2.4 Preprocessing</h2>
-<p>xxxxxx</p>
-</section>
-</section>
-<section id="analysis" class="level1">
-<h1>3. Analysis</h1>
-<p>xxxxxx</p>
-<section id="exploratory-data-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="exploratory-data-analysis">3.1 Exploratory Data Analysis</h2>
-<p>xxxxxx</p>
-</section>
-<section id="trend-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="trend-analysis">3.2 Trend Analysis</h2>
-<p>xxxxxx</p>
-</section>
-<section id="model-fitting" class="level2">
-<h2 class="anchored" data-anchor-id="model-fitting">3.3 Model Fitting</h2>
-<p>xxxxxx</p>
-</section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">3.4 Results</h2>
-<p>xxxxxx</p>
+<section id="hedeflerimiz" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="hedeflerimiz"><span class="header-section-number">1.3</span> Hedeflerimiz</h2>
+<ul>
+<li>Yangın nedenlerinin yıllar içerisindeki değişimini incelemek,</li>
+<li>Bölge müdürlüklerine göre yangın sayısı ve yanan alanı karşılaştırmak,</li>
+<li>2023 yılı yangınlarının etkilerini değerlendirmek,</li>
+<li>Bulguları grafik ve tablolarla sunmak ve politika önerileri geliştirmek.</li>
+</ul>
 </section>
 </section>
-<section id="results-and-key-takeaways" class="level1">
-<h1>4. Results and Key Takeaways</h1>
-<p>xxxxxx</p>
+<section id="veri" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Veri</h1>
+<section id="veri-kaynağı" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="veri-kaynağı"><span class="header-section-number">2.1</span> Veri Kaynağı</h2>
+<p>Veriler, <strong>Orman Genel Müdürlüğü (OGM)</strong> tarafından yayımlanan resmi Excel dosyalarından alınmıştır.</p>
+<ul>
+<li><a href="https://www.ogm.gov.tr">Orman Genel Müdürlüğü Resmi Web Sitesi</a></li>
+<li>Veri dosyaları: Çeşitli Excel (.xlsx) formatındadır.</li>
+</ul>
+</section>
+<section id="veriye-erişim" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="veriye-erişim"><span class="header-section-number">2.2</span> Veriye Erişim</h2>
+<p>İlgili .RData dosyasına aşağıdaki bağlantıdan ulaşabilirsiniz:</p>
+<p>👉 <a href="https://github.com/ecezeynepa/yangin_verileri/blob/main/yangin_verileri.RData">Yangın Verileri RData Dosyası</a></p>
+</section>
+<section id="verinin-genel-özellikleri" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="verinin-genel-özellikleri"><span class="header-section-number">2.3</span> Verinin Genel Özellikleri</h2>
+<ul>
+<li><p>🔥 1988–2023 yılları arasında yangın nedenleri, sayıları ve yanan alan (hektar)</p></li>
+<li><p>📍 2004–2023 yılları arasında bölge müdürlüklerine göre yangın sayısı ve alanı</p></li>
+<li><p>📊 2023 yılına özel analizler:</p>
+<ul>
+<li><p>🏙️ İl bazında yangın sayısı</p></li>
+<li><p>🌲 Orman vasfına göre yanan alan türleri</p></li>
+<li><p>🚒 Yangın nedenlerinin detaylı sınıflandırması</p></li>
+<li><p>🌱 Yangın sonrası silvikültürel işlemler</p></li>
+</ul></li>
+</ul>
+<p>Çalışmada kullanılan veri setleri şunlardır:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gerekli paketleri yükle ve çağır</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Çalışma dizinini ayarla</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Verileri oku (uyarıları engellemek için .name_repair = "minimal" ekledik)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>iller_2023 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"iller_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>orman_yanginlari <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"orman_yanginlari1988_2023.xlsx"</span>, <span class="at">skip =</span> <span class="dv">3</span>, <span class="at">range =</span> <span class="fu">cell_rows</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">40</span>), <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>vasfina_2023 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"vasfina_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>silvikulturel_2023 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"silvikulturel_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>sebep_mudurluk_sayisal_2023 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"sebep_mudurluk_sayisal_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>sebep_mudurluk_alan_2023 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"sebep_mudurluk_alan_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>bolge_mudurluklerine_sayisal <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"bolge_mudurluklerine_sayisal_olarak_2004_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>bolge_mudurluklerine_alan <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"bolge_mudurluklerine_alan_olarak_2004_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Verilerin yapısını kontrol et</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(iller_2023)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [82 × 3] (S3: tbl_df/tbl/data.frame)
+ $ sehir : chr [1:82] "Türkiye" "İstanbul" "Tekirdağ" "Edirne" ...
+ $ adet  : chr [1:82] "2579" "84" "16" "29" ...
+ $ hektar: chr [1:82] "15520.1" "78.09" "121.07" "61.61" ...</code></pre>
+</div>
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(orman_yanginlari)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [39 × 11] (S3: tbl_df/tbl/data.frame)
+ $ yil                     : num [1:39] 1988 1989 1990 1991 1992 ...
+ $ hektar                  : chr [1:39] "18210" "13099" "13742" "8081" ...
+ $ adet                    : chr [1:39] "1372" "1633" "1750" "1481" ...
+ $ kasit_adet              : chr [1:39] "-" "-" "-" "-" ...
+ $ kasit_hektar            : chr [1:39] "-" "-" "-" "-" ...
+ $ ihmal_kaza_adet         : chr [1:39] "-" "-" "-" "-" ...
+ $ ihmal_kaza_hektar       : chr [1:39] "-" "-" "-" "-" ...
+ $ dogal_adet              : chr [1:39] "-" "-" "-" "-" ...
+ $ dogal_hektar            : chr [1:39] "-" "-" "-" "-" ...
+ $ sebebi_bilinmeyen_ adet : chr [1:39] "-" "-" "-" "-" ...
+ $ sebebi_bilinmeyen_hektar: chr [1:39] "-" "-" "-" "-" ...</code></pre>
+</div>
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(vasfina_2023)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [32 × 10] (S3: tbl_df/tbl/data.frame)
+ $ orman_bolge_mudurlugu   : chr [1:32] "Toplam-Total" "Adana" "Amasya" "Ankara" ...
+ $ hektar                  : num [1:32] 15520 346 89 257 386 ...
+ $ normal_koru             : num [1:32] 10656 262.2 50.7 102.9 326.8 ...
+ $ bosluklu_kapali_koru    : chr [1:32] "3212.1" "80.400000000000006" "21.4" "84.4" ...
+ $ normal_bataklik         : chr [1:32] "99.3" "-" "-" "-" ...
+ $ bosluklı_kapali_bataklik: chr [1:32] "199.3" "-" "-" "-" ...
+ $ makilik                 : chr [1:32] "401" "0.57899999999999996" "-" "6.2930000000000001" ...
+ $ agaclandirma_sahasi     : chr [1:32] "205.3" "-" "2.2999999999999998" "2.4" ...
+ $ milli_park              : chr [1:32] "406.5" "-" "-" "-" ...
+ $ orman_topragi           : chr [1:32] "340" "-" "6.1560000000000006" "25.86375" ...</code></pre>
+</div>
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(silvikulturel_2023)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [32 × 9] (S3: tbl_df/tbl/data.frame)
+ $ orman_bolge_mudurlugu                                     : chr [1:32] "Toplaml" "Adana" "Amasya" "Ankara" ...
+ $ toplam_alan                                               : num [1:32] 15520 346.1 88.8 257.2 385.6 ...
+ $ ortu_yangina_maruz_olup_zarar_gormeyen_alan               : num [1:32] 3139.31 64.03 63.82 161.46 3.65 ...
+ $ dogal_genclestirme_hazirligi_yapilan_alan                 : chr [1:32] "3015.1859999999997" "2.58" "-" "70.096000000000004" ...
+ $ sunu_genclestirme_programina_alinan_alan                  : chr [1:32] "2252.4400000000005" "2.41" "-" "-" ...
+ $ rehabilitasyon                                            : chr [1:32] "-" "-" "-" "-" ...
+ $ agaclandirma_programina_alinan_alan                       : chr [1:32] "1911.1200000000001" "-" "-" "-" ...
+ $ yapilacak_teknik_islem_olmadigindan_korumaya_alinacak_alan: chr [1:32] "1173.0114999999987" "56.478000000000009" "4.4939999999999998" "-" ...
+ $ gelecek_yillara_birakilan_alan                            : chr [1:32] "4029.1800000000003" "220.58" "20.47" "25.61" ...</code></pre>
+</div>
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sebep_mudurluk_sayisal_2023)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [32 × 21] (S3: tbl_df/tbl/data.frame)
+ $ orman_bolge_mudurlugu: chr [1:32] "Toplam-Total" "Adana" "Amasya" "Ankara" ...
+ $ ihmal_aniz           : chr [1:32] "137" "4" "13" "2" ...
+ $ ihmal_copluk         : chr [1:32] "36" "-" "2" "-" ...
+ $ ihmal_avcilik        : chr [1:32] "2" "-" "-" "-" ...
+ $ ihmal_coban_atesi    : chr [1:32] "81" "2" "24" "-" ...
+ $ ihmal_sigara         : chr [1:32] "56" "-" "4" "-" ...
+ $ ihmal_piknik         : chr [1:32] "9" "1" "-" "-" ...
+ $ ihmal_diger          : chr [1:32] "602" "11" "25" "6" ...
+ $                      : logi [1:32] NA NA NA NA NA NA ...
+ $ kasit_teror          : chr [1:32] "4" "-" "-" "-" ...
+ $ kasit_kundaklama     : chr [1:32] "5" "-" "-" "-" ...
+ $ kasit_acma           : chr [1:32] "1" "-" "-" "-" ...
+ $ kasit_diger          : chr [1:32] "82" "5" "-" "1" ...
+ $                      : logi [1:32] NA NA NA NA NA NA ...
+ $ kaza_enerji          : chr [1:32] "142" "7" "4" "2" ...
+ $ kaza_trafik          : chr [1:32] "22" "1" "-" "-" ...
+ $ kaza_diger           : chr [1:32] "46" "3" "1" "2" ...
+ $                      : logi [1:32] NA NA NA NA NA NA ...
+ $                      : chr [1:32] "955" "76" "-" "29" ...
+ $                      : chr [1:32] "399" "22" "4" "11" ...
+ $                      : num [1:32] 2579 132 77 53 162 ...</code></pre>
+</div>
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sebep_mudurluk_alan_2023)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [32 × 20] (S3: tbl_df/tbl/data.frame)
+ $ orman_bolge_mudurlugu: chr [1:32] "Toplam-Total" "Adana" "Amasya" "Ankara" ...
+ $ ihmal_aniz           : chr [1:32] "912.89789999999994" "1.073" "11.11" "9.0969999999999995" ...
+ $ ihmal_copluk         : chr [1:32] "29.986000000000001" "-" "1.21" "-" ...
+ $ ihmal_avcilik        : chr [1:32] "2.0510000000000002" "-" "-" "-" ...
+ $ ihmal_coban_atesi    : chr [1:32] "81.492999999999995" "-" "33.119999999999997" "-" ...
+ $ ihmal_sigara         : chr [1:32] "339.00229999999993" "-" "2.66" "-" ...
+ $ ihmal_piknik         : chr [1:32] "34.343000000000004" "1.1000000000000001" "-" "-" ...
+ $ ihmal_diger          : chr [1:32] "1896.5705000000003" "47.838000000000001" "38.4" "30.056000000000001" ...
+ $                      : logi [1:32] NA NA NA NA NA NA ...
+ $ kasit_teror          : chr [1:32] "0.54400000000000004" "-" "-" "-" ...
+ $ kasit_kundaklama     : chr [1:32] "-" "-" "-" "-" ...
+ $ kasit_acma           : chr [1:32] "-" "-" "-" "-" ...
+ $ kasit_diger          : chr [1:32] "662" "1.7782" "-" "2" ...
+ $                      : logi [1:32] NA NA NA NA NA NA ...
+ $ kaza_enerji          : chr [1:32] "4536.0315999999984" "0.96799999999999997" "1.4" "0.54" ...
+ $ kaza_trafik          : chr [1:32] "1330.4659999999999" "-" "-" "-" ...
+ $ kaza_diger           : chr [1:32] "2096.7660000000001" "36.393999999999998" "-" "57.625" ...
+ $                      : chr [1:32] "3233" "255.5265" "-" "69.510000000000005" ...
+ $                      : chr [1:32] "364.98099999999994" "0.90200000000000002" "0.78" "88.838999999999999" ...
+ $                      : num [1:32] 15520.5 346.1 88.8 257.2 385.6 ...</code></pre>
+</div>
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(bolge_mudurluklerine_sayisal)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [32 × 21] (S3: tbl_df/tbl/data.frame)
+ $ orman_bolge_mudurlugu: chr [1:32] "Toplam-Total" "Adana" "Amasya" "Ankara" ...
+ $ 2004                 : chr [1:32] "1762" "89" "68" "59" ...
+ $ 2005                 : chr [1:32] "1530" "64" "52" "47" ...
+ $ 2006                 : chr [1:32] "2227" "105" "116" "76" ...
+ $ 2007                 : chr [1:32] "2829" "123" "165" "95" ...
+ $ 2008                 : chr [1:32] "2135" "107" "63" "38" ...
+ $ 2009                 : chr [1:32] "1792" "83" "74" "84" ...
+ $ 2010                 : chr [1:32] "1861" "84" "104" "57" ...
+ $ 2011                 : chr [1:32] "1954" "88" "93" "73" ...
+ $ 2012                 : chr [1:32] "2450" "101" "95" "113" ...
+ $ 2013                 : chr [1:32] "3755" "173" "144" "233" ...
+ $ 2014                 : chr [1:32] "2149" "81" "84" "46" ...
+ $ 2015                 : chr [1:32] "2150" "176" "60" "43" ...
+ $ 2016                 : chr [1:32] "3188" "183" "121" "125" ...
+ $ 2017                 : chr [1:32] "2411" "151" "79" "98" ...
+ $ 2018                 : chr [1:32] "2167" "124" "86" "46" ...
+ $ 2019                 : chr [1:32] "2688" "174" "81" "55" ...
+ $ 2020                 : chr [1:32] "3399" "186" "158" "67" ...
+ $ 2021                 : chr [1:32] "2793" "190" "81" "46" ...
+ $ 2022                 : num [1:32] 2160 108 47 33 179 12 91 20 80 131 ...
+ $ 2023                 : num [1:32] 2579 132 77 53 162 ...</code></pre>
+</div>
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(bolge_mudurluklerine_alan)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [32 × 21] (S3: tbl_df/tbl/data.frame)
+ $ orman_bolge_mudurlugu: chr [1:32] "Toplam" "Adana" "Amasya" "Ankara" ...
+ $ 2004                 : chr [1:32] "4876" "397" "108" "173" ...
+ $ 2005                 : chr [1:32] "2820.8180000000007" "94" "31.8" "41.97" ...
+ $ 2006                 : chr [1:32] "7761.3" "443.2" "93.4" "313.5" ...
+ $ 2007                 : chr [1:32] "11664.624899999999" "704.43" "413.41199999999998" "80.430000000000007" ...
+ $ 2008                 : chr [1:32] "29749" "415" "46" "63" ...
+ $ 2009                 : chr [1:32] "4678.0949999999993" "183.18" "84.826999999999998" "65.064999999999998" ...
+ $ 2010                 : chr [1:32] "3317" "237" "306" "43" ...
+ $ 2011                 : chr [1:32] "3612" "222.45" "158.07" "165.30199999999999" ...
+ $ 2012                 : chr [1:32] "10454.636999999999" "916.31" "139.13999999999999" "158.488" ...
+ $ 2013                 : chr [1:32] "11456.491" "874.92" "279.52" "176.542" ...
+ $ 2014                 : chr [1:32] "3117" "144.78" "200.57" "35.93" ...
+ $ 2015                 : chr [1:32] "3219" "402" "119" "15" ...
+ $ 2016                 : chr [1:32] "9156" "177" "390" "414" ...
+ $ 2017                 : chr [1:32] "11993" "162" "137" "92" ...
+ $ 2018                 : chr [1:32] "5644" "163" "52" "80" ...
+ $ 2019                 : chr [1:32] "11332" "159.0787" "150.99" "69.599999999999994" ...
+ $ 2020                 : chr [1:32] "20971" "2775.5371" "562.47000000000014" "781.13000000000011" ...
+ $ 2021                 : chr [1:32] "139503" "7698.6" "80.8" "25.914000000000001" ...
+ $ 2022                 : num [1:32] 12799 486.49 59.15 4.94 200.69 ...
+ $ 2023                 : num [1:32] 15520 346 89 257 386 ...</code></pre>
+</div>
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Verileri kaydet</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(iller_2023, orman_yanginlari, vasfina_2023, silvikulturel_2023,</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>     sebep_mudurluk_sayisal_2023, sebep_mudurluk_alan_2023,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>     bolge_mudurluklerine_sayisal, bolge_mudurluklerine_alan,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">file =</span> <span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/yangin_verileri.RData"</span>)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="veriyi-seçme-sebebi" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="veriyi-seçme-sebebi"><span class="header-section-number">2.4</span> Veriyi Seçme Sebebi</h2>
+<ul>
+<li>Türkiye’ye özgü, resmi ve güvenilir bir kaynak olması,</li>
+<li>Uzun yıllara yayılan ve çok yönlü analiz yapmaya elverişli veri içeriği sunması,</li>
+<li>R programlama dili ile ileri veri analizleri ve modelleme çalışmalarına uygunluk sağlaması.</li>
+</ul>
+</section>
+<section id="veri-ön-işleme" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="veri-ön-işleme"><span class="header-section-number">2.5</span> Veri Ön İşleme</h2>
+<p>Verileri R ortamına aktarırken aşağıdaki adımlar uygulanmıştır:</p>
+<ol type="1">
+<li><p><strong>Dosya İsimlerini Düzenleme:</strong> TR’de dosya isimlerinde Türkçe karakterler (ç, ğ, ü, ö, ş, ı) bazen hata oluşturduğundan dolayı dosya isimlerindeki Türkçe karakterleri İngilizce karakterlere çevrildi. Örneğin: “bölge_mudurluklerine_sayisal_olarak_2004_2023.xlsx” dosyasını “bolge_mudurluklerine_sayisal_olarak_2004_2023.xlsx” olarak değiştirildi.</p></li>
+<li><p><strong>Veri Temizleme:</strong> Excel dosyalarındaki gereksiz açıklamalar, görseller, boş satırlar gibi analizle ilgisi olmayan içerikleri silindi. Böylece veri setlerinin doğrudan okunabilir ve işlenebilir hale gelmesini sağlandı.</p></li>
+<li><p><strong>Sütun İsimlerini Düzenleme:</strong> o Sütun isimlerindeki Türkçe karakterleri İngilizce karakterlerle değiştirdim (Şehir yerine Sehir, Bölge yerine Bolge gibi). o Ayrıca sütun adlarını daha açıklayıcı hale getirdim. Örneğin: yangın sebeplerine göre ihmal, kaza, kasıt ana kategorilerini detaylandırarak şu şekilde isimlendirdim:  ihmal_copluk, ihmal_avcilik  kaza_trafik, kaza_enerji  kasit_yangin, kasit_aniz</p></li>
+<li><p><strong>Veri Yapısını Düzenleme:</strong> Aynı kategorideki veriler bir araya getirildi.</p></li>
+<li><p><strong>Veri İçe Aktarma:</strong> <code>read.xlsx()</code> fonksiyonu ile xlsx paketinden veriler aktarıldı (<code>encoding = "UTF-8"</code> kullanıldı).</p></li>
+<li><p><strong>Planlanan İleri Ön İşleme Adımları:</strong></p>
+<ul>
+<li>Veri tiplerinin düzenlenmesi (character, numeric vs.),</li>
+<li>Eksik verileri (NA) belirleyip, gerekirse temizlemek,</li>
+<li>Kategorik değişkenlerin faktör (factor) formatına çevrilmesi.</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="analiz" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Analiz</h1>
+<section id="keşifsel-veri-analizi-exploratory-data-analysis" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="keşifsel-veri-analizi-exploratory-data-analysis"><span class="header-section-number">3.1</span> Keşifsel Veri Analizi (Exploratory Data Analysis)</h2>
+<p>Veri setlerindeki genel eğilimler, dağılımlar ve ilişkiler incelenecektir.</p>
+</section>
+<section id="trend-analizi" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="trend-analizi"><span class="header-section-number">3.2</span> Trend Analizi</h2>
+<p>Zaman içinde yangınların sayısı ve yanan alanların değişim trendleri analiz edilecektir.</p>
+</section>
+<section id="modelleme" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="modelleme"><span class="header-section-number">3.3</span> Modelleme</h2>
+<p>Gerekirse yangın nedenleri ve etkileri üzerine istatistiksel modeller kurulacaktır.</p>
+</section>
+<section id="sonuçlar" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sonuçlar"><span class="header-section-number">3.4</span> Sonuçlar</h2>
+<p>Elde edilen bulgular grafikler ve tablolarla sunulacaktır.</p>
+</section>
+</section>
+<section id="sonuçlar-ve-öneriler" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Sonuçlar ve Öneriler</h1>
+<p>Çalışmadan elde edilen temel bulgular özetlenecek ve politika yapıcılar için öneriler geliştirilecektir.</p>
+<p><strong>Not:</strong> Bu projede belirli kod bloklarının hazırlanması ve veri yükleme yöntemlerinin düzenlenmesi aşamasında ChatGPT’den destek alınmıştır.</p>
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Başa dönüş</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -422,12 +717,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Kopyalandı");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Kopyalandı");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

@@ -21,12 +21,6 @@ Bu projede, Türkiye'deki orman yangınlarının zaman içindeki değişimi, bö
 
 Türkiye’de orman yangınları hem çevresel hem de ekonomik ciddi sonuçlar doğurmaktadır. Bu çalışma ile: - 1988–2023 yılları arasındaki yangın nedenlerinin ve yanan alanların değişimi, - 2023 yılına özel bölgesel ve niteliksel yangın dağılımları, - Yangın sonrası silvikültürel uygulamalar analiz edilecektir.
 
-## Bu Veriyi Seçme Nedenimiz
-
--   Türkiye'ye özgü ve güncel veriler sunması,
--   Çok yıllı ve çok boyutlu veri yapısına sahip olması,
--   R ile kapsamlı veri ön işleme, analiz ve görselleştirme fırsatı sağlaması.
-
 ## Hedeflerimiz
 
 -   Yangın nedenlerinin yıllar içerisindeki değişimini incelemek,

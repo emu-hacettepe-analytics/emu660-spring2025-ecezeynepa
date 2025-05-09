@@ -1,3 +1,8 @@
+<img src="assets/images/yangin.jpg" width="70%" style="display: block; margin: 0 auto; border-radius: 10x; box-shadow: 0 0 10px rgba(0,0,0,0.5); margin-bottom: 14x;" />
+
+
+
+
 ---
 title: "PROJE: Türkiye'de Orman Yangınları Analizi (1988–2023)"
 lang: tr
@@ -84,7 +89,7 @@ sebep_mudurluk_sayisal_2023 <- read_excel("sebep_mudurluk_sayisal_2023.xlsx", .n
 sebep_mudurluk_alan_2023 <- read_excel("sebep_mudurluk_alan_2023.xlsx", .name_repair = "minimal")
 bolge_mudurluklerine_sayisal <- read_excel("bolge_mudurluklerine_sayisal_olarak_2004_2023.xlsx", .name_repair = "minimal")
 bolge_mudurluklerine_alan <- read_excel("bolge_mudurluklerine_alan_olarak_2004_2023.xlsx", .name_repair = "minimal")
-
+silvikultur_yillar <- read_excel("silvikultur_faaliyetler_1988_2023.xlsx", .name_repair = "minimal")
 # Verilerin yapısını kontrol et
 str(iller_2023)
 str(orman_yanginlari)
@@ -199,6 +204,48 @@ print(
 ```{r}
 library(readxl)
 library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(scales)
+
+# Veriyi oku ve sayısal hale getir
+df <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_2023.xlsx") |>
+  mutate(
+    yil = as.numeric(yil),
+    kasit_adet = as.numeric(gsub("[^0-9.]", "", kasit_adet)),
+    ihmal_kaza_adet = as.numeric(gsub("[^0-9.]", "", ihmal_kaza_adet)),
+    dogal_adet = as.numeric(gsub("[^0-9.]", "", dogal_adet)),
+    sebebi_bilinmeyen_adet = as.numeric(gsub("[^0-9.]", "", `sebebi_bilinmeyen_ adet`))
+  ) |>
+  select(yil, kasit_adet, ihmal_kaza_adet, dogal_adet, sebebi_bilinmeyen_adet)
+
+# Uzun forma getir
+neden_df <- df |>
+  pivot_longer(cols = -yil, names_to = "neden", values_to = "adet") |>
+  filter(!is.na(adet))
+
+# Grafik
+ggplot(neden_df, aes(x = yil, y = adet, fill = neden)) +
+  geom_area(alpha = 0.8) +
+  labs(
+    title = "1988–2023 Yılları Arasında Yangın Nedenlerine Göre Dağılım (Stacked Area Chart)",
+    x = "Yıl",
+    y = "Yangın Sayısı",
+    fill = "Yangın Nedeni"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5),
+    plot.title = element_text(face = "bold", hjust = 0.5)
+  ) +
+  scale_y_continuous(labels = label_comma()) +
+  scale_x_continuous(breaks = seq(min(neden_df$yil), max(neden_df$yil), by = 1))
+
+```
+
+```{r}
+library(readxl)
+library(dplyr)
 library(ggplot2)
 library(scales)
 
@@ -267,6 +314,8 @@ print(
 )
 
 ```
+### 🔥 Leaflet Harita – 2023 İl Bazında Yangın Sayısı ve Alan
+
 
 ```{r}
 library(readr)
@@ -316,6 +365,78 @@ leaflet(data = iller_map) |>
 
 ```
 
+
+
+### 🌍 Harita: 2023 – İl Bazında Yangın Başına Ortalama Yanan Alan
+
+Bu interaktif harita, Türkiye'deki illerde 2023 yılı boyunca çıkan yangınlar başına düşen ortalama yanan alanı (hektar / adet) göstermektedir. Baloncukların büyüklüğü, o ildeki yangınların ortalama şiddetini yansıtmaktadır.
+
+
+```{r}
+library(readr)
+library(readxl)
+library(dplyr)
+library(leaflet)
+library(stringi)
+
+# Karakter düzeltme fonksiyonu
+duzelt <- function(x) {
+  tolower(stri_trans_general(x, "Latin-ASCII"))
+}
+
+# 1. Koordinat verisini oku
+koord <- read_csv("C:/Users/aktas/OneDrive/yangin_verisi/il.csv") |>
+  mutate(sehir = duzelt(il_adi)) |>
+  select(sehir, lat, lon)
+
+# 2. İl yangın verisini oku ve ortalama hesapla
+iller <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/iller_2023.xlsx") |>
+  filter(sehir != "Türkiye") |>
+  mutate(
+    sehir = duzelt(sehir),
+    adet = as.numeric(gsub(",", ".", adet)),
+    hektar = as.numeric(gsub(",", ".", hektar)),
+    oran = hektar / adet
+  ) |>
+  filter(!is.na(oran), oran > 0)
+
+# 3. Birleştir
+veri <- left_join(koord, iller, by = "sehir") |> filter(!is.na(lat), !is.na(oran))
+
+# 4. Renk paleti oluştur (kırmızı tonları)
+pal <- colorNumeric(palette = "YlOrRd", domain = veri$oran)
+
+# 5. Haritayı çiz
+leaflet(veri) |>
+  addProviderTiles("CartoDB.Positron") |>
+  addCircleMarkers(
+    lng = ~lon,
+    lat = ~lat,
+    radius = ~sqrt(oran)*2.5, # daha fark edilir hale gelir
+    fillColor = ~pal(oran),
+    fillOpacity = 0.8,
+    color = "#444", weight = 1,
+    stroke = TRUE,
+    popup = ~paste0(
+      "<b>", toupper(sehir), "</b><br>",
+      "Yangın Sayısı: ", adet, "<br>",
+      "Yanan Alan: ", hektar, " ha<br>",
+      "<b>🔥 Ortalama Hektar / Yangın:</b> ", round(oran, 2)
+    )
+  ) |>
+  addLegend(
+    pal = pal, values = ~oran,
+    title = "Ortalama Hektar / Yangın",
+    position = "bottomright"
+  )
+
+
+```
+**Grafik Yorumu:**  
+Haritada balon çapı büyüdükçe, o ilde çıkan yangınların **daha büyük alanlara yayıldığı** görülmektedir. Bu da yangının kontrolünün daha zor olduğunu gösterir.
+
+2023 yılı verilerine göre **Mersin**, **Çanakkale**, **Kahramanmaraş** gibi illerde yangın sayısı az olmasına rağmen, yangın başına düşen yanan alan oldukça yüksektir. Bu durum, bu illerdeki yangınların genellikle **daha şiddetli ve yaygın** olduğunu, dolayısıyla kontrol altına alınmalarının daha zor olabileceğini düşündürmektedir.
+
 ```{r}
 library(readxl)
 library(dplyr)
@@ -351,7 +472,7 @@ vasif_long <- vasif_df |>
 ggplot(vasif_long, aes(x = reorder(bolge, -toplam_hektar), y = alan, fill = vasif_turu)) +
   geom_bar(stat = "identity") +
   labs(
-    title = "Bolge Mudurluklerine Gore Orman Vasif Turlerinin Yanan Alan Dagilimi (2023)",
+    title = "      Bolge Mudurluklerine Gore Orman Vasif Turlerinin Yanan Alan Dagilimi-2023",
     x = "Orman Bolge Mudurlugu",
     y = "Yanan Alan (ha)",
     fill = "Vasif Turu"
@@ -410,7 +531,7 @@ print(
     geom_bar(stat = "identity", fill = "darkolivegreen4") +
     coord_flip() +
     labs(
-      title = NULL,
+      title = "Turkiye Genelinde Yangin Sonrasi Mudahale Turlerinin Dagilimi (2023)",
       x = "Mudahale Turu", y = "Toplam Alan (ha)"
     ) +
     theme_minimal(base_size = 11) +
@@ -421,13 +542,16 @@ print(
 ```
 
 Yukarıdaki grafik, 2023 yılında orman yangınlarından etkilenen alanlara uygulanan silvikültürel müdahale türlerini ve bu müdahalelerin toplam alan (hektar) cinsinden büyüklüklerini göstermektedir. En büyük payı, herhangi bir müdahale yapılmayarak gelecek yıla bırakılan alanlar oluşturmaktadır. Onu sırasıyla örtüye zarar görmeyen alanlar ve doğal gençleştirme uygulamaları takip etmektedir. En az müdahale ise koruma altına alınan alanlarda yapılmıştır.
-```{r}
 
 
-```
+
+
+
+
+
 ## Trend Analizi
 
-Zaman içinde yangınların sayısı ve yanan alanların değişim trendleri analiz edilecektir.
+
 
 ```{r}
 
@@ -486,24 +610,145 @@ ggplot(df, aes(x = yil, y = hektar)) +
   scale_y_continuous(labels = label_comma())
 
 
-
-
 ```
 
 ```{r}
+library(readxl)
+library(dplyr)
+library(ggplot2)
+library(scales)
+
+# Veriyi oku ve hesapla
+df <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_2023.xlsx") |>
+  mutate(
+    yil = as.numeric(yil),
+    adet = as.numeric(gsub("[^0-9.]", "", adet)),
+    hektar = as.numeric(gsub("[^0-9.]", "", hektar)),
+    ortalama_hektar = hektar / adet
+  ) |>
+  filter(!is.na(yil), !is.na(ortalama_hektar), ortalama_hektar < 100)  # çok uç yılları filtrele
+
+# Grafik
+ggplot(df, aes(x = yil, y = ortalama_hektar)) +
+  geom_line(color = "#984ea3", linewidth = 1.2) +
+  geom_point(color = "#6a3d9a") +
+  geom_smooth(method = "lm", se = TRUE, color = "black", linetype = "dashed") +
+  labs(
+    title = "Yıllara Göre Yangın Başına Ortalama Yanan Alan (Hektar)",
+    x = "Yıl",
+    y = "Ortalama Hektar / Yangın"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5)) +
+  scale_y_continuous(labels = label_comma())
 
 
 ```
+
+
 ## Modelleme
+### 🔮 ARIMA Zaman Serisi Analizi: Yangın Sayısı Tahmini (2024–2026)
+
+Bu bölümde, geçmiş verilere dayalı olarak 2024–2026 yıllarına ait orman yangını sayısı tahmini yapılmıştır. Tahminler, ARIMA (Auto-Regressive Integrated Moving Average) zaman serisi modeli ile elde edilmiştir.
+
 
 Gerekirse yangın nedenleri ve etkileri üzerine istatistiksel modeller kurulacaktır.
+```{r}
+# Gerekli paketleri yükle (ilk kez çalıştırıyorsan sadece)
+# install.packages("forecast")
 
-## Sonuçlar
+library(readxl)
+library(dplyr)
+library(forecast)
+library(ggplot2)
 
-Elde edilen bulgular grafikler ve tablolarla sunulacaktır.
+# 1. Veriyi oku ve zaman serisine çevir
+df <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_2023.xlsx") |>
+  mutate(
+    yil = as.numeric(yil),
+    adet = as.numeric(gsub("[^0-9.]", "", adet))
+  ) |>
+  filter(!is.na(adet))
+
+# 2. Zaman serisi oluştur
+adet_ts <- ts(df$adet, start = 1988, frequency = 1)
+
+# 3. ARIMA modeli kur ve tahmin yap
+model <- auto.arima(adet_ts)
+tahmin <- forecast(model, h = 3)  # 2024–2026 için tahmin
+
+# 4. Tahmin grafiği
+autoplot(tahmin) +
+  labs(
+    title = "2024–2026 Yılları İçin Orman Yangını Sayısı Tahmini (ARIMA)",
+    x = "Yıl",
+    y = "Tahmin Edilen Yangın Sayısı"
+  ) +
+  theme_minimal()
+
+
+```
+**Grafik Yorumu:**  
+Bu zaman serisi modeli, geçmiş yıllardaki düzensizlik ve dalgalanmalar nedeniyle tahmin aralığı geniş bir öngörü sunmaktadır. ARIMA modeline göre, 2024–2026 yıllarında Türkiye'de çıkacak orman yangını sayısının yaklaşık **2100–2400 aralığında** olması beklenmektedir. Ancak tahminin etrafındaki belirsizlik bandı oldukça geniştir, bu da modelin tahmin gücünü sınırlamaktadır.
+
+- **Siyah çizgi:** 1988–2023 yılları arasındaki gerçek yangın sayısı  
+- **Ortadaki koyu mavi çizgi:** Modelin en olası tahmini (point forecast)  
+- **Mavi gölgeli alan:** %80 ve %95 güven aralığı (belirsizlik payı)  
+
+Model, 2020 sonrası yıllarda belirgin bir trend belirleyememiştir. Bu nedenle, çevresel değişkenler (iklim, kuraklık, rüzgar vb.) ve insan faaliyetleri dikkate alınmadan yapılan bu tahminler sadece genel bir öngörü niteliğindedir.
 
 # Sonuçlar ve Öneriler
 
-Çalışmadan elde edilen temel bulgular özetlenecek ve politika yapıcılar için öneriler geliştirilecektir.
+## 📌 Çalışmanın Özeti
+
+Bu proje kapsamında, Türkiye'deki orman yangınları 1988–2023 yılları arasında kapsamlı biçimde analiz edilmiştir. Çalışma, yalnızca sayısal bir raporlama değil, aynı zamanda **veri temizleme, ön işleme, görselleştirme ve tahminleme** adımlarını içeren **uçtan uca bir analitik süreci** yansıtmaktadır.
+
+Veri kaynakları Orman Genel Müdürlüğü (OGM)'nin resmi Excel dosyalarıdır. Bu dosyalar ham biçimden alınmış, Türkçe karakter sorunları çözülmüş, sütun isimleri düzenlenmiş, **eksik veriler (NA), hatalı karakterler, boşluklar ve "-" gibi semboller temizlenmiştir**. Tüm veriler okunabilir ve analiz edilebilir hale getirilmiştir.
+
+Bazı veri setlerinde toplam satırlarının analiz dışında bırakılması sağlanmıştır. **Türkçe karakter hataları düzeltilmiş**, `readxl`, `dplyr`, `tidyr`, `ggplot2`, `leaflet`, `forecast` gibi R paketleriyle güçlü veri hazırlığı ve modelleme adımları yürütülmüştür.
+
+---
+
+## 📊 Temel Bulgular
+
+- **Yangın sayısı**: 1988–2023 döneminde yıllık yangın sayısında artış eğilimi gözlenmiştir. 2021 yılı yangın sayısı bakımından zirve yıldır.
+- **Yanan alan**: Yıllık yanan orman alanları, özellikle 2008, 2013 ve 2021 yıllarında sıçrama göstermiştir.
+- **Yangın nedenleri**: En büyük payı ihmal/kaza ve kasıtlı yangınlar oluşturmaktadır. Doğal yangınlar sınırlıdır.
+- **2023 yılı analizleri**: Muğla, Antalya ve İzmir en çok yangın çıkan illerdir. Alan bazında da aynı iller öne çıkmaktadır.
+- **Yangın şiddeti**: “Yangın başına ortalama yanan alan” verisi bazı illerde çok yüksektir (Mersin, Çanakkale, Kahramanmaraş).
+- **Silvikültürel müdahaleler**: Müdahale türleri arasında "gelecek yıla bırakılan alanlar" ve "örtüye zarar görmeyen sahalar" öne çıkmaktadır.
+- **ARIMA zaman serisi modeli**: 2024–2026 yıllarında yangın sayısının 2100–2400 arasında olması tahmin edilmiştir.
+
+---
+
+## 🛠️ Teknik Zorluklar ve Çözümler
+
+Bu proje sırasında yalnızca analiz değil, **analize ulaşmak için birçok teknik engel** de aşılmıştır:
+
+- 📌 **NA (eksik) veriler tespit edilip analiz dışı bırakıldı**
+- 📌 **Karakter tipinde olan sayısal veriler `as.numeric` + `gsub()` ile düzeltildi**
+- 📌 **Excel sütun adlarındaki Türkçe karakterler ve boşluk sorunları temizlendi**
+- 📌 **Leaflet harita görselleştirmesi için `il.csv`dosyası ile şehirlerin koordinatlarına ulaşıldı**
+- 📌 **Balon haritada boyut + renk aynı anda gösterilerek etki artırıldı**
+- 📌 **ARIMA modelinde belirsizlik genişliği grafikle birlikte açıklanarak yorumlandı**
+
+Bu hatalar, bir veri analistinin gerçek dünyada sıklıkla karşılaşacağı türden ve bu projede sistemli şekilde çözüldü.
+
+---
+
+## 🎯 Politika ve Uygulama Önerileri
+
+- 🔥 **Yangın önleme çalışmaları güçlendirilmelidir.** Eğitim, denetim ve caydırıcılık artırılmalıdır.
+- 🛰️ **Veri şeffaflığı artırılmalıdır.** OGM verileri erişilebilir, güncel ve eksiksiz olarak kamuya sunulmalıdır.
+- 🚒 **Yüksek şiddetli yangın görülen illere özel planlama yapılmalıdır.** Yangın başına ortalama yanan alan yüksek olan bölgeler öncelikli ele alınmalıdır.
+- 🌱 **Pasif müdahale oranı azaltılmalı, aktif rehabilitasyon artırılmalıdır.**
+- 📈 **Zaman serisi tahminleri düzenli yapılmalı, yangınla mücadelede önleyici planlamaya entegre edilmelidir.**
+
+---
+
+## 📌 Genel Değerlendirme
+
+Bu proje, Türkiye orman yangınlarının yalnızca nicel değil, aynı zamanda **nedenlerine, bölgesel farklılıklarına ve etkilerine dair kapsamlı bir analitik bakış** sunmaktadır. Veri ön işleme adımlarından, tahmin modellerine kadar uzanan bu analiz süreci, sadece akademik değil, aynı zamanda uygulamaya yönelik çıkarımlar da üretmektedir.
+.
 
 **Not:** Bu projede belirli kod bloklarının hazırlanması ve veri yükleme yöntemlerinin düzenlenmesi aşamasında ChatGPT'den destek alınmıştır.

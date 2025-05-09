@@ -1,19 +1,49 @@
 /* css styles */
-/* Sayfa arka planını pembe yapmak */
+
+/* Arka plan: dumanlı açık yeşil */
 body {
-  background-color: #f8e1f4;
+  background-color: #d4ebd4;   /* daha koyu pastel çimen yeşili */
+  color: #1c1c1c;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* Başlık rengini pembe yapmak */
-h1 {
-  color: #ff66b2;
+
+/* Ana başlıklar: Ateş kırmızısı */
+h1, h2, h3 {
+  color: #b22222;  /* firebrick */
+  font-weight: bold;
 }
 
-/* Bağlantıları pembe yapmak */
+/* Bağlantılar: yeşil tonlu ama hover'da yanan kırmızı */
 a {
-  color: #ff3385;
+  color: #006400;         /* koyu yeşil */
+  text-decoration: none;
 }
 
 a:hover {
-  color: #ff1a73;
+  color: #d73027;         /* canlı yanık kırmızı */
+  text-decoration: underline;
 }
+
+/* Kod kutuları için arka plan: açık dumanlı gri */
+pre, code {
+  background-color: #fdf6f6;  /* çok açık kırmızımsı bej */
+  color: #2e8b57;             /* orman yeşili kod rengi */
+  padding: 6px;
+  border-radius: 5px;
+}
+
+/* Grafik başlıkları (ggplot): */
+.plot-title {
+  color: #8b0000;  /* koyu yangın kırmızısı */
+}
+
+/* Sayfa genel kenarları */
+.container {
+  border-left: 4px solid #b22222;
+  border-right: 4px solid #228b22;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+

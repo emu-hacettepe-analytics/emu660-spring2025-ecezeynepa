@@ -208,12 +208,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#analiz" id="toc-analiz" class="nav-link" data-scroll-target="#analiz"><span class="header-section-number">3</span> Analiz</a>
   <ul class="collapse">
-  <li><a href="#keşifsel-veri-analizi-exploratory-data-analysis" id="toc-keşifsel-veri-analizi-exploratory-data-analysis" class="nav-link" data-scroll-target="#keşifsel-veri-analizi-exploratory-data-analysis"><span class="header-section-number">3.1</span> Keşifsel Veri Analizi (Exploratory Data Analysis)</a></li>
-  <li><a href="#trend-analizi" id="toc-trend-analizi" class="nav-link" data-scroll-target="#trend-analizi"><span class="header-section-number">3.2</span> Trend Analizi</a></li>
-  <li><a href="#modelleme" id="toc-modelleme" class="nav-link" data-scroll-target="#modelleme"><span class="header-section-number">3.3</span> Modelleme</a></li>
-  <li><a href="#sonuçlar" id="toc-sonuçlar" class="nav-link" data-scroll-target="#sonuçlar"><span class="header-section-number">3.4</span> Sonuçlar</a></li>
+  <li><a href="#keşifsel-veri-analizi-exploratory-data-analysis" id="toc-keşifsel-veri-analizi-exploratory-data-analysis" class="nav-link" data-scroll-target="#keşifsel-veri-analizi-exploratory-data-analysis"><span class="header-section-number">3.1</span> Keşifsel Veri Analizi (Exploratory Data Analysis)</a>
+  <ul class="collapse">
+  <li><a href="#leaflet-harita-2023-il-bazında-yangın-sayısı-ve-alan" id="toc-leaflet-harita-2023-il-bazında-yangın-sayısı-ve-alan" class="nav-link" data-scroll-target="#leaflet-harita-2023-il-bazında-yangın-sayısı-ve-alan"><span class="header-section-number">3.1.1</span> 🔥 Leaflet Harita – 2023 İl Bazında Yangın Sayısı ve Alan</a></li>
+  <li><a href="#harita-2023-il-bazında-yangın-başına-ortalama-yanan-alan" id="toc-harita-2023-il-bazında-yangın-başına-ortalama-yanan-alan" class="nav-link" data-scroll-target="#harita-2023-il-bazında-yangın-başına-ortalama-yanan-alan"><span class="header-section-number">3.1.2</span> 🌍 Harita: 2023 – İl Bazında Yangın Başına Ortalama Yanan Alan</a></li>
   </ul></li>
-  <li><a href="#sonuçlar-ve-öneriler" id="toc-sonuçlar-ve-öneriler" class="nav-link" data-scroll-target="#sonuçlar-ve-öneriler"><span class="header-section-number">4</span> Sonuçlar ve Öneriler</a></li>
+  <li><a href="#trend-analizi" id="toc-trend-analizi" class="nav-link" data-scroll-target="#trend-analizi"><span class="header-section-number">3.2</span> Trend Analizi</a></li>
+  <li><a href="#modelleme" id="toc-modelleme" class="nav-link" data-scroll-target="#modelleme"><span class="header-section-number">3.3</span> Modelleme</a>
+  <ul class="collapse">
+  <li><a href="#arima-zaman-serisi-analizi-yangın-sayısı-tahmini-20242026" id="toc-arima-zaman-serisi-analizi-yangın-sayısı-tahmini-20242026" class="nav-link" data-scroll-target="#arima-zaman-serisi-analizi-yangın-sayısı-tahmini-20242026"><span class="header-section-number">3.3.1</span> 🔮 ARIMA Zaman Serisi Analizi: Yangın Sayısı Tahmini (2024–2026)</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#sonuçlar-ve-öneriler" id="toc-sonuçlar-ve-öneriler" class="nav-link" data-scroll-target="#sonuçlar-ve-öneriler"><span class="header-section-number">4</span> Sonuçlar ve Öneriler</a>
+  <ul class="collapse">
+  <li><a href="#çalışmanın-özeti" id="toc-çalışmanın-özeti" class="nav-link" data-scroll-target="#çalışmanın-özeti"><span class="header-section-number">4.1</span> 📌 Çalışmanın Özeti</a></li>
+  <li><a href="#temel-bulgular" id="toc-temel-bulgular" class="nav-link" data-scroll-target="#temel-bulgular"><span class="header-section-number">4.2</span> 📊 Temel Bulgular</a></li>
+  <li><a href="#teknik-zorluklar-ve-çözümler" id="toc-teknik-zorluklar-ve-çözümler" class="nav-link" data-scroll-target="#teknik-zorluklar-ve-çözümler"><span class="header-section-number">4.3</span> 🛠️ Teknik Zorluklar ve Çözümler</a></li>
+  <li><a href="#politika-ve-uygulama-önerileri" id="toc-politika-ve-uygulama-önerileri" class="nav-link" data-scroll-target="#politika-ve-uygulama-önerileri"><span class="header-section-number">4.4</span> 🎯 Politika ve Uygulama Önerileri</a></li>
+  <li><a href="#genel-değerlendirme" id="toc-genel-değerlendirme" class="nav-link" data-scroll-target="#genel-değerlendirme"><span class="header-section-number">4.5</span> 📌 Genel Değerlendirme</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -243,6 +256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p><img src="assets/images/yangin.jpg" width="70%" style="display: block; margin: 0 auto; border-radius: 10x; box-shadow: 0 0 10px rgba(0,0,0,0.5); margin-bottom: 14x;"></p>
 <p>Bu sayfa, Türkiye’deki orman yangınlarının nedenleri, dağılımı ve sonuçları üzerine yapılan veri analizi projesini sunmaktadır.</p>
 <p>Gelişmeler için bu alanı takip edebilirsiniz.</p>
 <section id="proje-tanımı-ve-kapsamı" class="level1" data-number="1">
@@ -309,7 +323,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>sebep_mudurluk_alan_2023 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"sebep_mudurluk_alan_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>bolge_mudurluklerine_sayisal <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"bolge_mudurluklerine_sayisal_olarak_2004_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>bolge_mudurluklerine_alan <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"bolge_mudurluklerine_alan_olarak_2004_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>silvikultur_yillar <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"silvikultur_faaliyetler_1988_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Verilerin yapısını kontrol et</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(iller_2023)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -610,38 +624,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <summary>Kod</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Veriyi oku</span></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>iller <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/iller_2023.xlsx"</span>)</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Sayısal düzeltme + Türkiye satırını çıkar</span></span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>iller <span class="ot">&lt;-</span> iller <span class="sc">|&gt;</span></span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sehir <span class="sc">!=</span> <span class="st">"Türkiye"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">adet =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">","</span>, <span class="st">"."</span>, adet)),</span>
-<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">hektar =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">","</span>, <span class="st">"."</span>, hektar))</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Veriyi oku ve sayısal hale getir</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_2023.xlsx"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">yil =</span> <span class="fu">as.numeric</span>(yil),</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">kasit_adet =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"[^0-9.]"</span>, <span class="st">""</span>, kasit_adet)),</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">ihmal_kaza_adet =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"[^0-9.]"</span>, <span class="st">""</span>, ihmal_kaza_adet)),</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">dogal_adet =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"[^0-9.]"</span>, <span class="st">""</span>, dogal_adet)),</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">sebebi_bilinmeyen_adet =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"[^0-9.]"</span>, <span class="st">""</span>, <span class="st">`</span><span class="at">sebebi_bilinmeyen_ adet</span><span class="st">`</span>))</span>
 <span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(adet <span class="sc">&gt;</span> <span class="dv">0</span>, hektar <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">|&gt;</span></span>
-<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">orani =</span> hektar <span class="sc">/</span> adet)</span>
-<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik 1: En Çok Yangın Çıkan İlk 15 İl</span></span>
-<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(</span>
-<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>  iller <span class="sc">|&gt;</span></span>
-<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(adet)) <span class="sc">|&gt;</span></span>
-<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">15</span>) <span class="sc">|&gt;</span></span>
-<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(sehir, <span class="sc">-</span>adet), <span class="at">y =</span> adet)) <span class="sc">+</span></span>
-<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"#d73027"</span>) <span class="sc">+</span></span>
-<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"2023 – En Çok Yangın Çıkan 15 İl"</span>,</span>
-<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>         <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Yangın Sayısı"</span>) <span class="sc">+</span></span>
-<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(</span>
-<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>),</span>
-<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>)</span>
-<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>(<span class="at">accuracy =</span> <span class="dv">1</span>))</span>
-<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(yil, kasit_adet, ihmal_kaza_adet, dogal_adet, sebebi_bilinmeyen_adet)</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Uzun forma getir</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>neden_df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>yil, <span class="at">names_to =</span> <span class="st">"neden"</span>, <span class="at">values_to =</span> <span class="st">"adet"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(adet))</span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik</span></span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(neden_df, <span class="fu">aes</span>(<span class="at">x =</span> yil, <span class="at">y =</span> adet, <span class="at">fill =</span> neden)) <span class="sc">+</span></span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>(<span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"1988–2023 Yılları Arasında Yangın Nedenlerine Göre Dağılım (Stacked Area Chart)"</span>,</span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Yıl"</span>,</span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Yangın Sayısı"</span>,</span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Yangın Nedeni"</span></span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>)</span>
+<span id="cb21-36"><a href="#cb21-36" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb21-37"><a href="#cb21-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>()) <span class="sc">+</span></span>
+<span id="cb21-38"><a href="#cb21-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fu">min</span>(neden_df<span class="sc">$</span>yil), <span class="fu">max</span>(neden_df<span class="sc">$</span>yil), <span class="at">by =</span> <span class="dv">1</span>))</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -650,43 +668,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
+</div>
+<div class="cell">
 <details class="code-fold">
 <summary>Kod</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik 2: En Fazla Alan Yanan İlk 15 İl</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  iller <span class="sc">|&gt;</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(hektar)) <span class="sc">|&gt;</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">15</span>) <span class="sc">|&gt;</span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(sehir, <span class="sc">-</span>hektar), <span class="at">y =</span> hektar)) <span class="sc">+</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"#1a9850"</span>) <span class="sc">+</span></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"2023 – En Fazla Alan Yanan 15 İl"</span>,</span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Yanan Alan (Hektar)"</span>) <span class="sc">+</span></span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(</span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>),</span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>)</span>
-<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>(<span class="at">accuracy =</span> <span class="dv">1</span>))</span>
-<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Veriyi oku</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>iller <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/iller_2023.xlsx"</span>)</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Sayısal düzeltme + Türkiye satırını çıkar</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>iller <span class="ot">&lt;-</span> iller <span class="sc">|&gt;</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sehir <span class="sc">!=</span> <span class="st">"Türkiye"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">adet =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">","</span>, <span class="st">"."</span>, adet)),</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">hektar =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">","</span>, <span class="st">"."</span>, hektar))</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(adet <span class="sc">&gt;</span> <span class="dv">0</span>, hektar <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">|&gt;</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">orani =</span> hektar <span class="sc">/</span> adet)</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik 1: En Çok Yangın Çıkan İlk 15 İl</span></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>  iller <span class="sc">|&gt;</span></span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(adet)) <span class="sc">|&gt;</span></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">15</span>) <span class="sc">|&gt;</span></span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(sehir, <span class="sc">-</span>adet), <span class="at">y =</span> adet)) <span class="sc">+</span></span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"#d73027"</span>) <span class="sc">+</span></span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"2023 – En Çok Yangın Çıkan 15 İl"</span>,</span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>         <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Yangın Sayısı"</span>) <span class="sc">+</span></span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(</span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>)</span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>(<span class="at">accuracy =</span> <span class="dv">1</span>))</span>
+<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="project_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="project_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <details class="code-fold">
 <summary>Kod</summary>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik 3: Yangın Başına Ortalama Yanan Alan (etkililik)</span></span>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik 2: En Fazla Alan Yanan İlk 15 İl</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  iller <span class="sc">|&gt;</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(orani)) <span class="sc">|&gt;</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(hektar)) <span class="sc">|&gt;</span></span>
 <span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">15</span>) <span class="sc">|&gt;</span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(sehir, <span class="sc">-</span>orani), <span class="at">y =</span> orani)) <span class="sc">+</span></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"#4575b4"</span>) <span class="sc">+</span></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"2023 – Yangın Başına Ortalama Yanan Alan"</span>,</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Hektar / Yangın"</span>) <span class="sc">+</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(sehir, <span class="sc">-</span>hektar), <span class="at">y =</span> hektar)) <span class="sc">+</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"#1a9850"</span>) <span class="sc">+</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"2023 – En Fazla Alan Yanan 15 İl"</span>,</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Yanan Alan (Hektar)"</span>) <span class="sc">+</span></span>
 <span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
 <span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(</span>
 <span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>),</span>
@@ -698,116 +736,216 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="project_files/figure-html/unnamed-chunk-3-3.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="project_files/figure-html/unnamed-chunk-4-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
-</div>
-<div class="cell">
 <details class="code-fold">
 <summary>Kod</summary>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringi)</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Türkçe karakter düzeltme fonksiyonu</span></span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>duzelt <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tolower</span>(<span class="fu">stri_trans_general</span>(x, <span class="st">"Latin-ASCII"</span>))</span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. İl koordinat verisini yükle (il.csv dosyan)</span></span>
-<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>koord <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/il.csv"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">il_adi =</span> <span class="fu">duzelt</span>(il_adi)) <span class="sc">|&gt;</span></span>
-<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">sehir =</span> il_adi, lat, lon)</span>
-<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. 2023 yılı yangın verisini oku ve temizle</span></span>
-<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>iller <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/iller_2023.xlsx"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sehir <span class="sc">!=</span> <span class="st">"Türkiye"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">sehir =</span> <span class="fu">duzelt</span>(sehir),</span>
-<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">adet =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">","</span>, <span class="st">"."</span>, adet)),</span>
-<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">hektar =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">","</span>, <span class="st">"."</span>, hektar))</span>
-<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Koordinatlar ile yangın verisini birleştir</span></span>
-<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>iller_map <span class="ot">&lt;-</span> <span class="fu">left_join</span>(koord, iller, <span class="at">by =</span> <span class="st">"sehir"</span>) <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(lat), <span class="sc">!</span><span class="fu">is.na</span>(hektar))</span>
-<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Leaflet haritası oluştur</span></span>
-<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>(<span class="at">data =</span> iller_map) <span class="sc">|&gt;</span></span>
-<span id="cb24-31"><a href="#cb24-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addProviderTiles</span>(<span class="st">"CartoDB.Positron"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb24-32"><a href="#cb24-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addCircleMarkers</span>(</span>
-<span id="cb24-33"><a href="#cb24-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">lng =</span> <span class="sc">~</span>lon, <span class="at">lat =</span> <span class="sc">~</span>lat,</span>
-<span id="cb24-34"><a href="#cb24-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">radius =</span> <span class="sc">~</span><span class="fu">sqrt</span>(hektar)<span class="sc">/</span><span class="dv">2</span>,</span>
-<span id="cb24-35"><a href="#cb24-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"darkred"</span>,</span>
-<span id="cb24-36"><a href="#cb24-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">stroke =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb24-37"><a href="#cb24-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">fillOpacity =</span> <span class="fl">0.7</span>,</span>
-<span id="cb24-38"><a href="#cb24-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">popup =</span> <span class="sc">~</span><span class="fu">paste0</span>(</span>
-<span id="cb24-39"><a href="#cb24-39" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;b&gt;"</span>, <span class="fu">toupper</span>(sehir), <span class="st">"&lt;/b&gt;&lt;br&gt;"</span>,</span>
-<span id="cb24-40"><a href="#cb24-40" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Yangın Sayısı: "</span>, adet, <span class="st">"&lt;br&gt;"</span>,</span>
-<span id="cb24-41"><a href="#cb24-41" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Yanan Alan: "</span>, hektar, <span class="st">" ha"</span></span>
-<span id="cb24-42"><a href="#cb24-42" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb24-43"><a href="#cb24-43" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-a04fd87daf611a7a60ee" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-a04fd87daf611a7a60ee">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["CartoDB.Positron",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[37,37.7641667,38.76376,39.7216667,40.65,39.92077,36.88414,41.1833333,37.8444,39.648369,40.150131,38.885349,38.4,40.739479,37.726909,40.18257,40.155312,40.6,40.5505556,37.77652,37.91441,41.6666667,38.680969,39.75,39.9043189,39.784302,37.06622,40.912811,40.4602778,37.5833333,36.4018488,37.7666667,41.00527,38.41885,40.59267,41.38871,38.7333333,41.7333333,39.15,40.8532704,37.8666667,39.4166667,38.35519,38.619099,37.5833333,37.3122361,37.2152778,38.7432926,38.62442,37.9666667,40.9833333,41.02005,40.7568793,41.292782,37.94429,42.0264222,39.747662,40.9833333,40.3166667,41,39.1079868,37.15,38.682301,38.4941667,39.82,41.456409,38.36869,37.17593,39.846821,37.881168,37.5163889,41.6344444,41.110481,40.65,41.2,36.718399,37.06805,40.843849],[35.3213333,38.2761667,30.54034,43.0566667,35.8333333,32.85411,30.70563,41.8166667,27.8458,27.88261,29.983061,40.498291,42.1166667,31.611561,30.288876,29.06687,26.41416,33.6166667,34.9555556,29.08639,40.230629,26.5666667,39.226398,39.5,41.2678853,30.51922,37.38332,38.38953,39.4813889,43.7333333,36.3498097,30.55,28.97696,27.12872,43.077831,33.78273,35.4833333,27.2166667,34.1666667,29.8815203,32.4833333,29.9833333,38.30946,27.428921,36.9333333,40.735112,28.3636111,41.5064823,34.723969,34.6833333,37.8833333,40.523449,30.378138,36.33128,41.93288,35.1550745,37.017879,27.5166667,36.55,39.7333333,39.5401672,38.8,29.40819,43.38,34.8044444,31.798731,34.03698,33.228748,33.515251,41.13509,42.4611111,32.3375,42.702171,29.2666667,32.6333333,37.12122,36.261589,31.15654],[7.987490219086343,5.977666768899049,3.574562910343025,0.469041575982343,2.333988003396761,5.695612346359257,14.01846995930726,0.8845903006477066,2.960996453898586,9.789662915545152,4.751052514969709,3.944616584663204,5.279678020485719,10.09455298663591,3.021588985947626,8.732410892760372,35.6009129096432,5.641143501099755,2.658006772000403,3.089902911096075,8.741424369060228,3.924601890638081,4.272001872658765,1.320037878244408,1.645448267190433,9.509468965194639,6.375735251718032,2.053046516764781,2.862254356272342,1.806239186818844,13.45176568335919,2.512468905280222,4.418427322023075,23.59740451829396,0.6708203932499369,2.022374841615668,0.5431390245600107,2.847806173179628,0.05,2.302172886644267,2.259424705539001,7.588313383091133,4.643543905251677,11.25455463356947,9.48353836919533,4.876217796612452,9.614832291829119,2.392174742781137,1.503329637837291,0.758287544405155,3.045898882103606,1.08397416943394,2.585053190942113,2.065187642806338,2.702313823374332,1.75641680702503,3.884263121880391,5.501590679067282,2.327552362461477,2.876195403653931,1.357387196049823,3.782525611281436,2.065187642806338,2.005617112013158,2.62011450131478,1.152171862180291,1.696319545368737,0.3,0.158113883008419,0.8276472678623424,2.80490641555115,0.5916079783099616,0.3674234614174767,0.08660254037844387,1.77341478509682,1.425657742938325,4.765763317664863,1.364734406395618],null,null,{"interactive":true,"className":"","stroke":false,"color":"darkred","weight":5,"opacity":0.5,"fill":true,"fillColor":"darkred","fillOpacity":0.7},null,null,["<b>ADANA<\/b><br>Yangın Sayısı: 89<br>Yanan Alan: 255.2 ha","<b>ADIYAMAN<\/b><br>Yangın Sayısı: 33<br>Yanan Alan: 142.93 ha","<b>AFYONKARAHISAR<\/b><br>Yangın Sayısı: 12<br>Yanan Alan: 51.11 ha","<b>AGRI<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 0.88 ha","<b>AMASYA<\/b><br>Yangın Sayısı: 13<br>Yanan Alan: 21.79 ha","<b>ANKARA<\/b><br>Yangın Sayısı: 28<br>Yanan Alan: 129.76 ha","<b>ANTALYA<\/b><br>Yangın Sayısı: 171<br>Yanan Alan: 786.07 ha","<b>ARTVIN<\/b><br>Yangın Sayısı: 4<br>Yanan Alan: 3.13 ha","<b>AYDIN<\/b><br>Yangın Sayısı: 62<br>Yanan Alan: 35.07 ha","<b>BALIKESIR<\/b><br>Yangın Sayısı: 68<br>Yanan Alan: 383.35 ha","<b>BILECIK<\/b><br>Yangın Sayısı: 21<br>Yanan Alan: 90.29 ha","<b>BINGOL<\/b><br>Yangın Sayısı: 28<br>Yanan Alan: 62.24 ha","<b>BITLIS<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 111.5 ha","<b>BOLU<\/b><br>Yangın Sayısı: 30<br>Yanan Alan: 407.6 ha","<b>BURDUR<\/b><br>Yangın Sayısı: 25<br>Yanan Alan: 36.52 ha","<b>BURSA<\/b><br>Yangın Sayısı: 56<br>Yanan Alan: 305.02 ha","<b>CANAKKALE<\/b><br>Yangın Sayısı: 132<br>Yanan Alan: 5069.7 ha","<b>CANKIRI<\/b><br>Yangın Sayısı: 23<br>Yanan Alan: 127.29 ha","<b>CORUM<\/b><br>Yangın Sayısı: 23<br>Yanan Alan: 28.26 ha","<b>DENIZLI<\/b><br>Yangın Sayısı: 24<br>Yanan Alan: 38.19 ha","<b>DIYARBAKIR<\/b><br>Yangın Sayısı: 96<br>Yanan Alan: 305.65 ha","<b>EDIRNE<\/b><br>Yangın Sayısı: 29<br>Yanan Alan: 61.61 ha","<b>ELAZIG<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 73 ha","<b>ERZINCAN<\/b><br>Yangın Sayısı: 3<br>Yanan Alan: 6.97 ha","<b>ERZURUM<\/b><br>Yangın Sayısı: 8<br>Yanan Alan: 10.83 ha","<b>ESKISEHIR<\/b><br>Yangın Sayısı: 22<br>Yanan Alan: 361.72 ha","<b>GAZIANTEP<\/b><br>Yangın Sayısı: 32<br>Yanan Alan: 162.6 ha","<b>GIRESUN<\/b><br>Yangın Sayısı: 14<br>Yanan Alan: 16.86 ha","<b>GUMUSHANE<\/b><br>Yangın Sayısı: 16<br>Yanan Alan: 32.77 ha","<b>HAKKARI<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 13.05 ha","<b>HATAY<\/b><br>Yangın Sayısı: 43<br>Yanan Alan: 723.8 ha","<b>ISPARTA<\/b><br>Yangın Sayısı: 18<br>Yanan Alan: 25.25 ha","<b>ISTANBUL<\/b><br>Yangın Sayısı: 84<br>Yanan Alan: 78.09 ha","<b>IZMIR<\/b><br>Yangın Sayısı: 163<br>Yanan Alan: 2227.35 ha","<b>KARS<\/b><br>Yangın Sayısı: 4<br>Yanan Alan: 1.8 ha","<b>KASTAMONU<\/b><br>Yangın Sayısı: 42<br>Yanan Alan: 16.36 ha","<b>KAYSERI<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 1.18 ha","<b>KIRKLARELI<\/b><br>Yangın Sayısı: 28<br>Yanan Alan: 32.44 ha","<b>KIRSEHIR<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 0.01 ha","<b>KOCAELI<\/b><br>Yangın Sayısı: 20<br>Yanan Alan: 21.2 ha","<b>KONYA<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 20.42 ha","<b>KUTAHYA<\/b><br>Yangın Sayısı: 35<br>Yanan Alan: 230.33 ha","<b>MALATYA<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 86.25 ha","<b>MANISA<\/b><br>Yangın Sayısı: 154<br>Yanan Alan: 506.66 ha","<b>KAHRAMANMARAS<\/b><br>Yangın Sayısı: 111<br>Yanan Alan: 359.75 ha","<b>MARDIN<\/b><br>Yangın Sayısı: 37<br>Yanan Alan: 95.11 ha","<b>MUGLA<\/b><br>Yangın Sayısı: 261<br>Yanan Alan: 369.78 ha","<b>MUS<\/b><br>Yangın Sayısı: 4<br>Yanan Alan: 22.89 ha","<b>NEVSEHIR<\/b><br>Yangın Sayısı: 2<br>Yanan Alan: 9.04 ha","<b>NIGDE<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 2.3 ha","<b>ORDU<\/b><br>Yangın Sayısı: 27<br>Yanan Alan: 37.11 ha","<b>RIZE<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 4.7 ha","<b>SAKARYA<\/b><br>Yangın Sayısı: 40<br>Yanan Alan: 26.73 ha","<b>SAMSUN<\/b><br>Yangın Sayısı: 24<br>Yanan Alan: 17.06 ha","<b>SIIRT<\/b><br>Yangın Sayısı: 12<br>Yanan Alan: 29.21 ha","<b>SINOP<\/b><br>Yangın Sayısı: 27<br>Yanan Alan: 12.34 ha","<b>SIVAS<\/b><br>Yangın Sayısı: 12<br>Yanan Alan: 60.35 ha","<b>TEKIRDAG<\/b><br>Yangın Sayısı: 16<br>Yanan Alan: 121.07 ha","<b>TOKAT<\/b><br>Yangın Sayısı: 17<br>Yanan Alan: 21.67 ha","<b>TRABZON<\/b><br>Yangın Sayısı: 20<br>Yanan Alan: 33.09 ha","<b>TUNCELI<\/b><br>Yangın Sayısı: 12<br>Yanan Alan: 7.37 ha","<b>SANLIURFA<\/b><br>Yangın Sayısı: 6<br>Yanan Alan: 57.23 ha","<b>USAK<\/b><br>Yangın Sayısı: 14<br>Yanan Alan: 17.06 ha","<b>VAN<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 16.09 ha","<b>YOZGAT<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 27.46 ha","<b>ZONGULDAK<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 5.31 ha","<b>AKSARAY<\/b><br>Yangın Sayısı: 4<br>Yanan Alan: 11.51 ha","<b>KARAMAN<\/b><br>Yangın Sayısı: 2<br>Yanan Alan: 0.36 ha","<b>KIRIKKALE<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 0.1 ha","<b>BATMAN<\/b><br>Yangın Sayısı: 5<br>Yanan Alan: 2.74 ha","<b>SIRNAK<\/b><br>Yangın Sayısı: 23<br>Yanan Alan: 31.47 ha","<b>BARTIN<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 1.4 ha","<b>ARDAHAN<\/b><br>Yangın Sayısı: 2<br>Yanan Alan: 0.54 ha","<b>YALOVA<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 0.03 ha","<b>KARABUK<\/b><br>Yangın Sayısı: 21<br>Yanan Alan: 12.58 ha","<b>KILIS<\/b><br>Yangın Sayısı: 6<br>Yanan Alan: 8.13 ha","<b>OSMANIYE<\/b><br>Yangın Sayısı: 41<br>Yanan Alan: 90.85 ha","<b>DUZCE<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 7.45 ha"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[36.4018488,42.0264222],"lng":[26.41416,43.7333333]}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<div class="cell">
-<details class="code-fold">
-<summary>Kod</summary>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Excel dosyasını oku (tam yol)</span></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>vasif_df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/vasfina_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Sütun isimlerini Türkçe karaktersiz olarak ayarla</span></span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(vasif_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"bolge"</span>, <span class="st">"toplam_hektar"</span>, <span class="st">"normal_koru"</span>, <span class="st">"bos_kapali_koru"</span>,</span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"normal_bataklik"</span>, <span class="st">"bos_kapali_bataklik"</span>, <span class="st">"makilik"</span>,</span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"agaclandirma_sahasi"</span>, <span class="st">"milli_park"</span>, <span class="st">"orman_topragi"</span></span>
-<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a><span class="co"># "Toplam-Total" satırını çıkar (tek satırlık toplam veridir, grafik dışında tutuyoruz)</span></span>
-<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>vasif_df <span class="ot">&lt;-</span> vasif_df <span class="sc">|&gt;</span> <span class="fu">filter</span>(bolge <span class="sc">!=</span> <span class="st">"Toplam-Total"</span>)</span>
-<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a><span class="co"># "-" karakterlerini NA yap ve sayıya çevir</span></span>
-<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>vasif_df <span class="ot">&lt;-</span> vasif_df <span class="sc">|&gt;</span></span>
-<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="sc">-</span>bolge, <span class="sc">~</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"-"</span>, <span class="cn">NA</span>, .))))</span>
-<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Uzun formata pivotla (grafik için)</span></span>
-<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a>vasif_long <span class="ot">&lt;-</span> vasif_df <span class="sc">|&gt;</span></span>
-<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span><span class="fu">c</span>(bolge, toplam_hektar),</span>
-<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"vasif_turu"</span>,</span>
-<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"alan"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(alan), alan <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
-<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-31"><a href="#cb25-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik: Bölge müdürlüklerine göre vasıf türlerinin dağılımı</span></span>
-<span id="cb25-32"><a href="#cb25-32" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(vasif_long, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(bolge, <span class="sc">-</span>toplam_hektar), <span class="at">y =</span> alan, <span class="at">fill =</span> vasif_turu)) <span class="sc">+</span></span>
-<span id="cb25-33"><a href="#cb25-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb25-34"><a href="#cb25-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb25-35"><a href="#cb25-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Bolge Mudurluklerine Gore Orman Vasif Turlerinin Yanan Alan Dagilimi (2023)"</span>,</span>
-<span id="cb25-36"><a href="#cb25-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Orman Bolge Mudurlugu"</span>,</span>
-<span id="cb25-37"><a href="#cb25-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Yanan Alan (ha)"</span>,</span>
-<span id="cb25-38"><a href="#cb25-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Vasif Turu"</span></span>
-<span id="cb25-39"><a href="#cb25-39" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb25-40"><a href="#cb25-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">11</span>) <span class="sc">+</span></span>
-<span id="cb25-41"><a href="#cb25-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb25-42"><a href="#cb25-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>),</span>
-<span id="cb25-43"><a href="#cb25-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>)</span>
-<span id="cb25-44"><a href="#cb25-44" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb25-45"><a href="#cb25-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>())</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik 3: Yangın Başına Ortalama Yanan Alan (etkililik)</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  iller <span class="sc">|&gt;</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(orani)) <span class="sc">|&gt;</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">15</span>) <span class="sc">|&gt;</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(sehir, <span class="sc">-</span>orani), <span class="at">y =</span> orani)) <span class="sc">+</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"#4575b4"</span>) <span class="sc">+</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"2023 – Yangın Başına Ortalama Yanan Alan"</span>,</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Hektar / Yangın"</span>) <span class="sc">+</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>)</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>(<span class="at">accuracy =</span> <span class="dv">1</span>))</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="project_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="project_files/figure-html/unnamed-chunk-4-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="leaflet-harita-2023-il-bazında-yangın-sayısı-ve-alan" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="leaflet-harita-2023-il-bazında-yangın-sayısı-ve-alan"><span class="header-section-number">3.1.1</span> 🔥 Leaflet Harita – 2023 İl Bazında Yangın Sayısı ve Alan</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringi)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Türkçe karakter düzeltme fonksiyonu</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>duzelt <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tolower</span>(<span class="fu">stri_trans_general</span>(x, <span class="st">"Latin-ASCII"</span>))</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. İl koordinat verisini yükle (il.csv dosyan)</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>koord <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/il.csv"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">il_adi =</span> <span class="fu">duzelt</span>(il_adi)) <span class="sc">|&gt;</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">sehir =</span> il_adi, lat, lon)</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. 2023 yılı yangın verisini oku ve temizle</span></span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>iller <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/iller_2023.xlsx"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sehir <span class="sc">!=</span> <span class="st">"Türkiye"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">sehir =</span> <span class="fu">duzelt</span>(sehir),</span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">adet =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">","</span>, <span class="st">"."</span>, adet)),</span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">hektar =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">","</span>, <span class="st">"."</span>, hektar))</span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Koordinatlar ile yangın verisini birleştir</span></span>
+<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a>iller_map <span class="ot">&lt;-</span> <span class="fu">left_join</span>(koord, iller, <span class="at">by =</span> <span class="st">"sehir"</span>) <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(lat), <span class="sc">!</span><span class="fu">is.na</span>(hektar))</span>
+<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Leaflet haritası oluştur</span></span>
+<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>(<span class="at">data =</span> iller_map) <span class="sc">|&gt;</span></span>
+<span id="cb25-31"><a href="#cb25-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addProviderTiles</span>(<span class="st">"CartoDB.Positron"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb25-32"><a href="#cb25-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addCircleMarkers</span>(</span>
+<span id="cb25-33"><a href="#cb25-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">lng =</span> <span class="sc">~</span>lon, <span class="at">lat =</span> <span class="sc">~</span>lat,</span>
+<span id="cb25-34"><a href="#cb25-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">radius =</span> <span class="sc">~</span><span class="fu">sqrt</span>(hektar)<span class="sc">/</span><span class="dv">2</span>,</span>
+<span id="cb25-35"><a href="#cb25-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"darkred"</span>,</span>
+<span id="cb25-36"><a href="#cb25-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">stroke =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb25-37"><a href="#cb25-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">fillOpacity =</span> <span class="fl">0.7</span>,</span>
+<span id="cb25-38"><a href="#cb25-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">popup =</span> <span class="sc">~</span><span class="fu">paste0</span>(</span>
+<span id="cb25-39"><a href="#cb25-39" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;b&gt;"</span>, <span class="fu">toupper</span>(sehir), <span class="st">"&lt;/b&gt;&lt;br&gt;"</span>,</span>
+<span id="cb25-40"><a href="#cb25-40" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Yangın Sayısı: "</span>, adet, <span class="st">"&lt;br&gt;"</span>,</span>
+<span id="cb25-41"><a href="#cb25-41" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Yanan Alan: "</span>, hektar, <span class="st">" ha"</span></span>
+<span id="cb25-42"><a href="#cb25-42" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb25-43"><a href="#cb25-43" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-ff961dbf46bbbf08aad1" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-ff961dbf46bbbf08aad1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["CartoDB.Positron",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[37,37.7641667,38.76376,39.7216667,40.65,39.92077,36.88414,41.1833333,37.8444,39.648369,40.150131,38.885349,38.4,40.739479,37.726909,40.18257,40.155312,40.6,40.5505556,37.77652,37.91441,41.6666667,38.680969,39.75,39.9043189,39.784302,37.06622,40.912811,40.4602778,37.5833333,36.4018488,37.7666667,41.00527,38.41885,40.59267,41.38871,38.7333333,41.7333333,39.15,40.8532704,37.8666667,39.4166667,38.35519,38.619099,37.5833333,37.3122361,37.2152778,38.7432926,38.62442,37.9666667,40.9833333,41.02005,40.7568793,41.292782,37.94429,42.0264222,39.747662,40.9833333,40.3166667,41,39.1079868,37.15,38.682301,38.4941667,39.82,41.456409,38.36869,37.17593,39.846821,37.881168,37.5163889,41.6344444,41.110481,40.65,41.2,36.718399,37.06805,40.843849],[35.3213333,38.2761667,30.54034,43.0566667,35.8333333,32.85411,30.70563,41.8166667,27.8458,27.88261,29.983061,40.498291,42.1166667,31.611561,30.288876,29.06687,26.41416,33.6166667,34.9555556,29.08639,40.230629,26.5666667,39.226398,39.5,41.2678853,30.51922,37.38332,38.38953,39.4813889,43.7333333,36.3498097,30.55,28.97696,27.12872,43.077831,33.78273,35.4833333,27.2166667,34.1666667,29.8815203,32.4833333,29.9833333,38.30946,27.428921,36.9333333,40.735112,28.3636111,41.5064823,34.723969,34.6833333,37.8833333,40.523449,30.378138,36.33128,41.93288,35.1550745,37.017879,27.5166667,36.55,39.7333333,39.5401672,38.8,29.40819,43.38,34.8044444,31.798731,34.03698,33.228748,33.515251,41.13509,42.4611111,32.3375,42.702171,29.2666667,32.6333333,37.12122,36.261589,31.15654],[7.987490219086343,5.977666768899049,3.574562910343025,0.469041575982343,2.333988003396761,5.695612346359257,14.01846995930726,0.8845903006477066,2.960996453898586,9.789662915545152,4.751052514969709,3.944616584663204,5.279678020485719,10.09455298663591,3.021588985947626,8.732410892760372,35.6009129096432,5.641143501099755,2.658006772000403,3.089902911096075,8.741424369060228,3.924601890638081,4.272001872658765,1.320037878244408,1.645448267190433,9.509468965194639,6.375735251718032,2.053046516764781,2.862254356272342,1.806239186818844,13.45176568335919,2.512468905280222,4.418427322023075,23.59740451829396,0.6708203932499369,2.022374841615668,0.5431390245600107,2.847806173179628,0.05,2.302172886644267,2.259424705539001,7.588313383091133,4.643543905251677,11.25455463356947,9.48353836919533,4.876217796612452,9.614832291829119,2.392174742781137,1.503329637837291,0.758287544405155,3.045898882103606,1.08397416943394,2.585053190942113,2.065187642806338,2.702313823374332,1.75641680702503,3.884263121880391,5.501590679067282,2.327552362461477,2.876195403653931,1.357387196049823,3.782525611281436,2.065187642806338,2.005617112013158,2.62011450131478,1.152171862180291,1.696319545368737,0.3,0.158113883008419,0.8276472678623424,2.80490641555115,0.5916079783099616,0.3674234614174767,0.08660254037844387,1.77341478509682,1.425657742938325,4.765763317664863,1.364734406395618],null,null,{"interactive":true,"className":"","stroke":false,"color":"darkred","weight":5,"opacity":0.5,"fill":true,"fillColor":"darkred","fillOpacity":0.7},null,null,["<b>ADANA<\/b><br>Yangın Sayısı: 89<br>Yanan Alan: 255.2 ha","<b>ADIYAMAN<\/b><br>Yangın Sayısı: 33<br>Yanan Alan: 142.93 ha","<b>AFYONKARAHISAR<\/b><br>Yangın Sayısı: 12<br>Yanan Alan: 51.11 ha","<b>AGRI<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 0.88 ha","<b>AMASYA<\/b><br>Yangın Sayısı: 13<br>Yanan Alan: 21.79 ha","<b>ANKARA<\/b><br>Yangın Sayısı: 28<br>Yanan Alan: 129.76 ha","<b>ANTALYA<\/b><br>Yangın Sayısı: 171<br>Yanan Alan: 786.07 ha","<b>ARTVIN<\/b><br>Yangın Sayısı: 4<br>Yanan Alan: 3.13 ha","<b>AYDIN<\/b><br>Yangın Sayısı: 62<br>Yanan Alan: 35.07 ha","<b>BALIKESIR<\/b><br>Yangın Sayısı: 68<br>Yanan Alan: 383.35 ha","<b>BILECIK<\/b><br>Yangın Sayısı: 21<br>Yanan Alan: 90.29 ha","<b>BINGOL<\/b><br>Yangın Sayısı: 28<br>Yanan Alan: 62.24 ha","<b>BITLIS<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 111.5 ha","<b>BOLU<\/b><br>Yangın Sayısı: 30<br>Yanan Alan: 407.6 ha","<b>BURDUR<\/b><br>Yangın Sayısı: 25<br>Yanan Alan: 36.52 ha","<b>BURSA<\/b><br>Yangın Sayısı: 56<br>Yanan Alan: 305.02 ha","<b>CANAKKALE<\/b><br>Yangın Sayısı: 132<br>Yanan Alan: 5069.7 ha","<b>CANKIRI<\/b><br>Yangın Sayısı: 23<br>Yanan Alan: 127.29 ha","<b>CORUM<\/b><br>Yangın Sayısı: 23<br>Yanan Alan: 28.26 ha","<b>DENIZLI<\/b><br>Yangın Sayısı: 24<br>Yanan Alan: 38.19 ha","<b>DIYARBAKIR<\/b><br>Yangın Sayısı: 96<br>Yanan Alan: 305.65 ha","<b>EDIRNE<\/b><br>Yangın Sayısı: 29<br>Yanan Alan: 61.61 ha","<b>ELAZIG<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 73 ha","<b>ERZINCAN<\/b><br>Yangın Sayısı: 3<br>Yanan Alan: 6.97 ha","<b>ERZURUM<\/b><br>Yangın Sayısı: 8<br>Yanan Alan: 10.83 ha","<b>ESKISEHIR<\/b><br>Yangın Sayısı: 22<br>Yanan Alan: 361.72 ha","<b>GAZIANTEP<\/b><br>Yangın Sayısı: 32<br>Yanan Alan: 162.6 ha","<b>GIRESUN<\/b><br>Yangın Sayısı: 14<br>Yanan Alan: 16.86 ha","<b>GUMUSHANE<\/b><br>Yangın Sayısı: 16<br>Yanan Alan: 32.77 ha","<b>HAKKARI<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 13.05 ha","<b>HATAY<\/b><br>Yangın Sayısı: 43<br>Yanan Alan: 723.8 ha","<b>ISPARTA<\/b><br>Yangın Sayısı: 18<br>Yanan Alan: 25.25 ha","<b>ISTANBUL<\/b><br>Yangın Sayısı: 84<br>Yanan Alan: 78.09 ha","<b>IZMIR<\/b><br>Yangın Sayısı: 163<br>Yanan Alan: 2227.35 ha","<b>KARS<\/b><br>Yangın Sayısı: 4<br>Yanan Alan: 1.8 ha","<b>KASTAMONU<\/b><br>Yangın Sayısı: 42<br>Yanan Alan: 16.36 ha","<b>KAYSERI<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 1.18 ha","<b>KIRKLARELI<\/b><br>Yangın Sayısı: 28<br>Yanan Alan: 32.44 ha","<b>KIRSEHIR<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 0.01 ha","<b>KOCAELI<\/b><br>Yangın Sayısı: 20<br>Yanan Alan: 21.2 ha","<b>KONYA<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 20.42 ha","<b>KUTAHYA<\/b><br>Yangın Sayısı: 35<br>Yanan Alan: 230.33 ha","<b>MALATYA<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 86.25 ha","<b>MANISA<\/b><br>Yangın Sayısı: 154<br>Yanan Alan: 506.66 ha","<b>KAHRAMANMARAS<\/b><br>Yangın Sayısı: 111<br>Yanan Alan: 359.75 ha","<b>MARDIN<\/b><br>Yangın Sayısı: 37<br>Yanan Alan: 95.11 ha","<b>MUGLA<\/b><br>Yangın Sayısı: 261<br>Yanan Alan: 369.78 ha","<b>MUS<\/b><br>Yangın Sayısı: 4<br>Yanan Alan: 22.89 ha","<b>NEVSEHIR<\/b><br>Yangın Sayısı: 2<br>Yanan Alan: 9.04 ha","<b>NIGDE<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 2.3 ha","<b>ORDU<\/b><br>Yangın Sayısı: 27<br>Yanan Alan: 37.11 ha","<b>RIZE<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 4.7 ha","<b>SAKARYA<\/b><br>Yangın Sayısı: 40<br>Yanan Alan: 26.73 ha","<b>SAMSUN<\/b><br>Yangın Sayısı: 24<br>Yanan Alan: 17.06 ha","<b>SIIRT<\/b><br>Yangın Sayısı: 12<br>Yanan Alan: 29.21 ha","<b>SINOP<\/b><br>Yangın Sayısı: 27<br>Yanan Alan: 12.34 ha","<b>SIVAS<\/b><br>Yangın Sayısı: 12<br>Yanan Alan: 60.35 ha","<b>TEKIRDAG<\/b><br>Yangın Sayısı: 16<br>Yanan Alan: 121.07 ha","<b>TOKAT<\/b><br>Yangın Sayısı: 17<br>Yanan Alan: 21.67 ha","<b>TRABZON<\/b><br>Yangın Sayısı: 20<br>Yanan Alan: 33.09 ha","<b>TUNCELI<\/b><br>Yangın Sayısı: 12<br>Yanan Alan: 7.37 ha","<b>SANLIURFA<\/b><br>Yangın Sayısı: 6<br>Yanan Alan: 57.23 ha","<b>USAK<\/b><br>Yangın Sayısı: 14<br>Yanan Alan: 17.06 ha","<b>VAN<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 16.09 ha","<b>YOZGAT<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 27.46 ha","<b>ZONGULDAK<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 5.31 ha","<b>AKSARAY<\/b><br>Yangın Sayısı: 4<br>Yanan Alan: 11.51 ha","<b>KARAMAN<\/b><br>Yangın Sayısı: 2<br>Yanan Alan: 0.36 ha","<b>KIRIKKALE<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 0.1 ha","<b>BATMAN<\/b><br>Yangın Sayısı: 5<br>Yanan Alan: 2.74 ha","<b>SIRNAK<\/b><br>Yangın Sayısı: 23<br>Yanan Alan: 31.47 ha","<b>BARTIN<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 1.4 ha","<b>ARDAHAN<\/b><br>Yangın Sayısı: 2<br>Yanan Alan: 0.54 ha","<b>YALOVA<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 0.03 ha","<b>KARABUK<\/b><br>Yangın Sayısı: 21<br>Yanan Alan: 12.58 ha","<b>KILIS<\/b><br>Yangın Sayısı: 6<br>Yanan Alan: 8.13 ha","<b>OSMANIYE<\/b><br>Yangın Sayısı: 41<br>Yanan Alan: 90.85 ha","<b>DUZCE<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 7.45 ha"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[36.4018488,42.0264222],"lng":[26.41416,43.7333333]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="harita-2023-il-bazında-yangın-başına-ortalama-yanan-alan" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="harita-2023-il-bazında-yangın-başına-ortalama-yanan-alan"><span class="header-section-number">3.1.2</span> 🌍 Harita: 2023 – İl Bazında Yangın Başına Ortalama Yanan Alan</h3>
+<p>Bu interaktif harita, Türkiye’deki illerde 2023 yılı boyunca çıkan yangınlar başına düşen ortalama yanan alanı (hektar / adet) göstermektedir. Baloncukların büyüklüğü, o ildeki yangınların ortalama şiddetini yansıtmaktadır.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringi)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Karakter düzeltme fonksiyonu</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>duzelt <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tolower</span>(<span class="fu">stri_trans_general</span>(x, <span class="st">"Latin-ASCII"</span>))</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Koordinat verisini oku</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>koord <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/il.csv"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sehir =</span> <span class="fu">duzelt</span>(il_adi)) <span class="sc">|&gt;</span></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(sehir, lat, lon)</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. İl yangın verisini oku ve ortalama hesapla</span></span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>iller <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/iller_2023.xlsx"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sehir <span class="sc">!=</span> <span class="st">"Türkiye"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">sehir =</span> <span class="fu">duzelt</span>(sehir),</span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">adet =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">","</span>, <span class="st">"."</span>, adet)),</span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">hektar =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">","</span>, <span class="st">"."</span>, hektar)),</span>
+<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">oran =</span> hektar <span class="sc">/</span> adet</span>
+<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(oran), oran <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Birleştir</span></span>
+<span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a>veri <span class="ot">&lt;-</span> <span class="fu">left_join</span>(koord, iller, <span class="at">by =</span> <span class="st">"sehir"</span>) <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(lat), <span class="sc">!</span><span class="fu">is.na</span>(oran))</span>
+<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Renk paleti oluştur (kırmızı tonları)</span></span>
+<span id="cb26-32"><a href="#cb26-32" aria-hidden="true" tabindex="-1"></a>pal <span class="ot">&lt;-</span> <span class="fu">colorNumeric</span>(<span class="at">palette =</span> <span class="st">"YlOrRd"</span>, <span class="at">domain =</span> veri<span class="sc">$</span>oran)</span>
+<span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-34"><a href="#cb26-34" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Haritayı çiz</span></span>
+<span id="cb26-35"><a href="#cb26-35" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>(veri) <span class="sc">|&gt;</span></span>
+<span id="cb26-36"><a href="#cb26-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addProviderTiles</span>(<span class="st">"CartoDB.Positron"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb26-37"><a href="#cb26-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addCircleMarkers</span>(</span>
+<span id="cb26-38"><a href="#cb26-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">lng =</span> <span class="sc">~</span>lon,</span>
+<span id="cb26-39"><a href="#cb26-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">lat =</span> <span class="sc">~</span>lat,</span>
+<span id="cb26-40"><a href="#cb26-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">radius =</span> <span class="sc">~</span><span class="fu">sqrt</span>(oran)<span class="sc">*</span><span class="fl">2.5</span>, <span class="co"># daha fark edilir hale gelir</span></span>
+<span id="cb26-41"><a href="#cb26-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">fillColor =</span> <span class="sc">~</span><span class="fu">pal</span>(oran),</span>
+<span id="cb26-42"><a href="#cb26-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">fillOpacity =</span> <span class="fl">0.8</span>,</span>
+<span id="cb26-43"><a href="#cb26-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"#444"</span>, <span class="at">weight =</span> <span class="dv">1</span>,</span>
+<span id="cb26-44"><a href="#cb26-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">stroke =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb26-45"><a href="#cb26-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">popup =</span> <span class="sc">~</span><span class="fu">paste0</span>(</span>
+<span id="cb26-46"><a href="#cb26-46" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;b&gt;"</span>, <span class="fu">toupper</span>(sehir), <span class="st">"&lt;/b&gt;&lt;br&gt;"</span>,</span>
+<span id="cb26-47"><a href="#cb26-47" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Yangın Sayısı: "</span>, adet, <span class="st">"&lt;br&gt;"</span>,</span>
+<span id="cb26-48"><a href="#cb26-48" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Yanan Alan: "</span>, hektar, <span class="st">" ha&lt;br&gt;"</span>,</span>
+<span id="cb26-49"><a href="#cb26-49" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;b&gt;🔥 Ortalama Hektar / Yangın:&lt;/b&gt; "</span>, <span class="fu">round</span>(oran, <span class="dv">2</span>)</span>
+<span id="cb26-50"><a href="#cb26-50" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb26-51"><a href="#cb26-51" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb26-52"><a href="#cb26-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addLegend</span>(</span>
+<span id="cb26-53"><a href="#cb26-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">pal =</span> pal, <span class="at">values =</span> <span class="sc">~</span>oran,</span>
+<span id="cb26-54"><a href="#cb26-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Ortalama Hektar / Yangın"</span>,</span>
+<span id="cb26-55"><a href="#cb26-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="st">"bottomright"</span></span>
+<span id="cb26-56"><a href="#cb26-56" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-2822118bc514ec7ee035" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-2822118bc514ec7ee035">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["CartoDB.Positron",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[37,37.7641667,38.76376,39.7216667,40.65,39.92077,36.88414,41.1833333,37.8444,39.648369,40.150131,38.885349,38.4,40.739479,37.726909,40.18257,40.155312,40.6,40.5505556,37.77652,37.91441,41.6666667,38.680969,39.75,39.9043189,39.784302,37.06622,40.912811,40.4602778,37.5833333,36.4018488,37.7666667,41.00527,38.41885,40.59267,41.38871,38.7333333,41.7333333,39.15,40.8532704,37.8666667,39.4166667,38.35519,38.619099,37.5833333,37.3122361,37.2152778,38.7432926,38.62442,37.9666667,40.9833333,41.02005,40.7568793,41.292782,37.94429,42.0264222,39.747662,40.9833333,40.3166667,41,39.1079868,37.15,38.682301,38.4941667,39.82,41.456409,38.36869,37.17593,39.846821,37.881168,37.5163889,41.6344444,41.110481,40.65,41.2,36.718399,37.06805,40.843849],[35.3213333,38.2761667,30.54034,43.0566667,35.8333333,32.85411,30.70563,41.8166667,27.8458,27.88261,29.983061,40.498291,42.1166667,31.611561,30.288876,29.06687,26.41416,33.6166667,34.9555556,29.08639,40.230629,26.5666667,39.226398,39.5,41.2678853,30.51922,37.38332,38.38953,39.4813889,43.7333333,36.3498097,30.55,28.97696,27.12872,43.077831,33.78273,35.4833333,27.2166667,34.1666667,29.8815203,32.4833333,29.9833333,38.30946,27.428921,36.9333333,40.735112,28.3636111,41.5064823,34.723969,34.6833333,37.8833333,40.523449,30.378138,36.33128,41.93288,35.1550745,37.017879,27.5166667,36.55,39.7333333,39.5401672,38.8,29.40819,43.38,34.8044444,31.798731,34.03698,33.228748,33.515251,41.13509,42.4611111,32.3375,42.702171,29.2666667,32.6333333,37.12122,36.261589,31.15654],[4.23336134940153,5.202891096071083,5.159437146304494,2.345207879911715,3.236659008678786,5.381847797391312,5.360095955761498,2.211475751619266,1.880234628461171,5.935855035291882,5.183823281085478,3.727312321614214,8.347903928532,9.215023964519391,3.021588985947626,5.834587450221798,15.49330867298408,5.881298658718453,2.771163623117003,3.153618952885715,4.460839443609988,3.643901376461678,6.754628043053148,3.810621121724558,2.908769069555024,10.13712797770471,5.635407039424925,2.743498808872662,3.577817945340428,3.413471211872998,10.25687517580735,2.960973000739978,2.410449720932353,9.241456840773392,1.677050983124842,1.560296064701763,1.026436275942851,2.690923898695656,0.25,2.57390753524675,4.269911340665384,6.413295341932815,8.775473125218296,4.534589286804263,4.500688135573681,4.00822633821724,2.975715889911412,5.980436856952843,5.315072906367324,3.791437722025775,2.930917565844829,1.713913650100261,2.043663989015807,2.107773311656956,3.900454033400043,1.69011286057514,5.60645089755245,6.876988348834102,2.822571835171938,3.215684219571319,1.959219657584791,7.721048072207123,2.759723070993071,10.02808556006579,4.951550983566376,1.821743670223668,4.240798863421843,1.060660171779821,0.7905694150420949,1.850675552332175,2.924317088617889,1.118033988749895,1.299038105676658,0.4330127018922193,1.934954164585719,2.910111681705704,3.721435927952228,2.157834562704009],null,null,{"interactive":true,"className":"","stroke":true,"color":"#444","weight":1,"opacity":0.5,"fill":true,"fillColor":["#FFF4B2","#FFEFA4","#FFEFA5","#FFFCC4","#FFF9BD","#FFEEA2","#FFEEA2","#FFFCC5","#FFFDC7","#FFEA99","#FFEFA5","#FFF7B8","#FFCD69","#FEB953","#FFFABF","#FFEA9A","#800026","#FFEA9A","#FFFAC1","#FFF9BD","#FFF3AF","#FFF7B9","#FFE38A","#FFF6B7","#FFFAC0","#FEA345","#FFEC9E","#FFFAC1","#FFF7B9","#FFF8BB","#FEA044","#FFFABF","#FFFCC4","#FEB853","#FFFDC8","#FFFEC9","#FFFECB","#FFFBC1","#FFFFCC","#FFFBC2","#FFF4B1","#FFE691","#FFC35E","#FFF3AE","#FFF3AE","#FFF5B5","#FFFABF","#FFE998","#FFEEA3","#FFF6B7","#FFFABF","#FFFDC8","#FFFDC6","#FFFCC6","#FFF6B6","#FFFDC8","#FFEC9E","#FFE188","#FFFAC0","#FFF9BD","#FFFDC6","#FED977","#FFFAC1","#FEA546","#FFF0A8","#FFFDC7","#FFF4B2","#FFFECA","#FFFFCB","#FFFDC7","#FFFAC0","#FFFECA","#FFFECA","#FFFFCC","#FFFDC7","#FFFAC0","#FFF7B8","#FFFCC5"],"fillOpacity":0.8},null,null,["<b>ADANA<\/b><br>Yangın Sayısı: 89<br>Yanan Alan: 255.2 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 2.87","<b>ADIYAMAN<\/b><br>Yangın Sayısı: 33<br>Yanan Alan: 142.93 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 4.33","<b>AFYONKARAHISAR<\/b><br>Yangın Sayısı: 12<br>Yanan Alan: 51.11 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 4.26","<b>AGRI<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 0.88 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.88","<b>AMASYA<\/b><br>Yangın Sayısı: 13<br>Yanan Alan: 21.79 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.68","<b>ANKARA<\/b><br>Yangın Sayısı: 28<br>Yanan Alan: 129.76 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 4.63","<b>ANTALYA<\/b><br>Yangın Sayısı: 171<br>Yanan Alan: 786.07 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 4.6","<b>ARTVIN<\/b><br>Yangın Sayısı: 4<br>Yanan Alan: 3.13 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.78","<b>AYDIN<\/b><br>Yangın Sayısı: 62<br>Yanan Alan: 35.07 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.57","<b>BALIKESIR<\/b><br>Yangın Sayısı: 68<br>Yanan Alan: 383.35 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 5.64","<b>BILECIK<\/b><br>Yangın Sayısı: 21<br>Yanan Alan: 90.29 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 4.3","<b>BINGOL<\/b><br>Yangın Sayısı: 28<br>Yanan Alan: 62.24 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 2.22","<b>BITLIS<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 111.5 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 11.15","<b>BOLU<\/b><br>Yangın Sayısı: 30<br>Yanan Alan: 407.6 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 13.59","<b>BURDUR<\/b><br>Yangın Sayısı: 25<br>Yanan Alan: 36.52 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.46","<b>BURSA<\/b><br>Yangın Sayısı: 56<br>Yanan Alan: 305.02 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 5.45","<b>CANAKKALE<\/b><br>Yangın Sayısı: 132<br>Yanan Alan: 5069.7 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 38.41","<b>CANKIRI<\/b><br>Yangın Sayısı: 23<br>Yanan Alan: 127.29 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 5.53","<b>CORUM<\/b><br>Yangın Sayısı: 23<br>Yanan Alan: 28.26 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.23","<b>DENIZLI<\/b><br>Yangın Sayısı: 24<br>Yanan Alan: 38.19 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.59","<b>DIYARBAKIR<\/b><br>Yangın Sayısı: 96<br>Yanan Alan: 305.65 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 3.18","<b>EDIRNE<\/b><br>Yangın Sayısı: 29<br>Yanan Alan: 61.61 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 2.12","<b>ELAZIG<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 73 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 7.3","<b>ERZINCAN<\/b><br>Yangın Sayısı: 3<br>Yanan Alan: 6.97 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 2.32","<b>ERZURUM<\/b><br>Yangın Sayısı: 8<br>Yanan Alan: 10.83 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.35","<b>ESKISEHIR<\/b><br>Yangın Sayısı: 22<br>Yanan Alan: 361.72 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 16.44","<b>GAZIANTEP<\/b><br>Yangın Sayısı: 32<br>Yanan Alan: 162.6 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 5.08","<b>GIRESUN<\/b><br>Yangın Sayısı: 14<br>Yanan Alan: 16.86 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.2","<b>GUMUSHANE<\/b><br>Yangın Sayısı: 16<br>Yanan Alan: 32.77 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 2.05","<b>HAKKARI<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 13.05 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.86","<b>HATAY<\/b><br>Yangın Sayısı: 43<br>Yanan Alan: 723.8 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 16.83","<b>ISPARTA<\/b><br>Yangın Sayısı: 18<br>Yanan Alan: 25.25 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.4","<b>ISTANBUL<\/b><br>Yangın Sayısı: 84<br>Yanan Alan: 78.09 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.93","<b>IZMIR<\/b><br>Yangın Sayısı: 163<br>Yanan Alan: 2227.35 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 13.66","<b>KARS<\/b><br>Yangın Sayısı: 4<br>Yanan Alan: 1.8 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.45","<b>KASTAMONU<\/b><br>Yangın Sayısı: 42<br>Yanan Alan: 16.36 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.39","<b>KAYSERI<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 1.18 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.17","<b>KIRKLARELI<\/b><br>Yangın Sayısı: 28<br>Yanan Alan: 32.44 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.16","<b>KIRSEHIR<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 0.01 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.01","<b>KOCAELI<\/b><br>Yangın Sayısı: 20<br>Yanan Alan: 21.2 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.06","<b>KONYA<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 20.42 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 2.92","<b>KUTAHYA<\/b><br>Yangın Sayısı: 35<br>Yanan Alan: 230.33 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 6.58","<b>MALATYA<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 86.25 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 12.32","<b>MANISA<\/b><br>Yangın Sayısı: 154<br>Yanan Alan: 506.66 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 3.29","<b>KAHRAMANMARAS<\/b><br>Yangın Sayısı: 111<br>Yanan Alan: 359.75 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 3.24","<b>MARDIN<\/b><br>Yangın Sayısı: 37<br>Yanan Alan: 95.11 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 2.57","<b>MUGLA<\/b><br>Yangın Sayısı: 261<br>Yanan Alan: 369.78 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.42","<b>MUS<\/b><br>Yangın Sayısı: 4<br>Yanan Alan: 22.89 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 5.72","<b>NEVSEHIR<\/b><br>Yangın Sayısı: 2<br>Yanan Alan: 9.04 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 4.52","<b>NIGDE<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 2.3 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 2.3","<b>ORDU<\/b><br>Yangın Sayısı: 27<br>Yanan Alan: 37.11 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.37","<b>RIZE<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 4.7 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.47","<b>SAKARYA<\/b><br>Yangın Sayısı: 40<br>Yanan Alan: 26.73 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.67","<b>SAMSUN<\/b><br>Yangın Sayısı: 24<br>Yanan Alan: 17.06 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.71","<b>SIIRT<\/b><br>Yangın Sayısı: 12<br>Yanan Alan: 29.21 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 2.43","<b>SINOP<\/b><br>Yangın Sayısı: 27<br>Yanan Alan: 12.34 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.46","<b>SIVAS<\/b><br>Yangın Sayısı: 12<br>Yanan Alan: 60.35 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 5.03","<b>TEKIRDAG<\/b><br>Yangın Sayısı: 16<br>Yanan Alan: 121.07 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 7.57","<b>TOKAT<\/b><br>Yangın Sayısı: 17<br>Yanan Alan: 21.67 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.27","<b>TRABZON<\/b><br>Yangın Sayısı: 20<br>Yanan Alan: 33.09 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.65","<b>TUNCELI<\/b><br>Yangın Sayısı: 12<br>Yanan Alan: 7.37 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.61","<b>SANLIURFA<\/b><br>Yangın Sayısı: 6<br>Yanan Alan: 57.23 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 9.54","<b>USAK<\/b><br>Yangın Sayısı: 14<br>Yanan Alan: 17.06 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.22","<b>VAN<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 16.09 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 16.09","<b>YOZGAT<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 27.46 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 3.92","<b>ZONGULDAK<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 5.31 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.53","<b>AKSARAY<\/b><br>Yangın Sayısı: 4<br>Yanan Alan: 11.51 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 2.88","<b>KARAMAN<\/b><br>Yangın Sayısı: 2<br>Yanan Alan: 0.36 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.18","<b>KIRIKKALE<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 0.1 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.1","<b>BATMAN<\/b><br>Yangın Sayısı: 5<br>Yanan Alan: 2.74 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.55","<b>SIRNAK<\/b><br>Yangın Sayısı: 23<br>Yanan Alan: 31.47 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.37","<b>BARTIN<\/b><br>Yangın Sayısı: 7<br>Yanan Alan: 1.4 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.2","<b>ARDAHAN<\/b><br>Yangın Sayısı: 2<br>Yanan Alan: 0.54 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.27","<b>YALOVA<\/b><br>Yangın Sayısı: 1<br>Yanan Alan: 0.03 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.03","<b>KARABUK<\/b><br>Yangın Sayısı: 21<br>Yanan Alan: 12.58 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.6","<b>KILIS<\/b><br>Yangın Sayısı: 6<br>Yanan Alan: 8.13 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 1.36","<b>OSMANIYE<\/b><br>Yangın Sayısı: 41<br>Yanan Alan: 90.85 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 2.22","<b>DUZCE<\/b><br>Yangın Sayısı: 10<br>Yanan Alan: 7.45 ha<br><b>🔥 Ortalama Hektar / Yangın:<\/b> 0.74"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#FFFFCC , #FFEC9E 12.9958685023617%, #FED673 26.0177808293774%, #FEAE4A 39.0396931563932%, #FD8439 52.0616054834089%, #F74527 65.0835178104246%, #D9141F 78.1054301374404%, #AB0026 91.1273424644561%, #800026 "],"labels":["5","10","15","20","25","30","35"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"numeric","title":"Ortalama Hektar / Yangın","extra":{"p_1":0.129958685023617,"p_n":0.911273424644561},"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[36.4018488,42.0264222],"lng":[26.41416,43.7333333]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p><strong>Grafik Yorumu:</strong><br>
+Haritada balon çapı büyüdükçe, o ilde çıkan yangınların <strong>daha büyük alanlara yayıldığı</strong> görülmektedir. Bu da yangının kontrolünün daha zor olduğunu gösterir.</p>
+<p>2023 yılı verilerine göre <strong>Mersin</strong>, <strong>Çanakkale</strong>, <strong>Kahramanmaraş</strong> gibi illerde yangın sayısı az olmasına rağmen, yangın başına düşen yanan alan oldukça yüksektir. Bu durum, bu illerdeki yangınların genellikle <strong>daha şiddetli ve yaygın</strong> olduğunu, dolayısıyla kontrol altına alınmalarının daha zor olabileceğini düşündürmektedir.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Excel dosyasını oku (tam yol)</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>vasif_df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/vasfina_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Sütun isimlerini Türkçe karaktersiz olarak ayarla</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(vasif_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"bolge"</span>, <span class="st">"toplam_hektar"</span>, <span class="st">"normal_koru"</span>, <span class="st">"bos_kapali_koru"</span>,</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"normal_bataklik"</span>, <span class="st">"bos_kapali_bataklik"</span>, <span class="st">"makilik"</span>,</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"agaclandirma_sahasi"</span>, <span class="st">"milli_park"</span>, <span class="st">"orman_topragi"</span></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a><span class="co"># "Toplam-Total" satırını çıkar (tek satırlık toplam veridir, grafik dışında tutuyoruz)</span></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>vasif_df <span class="ot">&lt;-</span> vasif_df <span class="sc">|&gt;</span> <span class="fu">filter</span>(bolge <span class="sc">!=</span> <span class="st">"Toplam-Total"</span>)</span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a><span class="co"># "-" karakterlerini NA yap ve sayıya çevir</span></span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>vasif_df <span class="ot">&lt;-</span> vasif_df <span class="sc">|&gt;</span></span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="sc">-</span>bolge, <span class="sc">~</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"-"</span>, <span class="cn">NA</span>, .))))</span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Uzun formata pivotla (grafik için)</span></span>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a>vasif_long <span class="ot">&lt;-</span> vasif_df <span class="sc">|&gt;</span></span>
+<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span><span class="fu">c</span>(bolge, toplam_hektar),</span>
+<span id="cb27-27"><a href="#cb27-27" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"vasif_turu"</span>,</span>
+<span id="cb27-28"><a href="#cb27-28" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"alan"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb27-29"><a href="#cb27-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(alan), alan <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb27-30"><a href="#cb27-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-31"><a href="#cb27-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik: Bölge müdürlüklerine göre vasıf türlerinin dağılımı</span></span>
+<span id="cb27-32"><a href="#cb27-32" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(vasif_long, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(bolge, <span class="sc">-</span>toplam_hektar), <span class="at">y =</span> alan, <span class="at">fill =</span> vasif_turu)) <span class="sc">+</span></span>
+<span id="cb27-33"><a href="#cb27-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb27-34"><a href="#cb27-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb27-35"><a href="#cb27-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"      Bolge Mudurluklerine Gore Orman Vasif Turlerinin Yanan Alan Dagilimi-2023"</span>,</span>
+<span id="cb27-36"><a href="#cb27-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Orman Bolge Mudurlugu"</span>,</span>
+<span id="cb27-37"><a href="#cb27-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Yanan Alan (ha)"</span>,</span>
+<span id="cb27-38"><a href="#cb27-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Vasif Turu"</span></span>
+<span id="cb27-39"><a href="#cb27-39" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb27-40"><a href="#cb27-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">11</span>) <span class="sc">+</span></span>
+<span id="cb27-41"><a href="#cb27-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb27-42"><a href="#cb27-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb27-43"><a href="#cb27-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>)</span>
+<span id="cb27-44"><a href="#cb27-44" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb27-45"><a href="#cb27-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>())</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="project_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -815,108 +953,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details class="code-fold">
 <summary>Kod</summary>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Veriyi oku</span></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>silvi_df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/silvikulturel_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Sütun adları sade</span></span>
-<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(silvi_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"bolge"</span>, <span class="st">"toplam_alan"</span>, <span class="st">"ortuye_zarar_gormeyen"</span>,</span>
-<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dogal_genclestirme"</span>, <span class="st">"suni_genclestirme"</span>, <span class="st">"rehabilitasyon"</span>,</span>
-<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"agaclandirma"</span>, <span class="st">"koruma_altina_alinan"</span>, <span class="st">"gelecek_yila_birakilan"</span></span>
-<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Toplam satırı çıkar</span></span>
-<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>silvi_df <span class="ot">&lt;-</span> silvi_df <span class="sc">|&gt;</span> <span class="fu">filter</span>(bolge <span class="sc">!=</span> <span class="st">"Toplaml"</span>)</span>
-<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Sayısallaştır</span></span>
-<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>silvi_df <span class="ot">&lt;-</span> silvi_df <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="sc">-</span>bolge, <span class="sc">~</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"-"</span>, <span class="cn">NA</span>, .))))</span>
-<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Müdahale türü toplamlarını hesapla</span></span>
-<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a>turkiye_geneli <span class="ot">&lt;-</span> silvi_df <span class="sc">|&gt;</span></span>
-<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>toplam_alan) <span class="sc">|&gt;</span></span>
-<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>bolge,</span>
-<span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"mudahale_turu"</span>,</span>
-<span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"alan"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(alan)) <span class="sc">|&gt;</span></span>
-<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(mudahale_turu) <span class="sc">|&gt;</span></span>
-<span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">toplam_alan =</span> <span class="fu">sum</span>(alan)) <span class="sc">|&gt;</span></span>
-<span id="cb26-32"><a href="#cb26-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(toplam_alan))</span>
-<span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-34"><a href="#cb26-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Başlık</span></span>
-<span id="cb26-35"><a href="#cb26-35" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">" Grafik: Türkiye Genelinde Yangın Sonrası Müdahale Türlerinin Dağılımı (2023)</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Veriyi oku</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>silvi_df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/silvikulturel_2023.xlsx"</span>, <span class="at">.name_repair =</span> <span class="st">"minimal"</span>)</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Sütun adları sade</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(silvi_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"bolge"</span>, <span class="st">"toplam_alan"</span>, <span class="st">"ortuye_zarar_gormeyen"</span>,</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dogal_genclestirme"</span>, <span class="st">"suni_genclestirme"</span>, <span class="st">"rehabilitasyon"</span>,</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"agaclandirma"</span>, <span class="st">"koruma_altina_alinan"</span>, <span class="st">"gelecek_yila_birakilan"</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Toplam satırı çıkar</span></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>silvi_df <span class="ot">&lt;-</span> silvi_df <span class="sc">|&gt;</span> <span class="fu">filter</span>(bolge <span class="sc">!=</span> <span class="st">"Toplaml"</span>)</span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Sayısallaştır</span></span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a>silvi_df <span class="ot">&lt;-</span> silvi_df <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="sc">-</span>bolge, <span class="sc">~</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"-"</span>, <span class="cn">NA</span>, .))))</span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Müdahale türü toplamlarını hesapla</span></span>
+<span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a>turkiye_geneli <span class="ot">&lt;-</span> silvi_df <span class="sc">|&gt;</span></span>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>toplam_alan) <span class="sc">|&gt;</span></span>
+<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>bolge,</span>
+<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"mudahale_turu"</span>,</span>
+<span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"alan"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(alan)) <span class="sc">|&gt;</span></span>
+<span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(mudahale_turu) <span class="sc">|&gt;</span></span>
+<span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">toplam_alan =</span> <span class="fu">sum</span>(alan)) <span class="sc">|&gt;</span></span>
+<span id="cb28-32"><a href="#cb28-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(toplam_alan))</span>
+<span id="cb28-33"><a href="#cb28-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-34"><a href="#cb28-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Başlık</span></span>
+<span id="cb28-35"><a href="#cb28-35" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">" Grafik: Türkiye Genelinde Yangın Sonrası Müdahale Türlerinin Dağılımı (2023)</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> Grafik: Türkiye Genelinde Yangın Sonrası Müdahale Türlerinin Dağılımı (2023)</code></pre>
 </div>
 <details class="code-fold">
 <summary>Kod</summary>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(turkiye_geneli, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(mudahale_turu, toplam_alan), <span class="at">y =</span> toplam_alan)) <span class="sc">+</span></span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"darkolivegreen4"</span>) <span class="sc">+</span></span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="cn">NULL</span>,</span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="st">"Mudahale Turu"</span>, <span class="at">y =</span> <span class="st">"Toplam Alan (ha)"</span></span>
-<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">11</span>) <span class="sc">+</span></span>
-<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span></span>
-<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>())</span>
-<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="project_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Yukarıdaki grafik, 2023 yılında orman yangınlarından etkilenen alanlara uygulanan silvikültürel müdahale türlerini ve bu müdahalelerin toplam alan (hektar) cinsinden büyüklüklerini göstermektedir. En büyük payı, herhangi bir müdahale yapılmayarak gelecek yıla bırakılan alanlar oluşturmaktadır. Onu sırasıyla örtüye zarar görmeyen alanlar ve doğal gençleştirme uygulamaları takip etmektedir. En az müdahale ise koruma altına alınan alanlarda yapılmıştır.</p>
-</section>
-<section id="trend-analizi" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="trend-analizi"><span class="header-section-number">3.2</span> Trend Analizi</h2>
-<p>Zaman içinde yangınların sayısı ve yanan alanların değişim trendleri analiz edilecektir.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Kod</summary>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Veriyi oku ve temizle</span></span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_2023.xlsx"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">yil =</span> <span class="fu">as.numeric</span>(yil),</span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">adet =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"[^0-9.]"</span>, <span class="st">""</span>, adet)),</span>
-<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">hektar =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"[^0-9.]"</span>, <span class="st">""</span>, hektar))</span>
-<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(yil), <span class="sc">!</span><span class="fu">is.na</span>(adet), <span class="sc">!</span><span class="fu">is.na</span>(hektar))</span>
-<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik 1: Yangın Sayısı</span></span>
-<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> yil, <span class="at">y =</span> adet)) <span class="sc">+</span></span>
-<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
-<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"darkred"</span>) <span class="sc">+</span></span>
-<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Yıllara Göre Orman Yangın Sayısı ve Trend Analizi (1988–2023)"</span>,</span>
-<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Yıl"</span>,</span>
-<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Yangın Sayısı (adet)"</span></span>
-<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>),</span>
-<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>)</span>
-<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fu">min</span>(df<span class="sc">$</span>yil), <span class="fu">max</span>(df<span class="sc">$</span>yil), <span class="at">by =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>())</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(turkiye_geneli, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(mudahale_turu, toplam_alan), <span class="at">y =</span> toplam_alan)) <span class="sc">+</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"darkolivegreen4"</span>) <span class="sc">+</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="st">"Turkiye Genelinde Yangin Sonrasi Mudahale Turlerinin Dagilimi (2023)"</span>,</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="st">"Mudahale Turu"</span>, <span class="at">y =</span> <span class="st">"Toplam Alan (ha)"</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">11</span>) <span class="sc">+</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>())</span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -925,32 +1015,120 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
+</div>
+<p>Yukarıdaki grafik, 2023 yılında orman yangınlarından etkilenen alanlara uygulanan silvikültürel müdahale türlerini ve bu müdahalelerin toplam alan (hektar) cinsinden büyüklüklerini göstermektedir. En büyük payı, herhangi bir müdahale yapılmayarak gelecek yıla bırakılan alanlar oluşturmaktadır. Onu sırasıyla örtüye zarar görmeyen alanlar ve doğal gençleştirme uygulamaları takip etmektedir. En az müdahale ise koruma altına alınan alanlarda yapılmıştır.</p>
+</section>
+</section>
+<section id="trend-analizi" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="trend-analizi"><span class="header-section-number">3.2</span> Trend Analizi</h2>
+<div class="cell">
 <details class="code-fold">
 <summary>Kod</summary>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------------------------------------------------</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik 2: Yanan Alan</span></span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> yil, <span class="at">y =</span> hektar)) <span class="sc">+</span></span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"darkgreen"</span>, <span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"forestgreen"</span>) <span class="sc">+</span></span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Yıllara Göre Yanan Alan ve Trend Analizi (1988–2023)"</span>,</span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Yıl"</span>,</span>
-<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Yanan Alan (hektar)"</span></span>
-<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>),</span>
-<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>)</span>
-<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fu">min</span>(df<span class="sc">$</span>yil), <span class="fu">max</span>(df<span class="sc">$</span>yil), <span class="at">by =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>())</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Veriyi oku ve temizle</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_2023.xlsx"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">yil =</span> <span class="fu">as.numeric</span>(yil),</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">adet =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"[^0-9.]"</span>, <span class="st">""</span>, adet)),</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">hektar =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"[^0-9.]"</span>, <span class="st">""</span>, hektar))</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(yil), <span class="sc">!</span><span class="fu">is.na</span>(adet), <span class="sc">!</span><span class="fu">is.na</span>(hektar))</span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik 1: Yangın Sayısı</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> yil, <span class="at">y =</span> adet)) <span class="sc">+</span></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"darkred"</span>) <span class="sc">+</span></span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Yıllara Göre Orman Yangın Sayısı ve Trend Analizi (1988–2023)"</span>,</span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Yıl"</span>,</span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Yangın Sayısı (adet)"</span></span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>)</span>
+<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fu">min</span>(df<span class="sc">$</span>yil), <span class="fu">max</span>(df<span class="sc">$</span>yil), <span class="at">by =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>())</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="project_files/figure-html/unnamed-chunk-8-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="project_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------------------------------------------------</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik 2: Yanan Alan</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> yil, <span class="at">y =</span> hektar)) <span class="sc">+</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"darkgreen"</span>, <span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"forestgreen"</span>) <span class="sc">+</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Yıllara Göre Yanan Alan ve Trend Analizi (1988–2023)"</span>,</span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Yıl"</span>,</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Yanan Alan (hektar)"</span></span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>)</span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fu">min</span>(df<span class="sc">$</span>yil), <span class="fu">max</span>(df<span class="sc">$</span>yil), <span class="at">by =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>())</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="project_files/figure-html/unnamed-chunk-9-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Veriyi oku ve hesapla</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_2023.xlsx"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">yil =</span> <span class="fu">as.numeric</span>(yil),</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">adet =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"[^0-9.]"</span>, <span class="st">""</span>, adet)),</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">hektar =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"[^0-9.]"</span>, <span class="st">""</span>, hektar)),</span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">ortalama_hektar =</span> hektar <span class="sc">/</span> adet</span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(yil), <span class="sc">!</span><span class="fu">is.na</span>(ortalama_hektar), ortalama_hektar <span class="sc">&lt;</span> <span class="dv">100</span>)  <span class="co"># çok uç yılları filtrele</span></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik</span></span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> yil, <span class="at">y =</span> ortalama_hektar)) <span class="sc">+</span></span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"#984ea3"</span>, <span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"#6a3d9a"</span>) <span class="sc">+</span></span>
+<span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb33-21"><a href="#cb33-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb33-22"><a href="#cb33-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Yıllara Göre Yangın Başına Ortalama Yanan Alan (Hektar)"</span>,</span>
+<span id="cb33-23"><a href="#cb33-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Yıl"</span>,</span>
+<span id="cb33-24"><a href="#cb33-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Ortalama Hektar / Yangın"</span></span>
+<span id="cb33-25"><a href="#cb33-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb33-26"><a href="#cb33-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb33-27"><a href="#cb33-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span></span>
+<span id="cb33-28"><a href="#cb33-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>())</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="project_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -958,19 +1136,120 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="modelleme" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="modelleme"><span class="header-section-number">3.3</span> Modelleme</h2>
+<section id="arima-zaman-serisi-analizi-yangın-sayısı-tahmini-20242026" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="arima-zaman-serisi-analizi-yangın-sayısı-tahmini-20242026"><span class="header-section-number">3.3.1</span> 🔮 ARIMA Zaman Serisi Analizi: Yangın Sayısı Tahmini (2024–2026)</h3>
+<p>Bu bölümde, geçmiş verilere dayalı olarak 2024–2026 yıllarına ait orman yangını sayısı tahmini yapılmıştır. Tahminler, ARIMA (Auto-Regressive Integrated Moving Average) zaman serisi modeli ile elde edilmiştir.</p>
 <p>Gerekirse yangın nedenleri ve etkileri üzerine istatistiksel modeller kurulacaktır.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Kod</summary>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gerekli paketleri yükle (ilk kez çalıştırıyorsan sadece)</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("forecast")</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forecast)</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Veriyi oku ve zaman serisine çevir</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_2023.xlsx"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">yil =</span> <span class="fu">as.numeric</span>(yil),</span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">adet =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"[^0-9.]"</span>, <span class="st">""</span>, adet))</span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(adet))</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Zaman serisi oluştur</span></span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>adet_ts <span class="ot">&lt;-</span> <span class="fu">ts</span>(df<span class="sc">$</span>adet, <span class="at">start =</span> <span class="dv">1988</span>, <span class="at">frequency =</span> <span class="dv">1</span>)</span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. ARIMA modeli kur ve tahmin yap</span></span>
+<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">auto.arima</span>(adet_ts)</span>
+<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a>tahmin <span class="ot">&lt;-</span> <span class="fu">forecast</span>(model, <span class="at">h =</span> <span class="dv">3</span>)  <span class="co"># 2024–2026 için tahmin</span></span>
+<span id="cb34-23"><a href="#cb34-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-24"><a href="#cb34-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Tahmin grafiği</span></span>
+<span id="cb34-25"><a href="#cb34-25" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(tahmin) <span class="sc">+</span></span>
+<span id="cb34-26"><a href="#cb34-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb34-27"><a href="#cb34-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"2024–2026 Yılları İçin Orman Yangını Sayısı Tahmini (ARIMA)"</span>,</span>
+<span id="cb34-28"><a href="#cb34-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Yıl"</span>,</span>
+<span id="cb34-29"><a href="#cb34-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Tahmin Edilen Yangın Sayısı"</span></span>
+<span id="cb34-30"><a href="#cb34-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb34-31"><a href="#cb34-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="project_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Grafik Yorumu:</strong><br>
+Bu zaman serisi modeli, geçmiş yıllardaki düzensizlik ve dalgalanmalar nedeniyle tahmin aralığı geniş bir öngörü sunmaktadır. ARIMA modeline göre, 2024–2026 yıllarında Türkiye’de çıkacak orman yangını sayısının yaklaşık <strong>2100–2400 aralığında</strong> olması beklenmektedir. Ancak tahminin etrafındaki belirsizlik bandı oldukça geniştir, bu da modelin tahmin gücünü sınırlamaktadır.</p>
+<ul>
+<li><strong>Siyah çizgi:</strong> 1988–2023 yılları arasındaki gerçek yangın sayısı<br>
+</li>
+<li><strong>Ortadaki koyu mavi çizgi:</strong> Modelin en olası tahmini (point forecast)<br>
+</li>
+<li><strong>Mavi gölgeli alan:</strong> %80 ve %95 güven aralığı (belirsizlik payı)</li>
+</ul>
+<p>Model, 2020 sonrası yıllarda belirgin bir trend belirleyememiştir. Bu nedenle, çevresel değişkenler (iklim, kuraklık, rüzgar vb.) ve insan faaliyetleri dikkate alınmadan yapılan bu tahminler sadece genel bir öngörü niteliğindedir.</p>
 </section>
-<section id="sonuçlar" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="sonuçlar"><span class="header-section-number">3.4</span> Sonuçlar</h2>
-<p>Elde edilen bulgular grafikler ve tablolarla sunulacaktır.</p>
 </section>
 </section>
 <section id="sonuçlar-ve-öneriler" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Sonuçlar ve Öneriler</h1>
-<p>Çalışmadan elde edilen temel bulgular özetlenecek ve politika yapıcılar için öneriler geliştirilecektir.</p>
+<section id="çalışmanın-özeti" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="çalışmanın-özeti"><span class="header-section-number">4.1</span> 📌 Çalışmanın Özeti</h2>
+<p>Bu proje kapsamında, Türkiye’deki orman yangınları 1988–2023 yılları arasında kapsamlı biçimde analiz edilmiştir. Çalışma, yalnızca sayısal bir raporlama değil, aynı zamanda <strong>veri temizleme, ön işleme, görselleştirme ve tahminleme</strong> adımlarını içeren <strong>uçtan uca bir analitik süreci</strong> yansıtmaktadır.</p>
+<p>Veri kaynakları Orman Genel Müdürlüğü (OGM)’nin resmi Excel dosyalarıdır. Bu dosyalar ham biçimden alınmış, Türkçe karakter sorunları çözülmüş, sütun isimleri düzenlenmiş, <strong>eksik veriler (NA), hatalı karakterler, boşluklar ve “-” gibi semboller temizlenmiştir</strong>. Tüm veriler okunabilir ve analiz edilebilir hale getirilmiştir.</p>
+<p>Bazı veri setlerinde toplam satırlarının analiz dışında bırakılması sağlanmıştır. <strong>Türkçe karakter hataları düzeltilmiş</strong>, <code>readxl</code>, <code>dplyr</code>, <code>tidyr</code>, <code>ggplot2</code>, <code>leaflet</code>, <code>forecast</code> gibi R paketleriyle güçlü veri hazırlığı ve modelleme adımları yürütülmüştür.</p>
+<hr>
+</section>
+<section id="temel-bulgular" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="temel-bulgular"><span class="header-section-number">4.2</span> 📊 Temel Bulgular</h2>
+<ul>
+<li><strong>Yangın sayısı</strong>: 1988–2023 döneminde yıllık yangın sayısında artış eğilimi gözlenmiştir. 2021 yılı yangın sayısı bakımından zirve yıldır.</li>
+<li><strong>Yanan alan</strong>: Yıllık yanan orman alanları, özellikle 2008, 2013 ve 2021 yıllarında sıçrama göstermiştir.</li>
+<li><strong>Yangın nedenleri</strong>: En büyük payı ihmal/kaza ve kasıtlı yangınlar oluşturmaktadır. Doğal yangınlar sınırlıdır.</li>
+<li><strong>2023 yılı analizleri</strong>: Muğla, Antalya ve İzmir en çok yangın çıkan illerdir. Alan bazında da aynı iller öne çıkmaktadır.</li>
+<li><strong>Yangın şiddeti</strong>: “Yangın başına ortalama yanan alan” verisi bazı illerde çok yüksektir (Mersin, Çanakkale, Kahramanmaraş).</li>
+<li><strong>Silvikültürel müdahaleler</strong>: Müdahale türleri arasında “gelecek yıla bırakılan alanlar” ve “örtüye zarar görmeyen sahalar” öne çıkmaktadır.</li>
+<li><strong>ARIMA zaman serisi modeli</strong>: 2024–2026 yıllarında yangın sayısının 2100–2400 arasında olması tahmin edilmiştir.</li>
+</ul>
+<hr>
+</section>
+<section id="teknik-zorluklar-ve-çözümler" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="teknik-zorluklar-ve-çözümler"><span class="header-section-number">4.3</span> 🛠️ Teknik Zorluklar ve Çözümler</h2>
+<p>Bu proje sırasında yalnızca analiz değil, <strong>analize ulaşmak için birçok teknik engel</strong> de aşılmıştır:</p>
+<ul>
+<li>📌 <strong>NA (eksik) veriler tespit edilip analiz dışı bırakıldı</strong></li>
+<li>📌 <strong>Karakter tipinde olan sayısal veriler <code>as.numeric</code> + <code>gsub()</code> ile düzeltildi</strong></li>
+<li>📌 <strong>Excel sütun adlarındaki Türkçe karakterler ve boşluk sorunları temizlendi</strong></li>
+<li>📌 <strong>Leaflet harita görselleştirmesi için <code>il.csv</code>dosyası ile şehirlerin koordinatlarına ulaşıldı</strong></li>
+<li>📌 <strong>Balon haritada boyut + renk aynı anda gösterilerek etki artırıldı</strong></li>
+<li>📌 <strong>ARIMA modelinde belirsizlik genişliği grafikle birlikte açıklanarak yorumlandı</strong></li>
+</ul>
+<p>Bu hatalar, bir veri analistinin gerçek dünyada sıklıkla karşılaşacağı türden ve bu projede sistemli şekilde çözüldü.</p>
+<hr>
+</section>
+<section id="politika-ve-uygulama-önerileri" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="politika-ve-uygulama-önerileri"><span class="header-section-number">4.4</span> 🎯 Politika ve Uygulama Önerileri</h2>
+<ul>
+<li>🔥 <strong>Yangın önleme çalışmaları güçlendirilmelidir.</strong> Eğitim, denetim ve caydırıcılık artırılmalıdır.</li>
+<li>🛰️ <strong>Veri şeffaflığı artırılmalıdır.</strong> OGM verileri erişilebilir, güncel ve eksiksiz olarak kamuya sunulmalıdır.</li>
+<li>🚒 <strong>Yüksek şiddetli yangın görülen illere özel planlama yapılmalıdır.</strong> Yangın başına ortalama yanan alan yüksek olan bölgeler öncelikli ele alınmalıdır.</li>
+<li>🌱 <strong>Pasif müdahale oranı azaltılmalı, aktif rehabilitasyon artırılmalıdır.</strong></li>
+<li>📈 <strong>Zaman serisi tahminleri düzenli yapılmalı, yangınla mücadelede önleyici planlamaya entegre edilmelidir.</strong></li>
+</ul>
+<hr>
+</section>
+<section id="genel-değerlendirme" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="genel-değerlendirme"><span class="header-section-number">4.5</span> 📌 Genel Değerlendirme</h2>
+<p>Bu proje, Türkiye orman yangınlarının yalnızca nicel değil, aynı zamanda <strong>nedenlerine, bölgesel farklılıklarına ve etkilerine dair kapsamlı bir analitik bakış</strong> sunmaktadır. Veri ön işleme adımlarından, tahmin modellerine kadar uzanan bu analiz süreci, sadece akademik değil, aynı zamanda uygulamaya yönelik çıkarımlar da üretmektedir. .</p>
 <p><strong>Not:</strong> Bu projede belirli kod bloklarının hazırlanması ve veri yükleme yöntemlerinin düzenlenmesi aşamasında ChatGPT’den destek alınmıştır.</p>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Başa dönüş</a></main> <!-- /main -->

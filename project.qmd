@@ -41,7 +41,7 @@ Veriler, **Orman Genel Müdürlüğü (OGM)** tarafından yayımlanan resmi Exce
 
 İlgili .RData dosyasına aşağıdaki bağlantıdan ulaşabilirsiniz:
 
-👉 [Yangın Verileri RData Dosyası](https://github.com/ecezeynepa/yangin_verileri/raw/main/yangin_verileri.RData)
+👉 [Yangın Verileri RData Dosyası](https://github.com/ecezeynepa/yangin_verileri/blob/main/yangin_verileri.RData)
 
 ## Verinin Genel Özellikleri
 

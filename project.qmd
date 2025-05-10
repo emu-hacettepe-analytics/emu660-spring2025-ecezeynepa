@@ -27,18 +27,12 @@ Gelişmeler için bu alanı takip edebilirsiniz.
 
 # Proje Tanımı ve Kapsamı
 
-Bu projede, Türkiye'deki orman yangınlarının zaman içindeki değişimi, bölgesel dağılımı ve yangın sonrası uygulamalar analiz edilecektir. Çalışmanın amacı, yangınların nedenlerini ve etkilerini daha iyi anlayarak politika önerileri geliştirmektir.
+
 
 ## Problem Tanımı
 
-Türkiye’de orman yangınları hem çevresel hem de ekonomik ciddi sonuçlar doğurmaktadır. Bu çalışma ile: - 1988–2023 yılları arasındaki yangın nedenlerinin ve yanan alanların değişimi, - 2023 yılına özel bölgesel ve niteliksel yangın dağılımları, - Yangın sonrası silvikültürel uygulamalar analiz edilecektir.
-
 ## Hedeflerimiz
 
--   Yangın nedenlerinin yıllar içerisindeki değişimini incelemek,
--   Bölge müdürlüklerine göre yangın sayısı ve yanan alanı karşılaştırmak,
--   2023 yılı yangınlarının etkilerini değerlendirmek,
--   Bulguları grafik ve tablolarla sunmak ve politika önerileri geliştirmek,
 
 # Veri
 
@@ -57,23 +51,11 @@ Veriler, **Orman Genel Müdürlüğü (OGM)** tarafından yayımlanan resmi Exce
 
 ## Verinin Genel Özellikleri
 
--   🔥 1988–2023 yılları arasında yangın nedenleri, sayıları ve yanan alan (hektar)
 
--   📍 2004–2023 yılları arasında bölge müdürlüklerine göre yangın sayısı ve alanı
-
--   📊 2023 yılına özel analizler:
-
-    -   🏙️ İl bazında yangın sayısı
-
-    -   🌲 Orman vasfına göre yanan alan türleri
-
-    -   🚒 Yangın nedenlerinin detaylı sınıflandırması
-
-    -   🌱 Yangın sonrası silvikültürel işlemler
 
 Çalışmada kullanılan veri setleri şunlardır:
 
-```{r}
+```{r, echo=TRUE, eval=TRUE}
 # Gerekli paketleri yükle ve çağır
 library(readxl)
 
@@ -130,15 +112,13 @@ Verileri R ortamına aktarırken aşağıdaki adımlar uygulanmıştır:
 
 6.  **Planlanan İleri Ön İşleme Adımları:**
 
-    -   Veri tiplerinin düzenlenmesi (character, numeric vs.),
-    -   Eksik verileri (NA) belirleyip, gerekirse temizlemek,
-    -   Kategorik değişkenlerin faktör (factor) formatına çevrilmesi.
+   
 
 # Analiz
 
 ## Keşifsel Veri Analizi (Exploratory Data Analysis)
 
-```{r}
+```{r, echo=TRUE, eval=TRUE}
 library(readxl)
 library(tidyr)
 library(dplyr)
@@ -201,7 +181,7 @@ print(
 
 ```
 
-```{r}
+```{r, echo=TRUE, eval=TRUE}
 library(readxl)
 library(dplyr)
 library(tidyr)
@@ -243,7 +223,7 @@ ggplot(neden_df, aes(x = yil, y = adet, fill = neden)) +
 
 ```
 
-```{r}
+```{r, echo=TRUE, eval=TRUE}
 library(readxl)
 library(dplyr)
 library(ggplot2)
@@ -317,7 +297,7 @@ print(
 ### 🔥 Leaflet Harita – 2023 İl Bazında Yangın Sayısı ve Alan
 
 
-```{r}
+```{r, echo=TRUE, eval=TRUE}
 library(readr)
 library(readxl)
 library(dplyr)
@@ -372,7 +352,7 @@ leaflet(data = iller_map) |>
 Bu interaktif harita, Türkiye'deki illerde 2023 yılı boyunca çıkan yangınlar başına düşen ortalama yanan alanı (hektar / adet) göstermektedir. Baloncukların büyüklüğü, o ildeki yangınların ortalama şiddetini yansıtmaktadır.
 
 
-```{r}
+```{r, echo=TRUE, eval=TRUE}
 library(readr)
 library(readxl)
 library(dplyr)
@@ -433,11 +413,9 @@ leaflet(veri) |>
 
 ```
 **Grafik Yorumu:**  
-Haritada balon çapı büyüdükçe, o ilde çıkan yangınların **daha büyük alanlara yayıldığı** görülmektedir. Bu da yangının kontrolünün daha zor olduğunu gösterir.
 
-2023 yılı verilerine göre **Mersin**, **Çanakkale**, **Kahramanmaraş** gibi illerde yangın sayısı az olmasına rağmen, yangın başına düşen yanan alan oldukça yüksektir. Bu durum, bu illerdeki yangınların genellikle **daha şiddetli ve yaygın** olduğunu, dolayısıyla kontrol altına alınmalarının daha zor olabileceğini düşündürmektedir.
 
-```{r}
+```{r, echo=TRUE, eval=TRUE}
 library(readxl)
 library(dplyr)
 library(tidyr)
@@ -487,7 +465,7 @@ ggplot(vasif_long, aes(x = reorder(bolge, -toplam_hektar), y = alan, fill = vasi
 
 ```
 
-```{r}
+```{r, echo=TRUE, eval=TRUE}
 
 library(readxl)
 library(dplyr)
@@ -540,8 +518,7 @@ print(
 )
 
 ```
-
-Yukarıdaki grafik, 2023 yılında orman yangınlarından etkilenen alanlara uygulanan silvikültürel müdahale türlerini ve bu müdahalelerin toplam alan (hektar) cinsinden büyüklüklerini göstermektedir. En büyük payı, herhangi bir müdahale yapılmayarak gelecek yıla bırakılan alanlar oluşturmaktadır. Onu sırasıyla örtüye zarar görmeyen alanlar ve doğal gençleştirme uygulamaları takip etmektedir. En az müdahale ise koruma altına alınan alanlarda yapılmıştır.
+**Grafik Yorumu:**
 
 
 
@@ -612,7 +589,7 @@ ggplot(df, aes(x = yil, y = hektar)) +
 
 ```
 
-```{r}
+```{r, echo=TRUE, eval=TRUE}
 library(readxl)
 library(dplyr)
 library(ggplot2)
@@ -647,13 +624,13 @@ ggplot(df, aes(x = yil, y = ortalama_hektar)) +
 
 
 ## Modelleme
-### 🔮 ARIMA Zaman Serisi Analizi: Yangın Sayısı Tahmini (2024–2026)
+### ARIMA Zaman Serisi Analizi: Yangın Sayısı Tahmini (2024–2026)
 
 Bu bölümde, geçmiş verilere dayalı olarak 2024–2026 yıllarına ait orman yangını sayısı tahmini yapılmıştır. Tahminler, ARIMA (Auto-Regressive Integrated Moving Average) zaman serisi modeli ile elde edilmiştir.
 
 
 Gerekirse yangın nedenleri ve etkileri üzerine istatistiksel modeller kurulacaktır.
-```{r}
+```{r, echo=TRUE, eval=TRUE}
 # Gerekli paketleri yükle (ilk kez çalıştırıyorsan sadece)
 # install.packages("forecast")
 
@@ -689,23 +666,17 @@ autoplot(tahmin) +
 
 ```
 **Grafik Yorumu:**  
-Bu zaman serisi modeli, geçmiş yıllardaki düzensizlik ve dalgalanmalar nedeniyle tahmin aralığı geniş bir öngörü sunmaktadır. ARIMA modeline göre, 2024–2026 yıllarında Türkiye'de çıkacak orman yangını sayısının yaklaşık **2100–2400 aralığında** olması beklenmektedir. Ancak tahminin etrafındaki belirsizlik bandı oldukça geniştir, bu da modelin tahmin gücünü sınırlamaktadır.
+.
 
 - **Siyah çizgi:** 1988–2023 yılları arasındaki gerçek yangın sayısı  
 - **Ortadaki koyu mavi çizgi:** Modelin en olası tahmini (point forecast)  
 - **Mavi gölgeli alan:** %80 ve %95 güven aralığı (belirsizlik payı)  
 
-Model, 2020 sonrası yıllarda belirgin bir trend belirleyememiştir. Bu nedenle, çevresel değişkenler (iklim, kuraklık, rüzgar vb.) ve insan faaliyetleri dikkate alınmadan yapılan bu tahminler sadece genel bir öngörü niteliğindedir.
 
 # Sonuçlar ve Öneriler
 
-## 📌 Çalışmanın Özeti
+## Summary
 
-Bu proje kapsamında, Türkiye'deki orman yangınları 1988–2023 yılları arasında kapsamlı biçimde analiz edilmiştir. Çalışma, yalnızca sayısal bir raporlama değil, aynı zamanda **veri temizleme, ön işleme, görselleştirme ve tahminleme** adımlarını içeren **uçtan uca bir analitik süreci** yansıtmaktadır.
-
-Veri kaynakları Orman Genel Müdürlüğü (OGM)'nin resmi Excel dosyalarıdır. Bu dosyalar ham biçimden alınmış, Türkçe karakter sorunları çözülmüş, sütun isimleri düzenlenmiş, **eksik veriler (NA), hatalı karakterler, boşluklar ve "-" gibi semboller temizlenmiştir**. Tüm veriler okunabilir ve analiz edilebilir hale getirilmiştir.
-
-Bazı veri setlerinde toplam satırlarının analiz dışında bırakılması sağlanmıştır. **Türkçe karakter hataları düzeltilmiş**, `readxl`, `dplyr`, `tidyr`, `ggplot2`, `leaflet`, `forecast` gibi R paketleriyle güçlü veri hazırlığı ve modelleme adımları yürütülmüştür.
 
 ---
 
@@ -723,32 +694,15 @@ Bazı veri setlerinde toplam satırlarının analiz dışında bırakılması sa
 
 ## 🛠️ Teknik Zorluklar ve Çözümler
 
-Bu proje sırasında yalnızca analiz değil, **analize ulaşmak için birçok teknik engel** de aşılmıştır:
-
-- 📌 **NA (eksik) veriler tespit edilip analiz dışı bırakıldı**
-- 📌 **Karakter tipinde olan sayısal veriler `as.numeric` + `gsub()` ile düzeltildi**
-- 📌 **Excel sütun adlarındaki Türkçe karakterler ve boşluk sorunları temizlendi**
-- 📌 **Leaflet harita görselleştirmesi için `il.csv`dosyası ile şehirlerin koordinatlarına ulaşıldı**
-- 📌 **Balon haritada boyut + renk aynı anda gösterilerek etki artırıldı**
-- 📌 **ARIMA modelinde belirsizlik genişliği grafikle birlikte açıklanarak yorumlandı**
-
-Bu hatalar, bir veri analistinin gerçek dünyada sıklıkla karşılaşacağı türden ve bu projede sistemli şekilde çözüldü.
 
 ---
 
 ## 🎯 Politika ve Uygulama Önerileri
 
-- 🔥 **Yangın önleme çalışmaları güçlendirilmelidir.** Eğitim, denetim ve caydırıcılık artırılmalıdır.
-- 🛰️ **Veri şeffaflığı artırılmalıdır.** OGM verileri erişilebilir, güncel ve eksiksiz olarak kamuya sunulmalıdır.
-- 🚒 **Yüksek şiddetli yangın görülen illere özel planlama yapılmalıdır.** Yangın başına ortalama yanan alan yüksek olan bölgeler öncelikli ele alınmalıdır.
-- 🌱 **Pasif müdahale oranı azaltılmalı, aktif rehabilitasyon artırılmalıdır.**
-- 📈 **Zaman serisi tahminleri düzenli yapılmalı, yangınla mücadelede önleyici planlamaya entegre edilmelidir.**
-
----
+-
 
 ## 📌 Genel Değerlendirme
 
-Bu proje, Türkiye orman yangınlarının yalnızca nicel değil, aynı zamanda **nedenlerine, bölgesel farklılıklarına ve etkilerine dair kapsamlı bir analitik bakış** sunmaktadır. Veri ön işleme adımlarından, tahmin modellerine kadar uzanan bu analiz süreci, sadece akademik değil, aynı zamanda uygulamaya yönelik çıkarımlar da üretmektedir.
-.
+
 
 **Not:** Bu projede belirli kod bloklarının hazırlanması ve veri yükleme yöntemlerinin düzenlenmesi aşamasında ChatGPT'den destek alınmıştır.

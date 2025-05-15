@@ -4,8 +4,11 @@
 
 
 ---
-title: "PROJE: Türkiye'de Orman Yangınları Analizi (1988–2023)"
-lang: tr
+title: "PROJECT: Analysis of Forest Fires in Turkey (1988-2023)"
+lang: eng
+author:   
+  - Ece Zeynep Aktaş  
+  - İrem Çatalkaya
 format: 
   html:
     toc: true
@@ -21,39 +24,21 @@ knitr::opts_chunk$set(
 )
 ```
 
-Bu sayfa, Türkiye'deki orman yangınlarının nedenleri, dağılımı ve sonuçları üzerine yapılan veri analizi projesini sunmaktadır.
+Please follow this page for updates.
 
-Gelişmeler için bu alanı takip edebilirsiniz.
+## Abstract
 
-# Proje Tanımı ve Kapsamı
+The problem we have chose to inspect is investigating causes of forest fires occurred in Turkey and creating actionable insights to prevent them. The reason we have chose to study this particular problem is; data being official source that offers us years of multi-faceted content to explore and is suitable to working with the R programming language. The structure of data consists of distribution of forest fires across counties, the categorization of their causes, and the silvicultural practices employed for forest management and establishment. The data we have studied on is taken from [Orman Genel Müdürlüğü](https://www.ogm.gov.tr) official website.   
 
+## Access to Data
 
+You can access the relevant .RData file from the link:
 
-## Problem Tanımı
+[Forest fires .RData file](https://github.com/ecezeynepa/yangin_verileri/raw/main/yangin_verileri.RData)
 
-## Hedeflerimiz
+## Description of Data
 
-
-# Veri
-
-## Veri Kaynağı
-
-Veriler, **Orman Genel Müdürlüğü (OGM)** tarafından yayımlanan resmi Excel dosyalarından alınmıştır.
-
--   [Orman Genel Müdürlüğü Resmi Web Sitesi](https://www.ogm.gov.tr)
--   Veri dosyaları: Çeşitli Excel (.xlsx) formatındadır.
-
-## Veriye Erişim
-
-İlgili .RData dosyasına aşağıdaki bağlantıdan ulaşabilirsiniz:
-
-👉 [Yangın Verileri RData Dosyası](https://github.com/ecezeynepa/yangin_verileri/raw/main/yangin_verileri.RData)
-
-## Verinin Genel Özellikleri
-
-
-
-Çalışmada kullanılan veri setleri şunlardır:
+Let's take a look at the characteristics of data:
 
 ```{r, echo=TRUE, eval=TRUE}
 # Gerekli paketleri yükle ve çağır
@@ -90,33 +75,19 @@ save(iller_2023, orman_yanginlari, vasfina_2023, silvikulturel_2023,
 
 ```
 
-## Veriyi Seçme Sebebi
+## Preprocessing Data
 
--   Türkiye'ye özgü, resmi ve güvenilir bir kaynak olması,
--   Uzun yıllara yayılan ve çok yönlü analiz yapmaya elverişli veri içeriği sunması,
--   R programlama dili ile ileri veri analizleri ve modelleme çalışmalarına uygunluk sağlaması.
+The following steps were taken when transferring data to the R environment:
 
-## Veri Ön İşleme
+1. **Editing File Names:** Since Turkish characters (ç, ğ, ü, ö, ş, ı) in file names in Turkish can cause errors, the Turkish characters in the file names were converted to English characters. For example: "b?lge_mudurluklerine_sayisal_olarak_2004_2023.xlsx" file was changed to "bolge_mudurluklerine_sayisal_olarak_2004_2023.xlsx".
 
-Verileri R ortamına aktarırken aşağıdaki adımlar uygulanmıştır:
+2. **Data Cleaning:**  Irrelevant explanations, visuals and empty lines in the Excel files is deleted to make datasets easily readable and processable.
 
-1.  **Dosya İsimlerini Düzenleme:** TR'de dosya isimlerinde Türkçe karakterler (ç, ğ, ü, ö, ş, ı) bazen hata oluşturduğundan dolayı dosya isimlerindeki Türkçe karakterleri İngilizce karakterlere çevrildi. Örneğin: "bölge_mudurluklerine_sayisal_olarak_2004_2023.xlsx" dosyasını "bolge_mudurluklerine_sayisal_olarak_2004_2023.xlsx" olarak değiştirildi.
+3. **Editing Column Names:** Turkish characters in the column names are replaced with English characters (such as Sehir instead of City, Bolge instead of Region). Column names are replaced with more descriptive ones. For example: Main categories of negligence, accident, and intent got more detailed according to the causes of fire and got named as: ihmal_copluk, ihmal_avcilik, kaza_trafik, kaza_energy, kaza_yangin, kaza_aniz
 
-2.  **Veri Temizleme:** Excel dosyalarındaki gereksiz açıklamalar, görseller, boş satırlar gibi analizle ilgisi olmayan içerikleri silindi. Böylece veri setlerinin doğrudan okunabilir ve işlenebilir hale gelmesini sağlandı.
+4. **Editing the Data Structure:** Data in the same category were brought together.
 
-3.  **Sütun İsimlerini Düzenleme:** o Sütun isimlerindeki Türkçe karakterleri İngilizce karakterlerle değiştirdim (Şehir yerine Sehir, Bölge yerine Bolge gibi). o Ayrıca sütun adlarını daha açıklayıcı hale getirdim. Örneğin: yangın sebeplerine göre ihmal, kaza, kasıt ana kategorilerini detaylandırarak şu şekilde isimlendirdim:  ihmal_copluk, ihmal_avcilik  kaza_trafik, kaza_enerji  kasit_yangin, kasit_aniz
-
-4.  **Veri Yapısını Düzenleme:** Aynı kategorideki veriler bir araya getirildi.
-
-5.  **Veri İçe Aktarma:** `read.xlsx()` fonksiyonu ile xlsx paketinden veriler aktarıldı (`encoding = "UTF-8"` kullanıldı).
-
-6.  **Planlanan İleri Ön İşleme Adımları:**
-
-   
-
-# Analiz
-
-## Keşifsel Veri Analizi (Exploratory Data Analysis)
+5. **Data Import:** Data was imported from the xlsx package with the `read.xlsx()` function (`encoding = "UTF-8"` was used).
 
 ```{r, echo=TRUE, eval=TRUE}
 library(readxl)
@@ -125,55 +96,52 @@ library(dplyr)
 library(ggplot2)
 library(scales)
 
-# Veriyi oku (uyarıları bastır)
-df <- suppressMessages(read_excel("C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_2023.xlsx"))
+df <- orman_yanginlari
 
-# Sayısal kolonları temizle + dönüştür (uyarıları bastır)
 df$yil <- suppressWarnings(as.numeric(df$yil))
 df$adet <- suppressWarnings(as.numeric(gsub("[^0-9.]", "", df$adet)))
 df$hektar <- suppressWarnings(as.numeric(gsub("[^0-9.]", "", df$hektar)))
 
-# NA'ları temizle
 df <- df |> filter(!is.na(yil), !is.na(adet), !is.na(hektar))
 
-# Grafik 1: Yangın Sayısı
+# Grafik 1: 
 print(
   ggplot(df, aes(x = yil, y = adet)) +
     geom_line(linewidth = 1.2, color = "firebrick") +
     geom_point(color = "darkred") +
     scale_x_continuous(breaks = seq(min(df$yil), max(df$yil), by = 1)) +
-    labs(title = "Yıllara Göre Orman Yangın Sayısı",
-         x = "Yıl", y = "Yangın Sayısı (adet)") +
+    labs(title = "Number of Forest Fires by Year",
+         x = "Year", y = "Number of Fires") +
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
 )
 
-# Grafik 2: Yanan Alan (DÜZENLENDİ: Y ekseni okunaklı)
+# Grafik 2: 
 print(
   ggplot(df, aes(x = yil, y = hektar)) +
     geom_line(linewidth = 1.2, color = "darkgreen") +
     geom_point(color = "forestgreen") +
     scale_x_continuous(breaks = seq(min(df$yil), max(df$yil), by = 1)) +
     scale_y_continuous(labels = label_comma()) +
-    labs(title = "Yıllara Göre Yanan Alan (Hektar)",
-         x = "Yıl", y = "Alan") +
+    labs(title = "Burned Area by Year (Hectares)",
+         x = "Year", y = "Area") +
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
 )
 
-# Grafik 3: Yangın Nedenleri
+# Grafik 3:
 neden_df <- df |>
   select(yil, kasit_adet, ihmal_kaza_adet, dogal_adet, `sebebi_bilinmeyen_ adet`) |>
   mutate(across(-yil, ~ suppressWarnings(as.numeric(gsub("[^0-9.]", "", .))))) |>
-  pivot_longer(cols = -yil, names_to = "neden", values_to = "adet") |>
+  pivot_longer(cols = -yil, names_to = "Cause", values_to = "adet") |>
   filter(!is.na(adet))
 
 print(
-  ggplot(neden_df, aes(x = yil, y = adet, color = neden)) +
+  ggplot(neden_df, aes(x = yil, y = adet, color = Cause)) +
     geom_line(linewidth = 1.1) +
     scale_x_continuous(breaks = seq(min(neden_df$yil), max(neden_df$yil), by = 1)) +
-    labs(title = "Yangın Nedenlerine Göre Yıllık Dağılım",
-         x = "Yıl", y = "Yangın Sayısı") +
+    labs(title = "Annual Distribution by Fire Causes",
+         x = "Year", y = "Number of Fires") +
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
 )
@@ -181,6 +149,8 @@ print(
 
 ```
 
+
+
 ```{r, echo=TRUE, eval=TRUE}
 library(readxl)
 library(dplyr)
@@ -188,8 +158,8 @@ library(tidyr)
 library(ggplot2)
 library(scales)
 
-# Veriyi oku ve sayısal hale getir
-df <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_2023.xlsx") |>
+# Veriyi oku
+df <- orman_yanginlari |>
   mutate(
     yil = as.numeric(yil),
     kasit_adet = as.numeric(gsub("[^0-9.]", "", kasit_adet)),
@@ -199,19 +169,18 @@ df <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_202
   ) |>
   select(yil, kasit_adet, ihmal_kaza_adet, dogal_adet, sebebi_bilinmeyen_adet)
 
-# Uzun forma getir
 neden_df <- df |>
-  pivot_longer(cols = -yil, names_to = "neden", values_to = "adet") |>
-  filter(!is.na(adet))
+  pivot_longer(cols = -yil, names_to = "cause", values_to = "number") |>
+  filter(!is.na(number))
 
 # Grafik
-ggplot(neden_df, aes(x = yil, y = adet, fill = neden)) +
+ggplot(neden_df, aes(x = yil, y = number, fill = cause)) +
   geom_area(alpha = 0.8) +
   labs(
-    title = "1988–2023 Yılları Arasında Yangın Nedenlerine Göre Dağılım (Stacked Area Chart)",
-    x = "Yıl",
-    y = "Yangın Sayısı",
-    fill = "Yangın Nedeni"
+    title = "  Distribution of Fire Causes Between 1988-2023 (Stacked Area Chart)",
+    x = "Year",
+    y = "Number of Fires",
+    fill = "Cause of Fire"
   ) +
   theme_minimal(base_size = 12) +
   theme(
@@ -230,9 +199,8 @@ library(ggplot2)
 library(scales)
 
 # Veriyi oku
-iller <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/iller_2023.xlsx")
+iller <- (iller_2023)
 
-# Sayısal düzeltme + Türkiye satırını çıkar
 iller <- iller |>
   filter(sehir != "Türkiye") |>
   mutate(
@@ -249,8 +217,8 @@ print(
     slice_head(n = 15) |>
     ggplot(aes(x = reorder(sehir, -adet), y = adet)) +
     geom_bar(stat = "identity", fill = "#d73027") +
-    labs(title = "2023 – En Çok Yangın Çıkan 15 İl",
-         x = NULL, y = "Yangın Sayısı") +
+    labs(title = "15 Cities with the Most Fires in 2023",
+         x = NULL, y = "Number of Fires") +
     theme_minimal(base_size = 12) +
     theme(
       axis.text.x = element_text(angle = 45, hjust = 1),
@@ -266,8 +234,8 @@ print(
     slice_head(n = 15) |>
     ggplot(aes(x = reorder(sehir, -hektar), y = hektar)) +
     geom_bar(stat = "identity", fill = "#1a9850") +
-    labs(title = "2023 – En Fazla Alan Yanan 15 İl",
-         x = NULL, y = "Yanan Alan (Hektar)") +
+    labs(title = "The Top 15 Cities with the Most Area Burned in 2023",
+         x = NULL, y = "Area Burned (Hectares)") +
     theme_minimal(base_size = 12) +
     theme(
       axis.text.x = element_text(angle = 45, hjust = 1),
@@ -283,8 +251,8 @@ print(
     slice_head(n = 15) |>
     ggplot(aes(x = reorder(sehir, -orani), y = orani)) +
     geom_bar(stat = "identity", fill = "#4575b4") +
-    labs(title = "2023 – Yangın Başına Ortalama Yanan Alan",
-         x = NULL, y = "Hektar / Yangın") +
+    labs(title = "Average Area Burned per Fire in 2023",
+         x = NULL, y = "Hectares / Fires") +
     theme_minimal(base_size = 12) +
     theme(
       axis.text.x = element_text(angle = 45, hjust = 1),
@@ -294,7 +262,7 @@ print(
 )
 
 ```
-### 🔥 Leaflet Harita – 2023 İl Bazında Yangın Sayısı ve Alan
+### Leaflet Map: Number of Fires and Areas by Cities in 2023
 
 
 ```{r, echo=TRUE, eval=TRUE}
@@ -337,8 +305,8 @@ leaflet(data = iller_map) |>
     fillOpacity = 0.7,
     popup = ~paste0(
       "<b>", toupper(sehir), "</b><br>",
-      "Yangın Sayısı: ", adet, "<br>",
-      "Yanan Alan: ", hektar, " ha"
+      "Number of Fires: ", adet, "<br>",
+      "Areas Burned: ", hektar, " ha"
     )
   )
 
@@ -347,9 +315,9 @@ leaflet(data = iller_map) |>
 
 
 
-### 🌍 Harita: 2023 – İl Bazında Yangın Başına Ortalama Yanan Alan
+### Leaflet Map: Average Area Burned per Fire by Cities in 2023
 
-Bu interaktif harita, Türkiye'deki illerde 2023 yılı boyunca çıkan yangınlar başına düşen ortalama yanan alanı (hektar / adet) göstermektedir. Baloncukların büyüklüğü, o ildeki yangınların ortalama şiddetini yansıtmaktadır.
+This interactive map shows the average area burned per fire (hectares / number of fires) by cities in 2023. The bigger the point, the severe the fires are.
 
 
 ```{r, echo=TRUE, eval=TRUE}
@@ -406,13 +374,13 @@ leaflet(veri) |>
   ) |>
   addLegend(
     pal = pal, values = ~oran,
-    title = "Ortalama Hektar / Yangın",
+    title = "Average Hectares / Fires",
     position = "bottomright"
   )
 
 
 ```
-**Grafik Yorumu:**  
+
 
 
 ```{r, echo=TRUE, eval=TRUE}
@@ -422,38 +390,32 @@ library(tidyr)
 library(ggplot2)
 library(scales)
 
-# Excel dosyasını oku (tam yol)
-vasif_df <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/vasfina_2023.xlsx", .name_repair = "minimal")
+vasif_df <- vasfina_2023
 
-# Sütun isimlerini Türkçe karaktersiz olarak ayarla
 colnames(vasif_df) <- c(
   "bolge", "toplam_hektar", "normal_koru", "bos_kapali_koru",
   "normal_bataklik", "bos_kapali_bataklik", "makilik",
   "agaclandirma_sahasi", "milli_park", "orman_topragi"
 )
 
-# "Toplam-Total" satırını çıkar (tek satırlık toplam veridir, grafik dışında tutuyoruz)
 vasif_df <- vasif_df |> filter(bolge != "Toplam-Total")
 
-# "-" karakterlerini NA yap ve sayıya çevir
 vasif_df <- vasif_df |>
   mutate(across(-bolge, ~ as.numeric(gsub("-", NA, .))))
 
-# Uzun formata pivotla (grafik için)
 vasif_long <- vasif_df |>
   pivot_longer(cols = -c(bolge, toplam_hektar),
                names_to = "vasif_turu",
                values_to = "alan") |>
   filter(!is.na(alan), alan > 0)
 
-# Grafik: Bölge müdürlüklerine göre vasıf türlerinin dağılımı
 ggplot(vasif_long, aes(x = reorder(bolge, -toplam_hektar), y = alan, fill = vasif_turu)) +
   geom_bar(stat = "identity") +
   labs(
-    title = "      Bolge Mudurluklerine Gore Orman Vasif Turlerinin Yanan Alan Dagilimi-2023",
-    x = "Orman Bolge Mudurlugu",
-    y = "Yanan Alan (ha)",
-    fill = "Vasif Turu"
+    title = "Burned Forest Area by Qualification Type and Region (2023)",
+    x = "Regional Directorates",
+    y = "Areas Burned (ha)",
+    fill = "Qualification Type"
   ) +
   theme_minimal(base_size = 11) +
   theme(
@@ -474,22 +436,16 @@ library(ggplot2)
 library(scales)
 
 # Veriyi oku
-silvi_df <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/silvikulturel_2023.xlsx", .name_repair = "minimal")
+silvi_df <- silvikulturel_2023
 
-# Sütun adları sade
 colnames(silvi_df) <- c(
   "bolge", "toplam_alan", "ortuye_zarar_gormeyen",
   "dogal_genclestirme", "suni_genclestirme", "rehabilitasyon",
   "agaclandirma", "koruma_altina_alinan", "gelecek_yila_birakilan"
 )
 
-# Toplam satırı çıkar
 silvi_df <- silvi_df |> filter(bolge != "Toplaml")
-
-# Sayısallaştır
 silvi_df <- silvi_df |> mutate(across(-bolge, ~ as.numeric(gsub("-", NA, .))))
-
-# Müdahale türü toplamlarını hesapla
 turkiye_geneli <- silvi_df |>
   select(-toplam_alan) |>
   pivot_longer(cols = -bolge,
@@ -499,9 +455,7 @@ turkiye_geneli <- silvi_df |>
   group_by(mudahale_turu) |>
   summarise(toplam_alan = sum(alan)) |>
   arrange(desc(toplam_alan))
-
-# Başlık
-cat(" Grafik: Türkiye Genelinde Yangın Sonrası Müdahale Türlerinin Dağılımı (2023)\n")
+cat(" Graph: Distribution of Post-Fire Intervention Types Across Turkey (2023)\n")
 
 # Grafik
 print(
@@ -509,8 +463,8 @@ print(
     geom_bar(stat = "identity", fill = "darkolivegreen4") +
     coord_flip() +
     labs(
-      title = "Turkiye Genelinde Yangin Sonrasi Mudahale Turlerinin Dagilimi (2023)",
-      x = "Mudahale Turu", y = "Toplam Alan (ha)"
+      title = "Distribution of Post-Fire Intervention Types (2023)",
+      x = "Intervention Type", y = "Total Area (ha)"
     ) +
     theme_minimal(base_size = 11) +
     theme(plot.title = element_text(face = "bold", hjust = 0.5)) +
@@ -518,15 +472,17 @@ print(
 )
 
 ```
-**Grafik Yorumu:**
+**Interpretation of the Graph:**
+The number of forest fires shows high variability but an overall upward trend and is peaking in 2021, on the other hand burned area demonstrates even more dramatic growth, particularly in recent years. The average area burned per fire has increased substantially, suggesting fires are becoming more and more severe.
+
+Normal forest areas (koru) suffer the most damage across regional directorates.
+
+"Areas left for next year" and "undamaged cover areas" are the most common interventions.
+
+We also performed a location-based analysis focusing on 2023. The top 15 cities were ranked by total fire count, area burned, and average area burned per fire. These metrics highlighted regions particularly vulnerable to fires, with some cities suffering from disproportionately large burned areas per incident. This suggests inefficiencies in early detection or fire management systems.
 
 
-
-
-
-
-
-## Trend Analizi
+## Trend Analysis
 
 
 
@@ -538,7 +494,7 @@ library(ggplot2)
 library(scales)
 
 # Veriyi oku ve temizle
-df <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_2023.xlsx") |>
+df <- orman_yanginlari |>
   mutate(
     yil = as.numeric(yil),
     adet = as.numeric(gsub("[^0-9.]", "", adet)),
@@ -546,15 +502,15 @@ df <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_202
   ) |>
   filter(!is.na(yil), !is.na(adet), !is.na(hektar))
 
-# Grafik 1: Yangın Sayısı
+# Grafik 1: 
 ggplot(df, aes(x = yil, y = adet)) +
   geom_line(color = "firebrick", linewidth = 1.2) +
   geom_point(color = "darkred") +
   geom_smooth(method = "lm", se = TRUE, color = "black", linetype = "dashed") +
   labs(
-    title = "Yıllara Göre Orman Yangın Sayısı ve Trend Analizi (1988–2023)",
-    x = "Yıl",
-    y = "Yangın Sayısı (adet)"
+    title = "Number of Forest Fires by Year and Trend Analysis (1988-2023)",
+    x = "Y?l",
+    y = "Number of Fires"
   ) +
   theme_minimal(base_size = 12) +
   theme(
@@ -574,9 +530,9 @@ ggplot(df, aes(x = yil, y = hektar)) +
   geom_point(color = "forestgreen") +
   geom_smooth(method = "lm", se = TRUE, color = "black", linetype = "dashed") +
   labs(
-    title = "Yıllara Göre Yanan Alan ve Trend Analizi (1988–2023)",
-    x = "Yıl",
-    y = "Yanan Alan (hektar)"
+    title = "Number of Forest Fires by Year and Trend Analysis (1988–2023)",
+    x = "Year",
+    y = "Areas Burned (hectares)"
   ) +
   theme_minimal(base_size = 12) +
   theme(
@@ -596,24 +552,23 @@ library(ggplot2)
 library(scales)
 
 # Veriyi oku ve hesapla
-df <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_2023.xlsx") |>
+df <- orman_yanginlari |>
   mutate(
     yil = as.numeric(yil),
     adet = as.numeric(gsub("[^0-9.]", "", adet)),
     hektar = as.numeric(gsub("[^0-9.]", "", hektar)),
     ortalama_hektar = hektar / adet
   ) |>
-  filter(!is.na(yil), !is.na(ortalama_hektar), ortalama_hektar < 100)  # çok uç yılları filtrele
-
+  filter(!is.na(yil), !is.na(ortalama_hektar), ortalama_hektar < 100)  
 # Grafik
 ggplot(df, aes(x = yil, y = ortalama_hektar)) +
   geom_line(color = "#984ea3", linewidth = 1.2) +
   geom_point(color = "#6a3d9a") +
   geom_smooth(method = "lm", se = TRUE, color = "black", linetype = "dashed") +
   labs(
-    title = "Yıllara Göre Yangın Başına Ortalama Yanan Alan (Hektar)",
-    x = "Yıl",
-    y = "Ortalama Hektar / Yangın"
+    title = "Average Area Burned per Fire by Year (Hectares)",
+    x = "Year",
+    y = "Average Hectares / Fire"
   ) +
   theme_minimal(base_size = 12) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5)) +
@@ -623,86 +578,66 @@ ggplot(df, aes(x = yil, y = ortalama_hektar)) +
 ```
 
 
-## Modelleme
-### ARIMA Zaman Serisi Analizi: Yangın Sayısı Tahmini (2024–2026)
+## Modeling
+### ARIMA Time Series Analysis: Fire Number Forecast (2024-2026)
 
-Bu bölümde, geçmiş verilere dayalı olarak 2024–2026 yıllarına ait orman yangını sayısı tahmini yapılmıştır. Tahminler, ARIMA (Auto-Regressive Integrated Moving Average) zaman serisi modeli ile elde edilmiştir.
-
-
-Gerekirse yangın nedenleri ve etkileri üzerine istatistiksel modeller kurulacaktır.
+In this section, the number of forest fires for the years 2024-2026 is estimated based on historical data. Estimates are obtained with the ARIMA (Auto-Regressive Integrated Moving Average) time series model.
 ```{r, echo=TRUE, eval=TRUE}
-# Gerekli paketleri yükle (ilk kez çalıştırıyorsan sadece)
-# install.packages("forecast")
 
 library(readxl)
 library(dplyr)
 library(forecast)
 library(ggplot2)
 
-# 1. Veriyi oku ve zaman serisine çevir
-df <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/orman_yanginlari1988_2023.xlsx") |>
+df <-orman_yanginlari |>
   mutate(
     yil = as.numeric(yil),
     adet = as.numeric(gsub("[^0-9.]", "", adet))
   ) |>
   filter(!is.na(adet))
-
-# 2. Zaman serisi oluştur
 adet_ts <- ts(df$adet, start = 1988, frequency = 1)
 
-# 3. ARIMA modeli kur ve tahmin yap
+# ARIMA modeli kur ve tahmin yap
 model <- auto.arima(adet_ts)
-tahmin <- forecast(model, h = 3)  # 2024–2026 için tahmin
+tahmin <- forecast(model, h = 3)  
 
-# 4. Tahmin grafiği
 autoplot(tahmin) +
   labs(
-    title = "2024–2026 Yılları İçin Orman Yangını Sayısı Tahmini (ARIMA)",
-    x = "Yıl",
-    y = "Tahmin Edilen Yangın Sayısı"
+    title = "Forecast for Forest Fire Number between 2024-2026 (ARIMA)",
+    x = "Year",
+    y = "Forecasted Fire Number"
   ) +
   theme_minimal()
 
 
 ```
-**Grafik Yorumu:**  
-.
+**Interpretation of Graph:**  
 
-- **Siyah çizgi:** 1988–2023 yılları arasındaki gerçek yangın sayısı  
-- **Ortadaki koyu mavi çizgi:** Modelin en olası tahmini (point forecast)  
-- **Mavi gölgeli alan:** %80 ve %95 güven aralığı (belirsizlik payı)  
-
-
-# Sonuçlar ve Öneriler
-
-## Summary
-
+The number of fires is estimated to be between 2100-2400 in 2024-2026.
 
 ---
 
-## 📊 Temel Bulgular
+## Discussion
+The increasing trend in fire severity can be correlated with global warming, and might warn us for more severe fires to come.
 
-- **Yangın sayısı**: 1988–2023 döneminde yıllık yangın sayısında artış eğilimi gözlenmiştir. 2021 yılı yangın sayısı bakımından zirve yıldır.
-- **Yanan alan**: Yıllık yanan orman alanları, özellikle 2008, 2013 ve 2021 yıllarında sıçrama göstermiştir.
-- **Yangın nedenleri**: En büyük payı ihmal/kaza ve kasıtlı yangınlar oluşturmaktadır. Doğal yangınlar sınırlıdır.
-- **2023 yılı analizleri**: Muğla, Antalya ve İzmir en çok yangın çıkan illerdir. Alan bazında da aynı iller öne çıkmaktadır.
-- **Yangın şiddeti**: “Yangın başına ortalama yanan alan” verisi bazı illerde çok yüksektir (Mersin, Çanakkale, Kahramanmaraş).
-- **Silvikültürel müdahaleler**: Müdahale türleri arasında "gelecek yıla bırakılan alanlar" ve "örtüye zarar görmeyen sahalar" öne çıkmaktadır.
-- **ARIMA zaman serisi modeli**: 2024–2026 yıllarında yangın sayısının 2100–2400 arasında olması tahmin edilmiştir.
+Leading human-caused fires indicate need for public awareness, this negligence might originate from people who are not familiar with the area, or with agricultural practices.
+
+Regional differences in fire severity might suggest a non-efficient resource allocation among directorates.
+
+Repeated and growing fires might cause loss of the ecosystem and the endemic species.
+
+
+## Results (Key Takeaways)
+
+- **Prevention**: Public education can be employed in high-risk regions. Monitoring should be focused during peak risk periods.
+- **Development**: Regional resource allocation can be more effective considering fire severity patterns. Early warning systems can be developed using predictive modeling and used in regional directorates.
+- **Policy**: Fires caused by negligence might be investigated and enforced in a more strict way. Directorates should be incentivized for fire-resistant land management.
 
 ---
+## Conclusion
 
-## 🛠️ Teknik Zorluklar ve Çözümler
+This analysis reveals Turkey's growing vulnerability to forest fires, with clear patterns in distribution by time, geographical accumulation, and human causation. The Mediterranean coastal region emerges as particularly sensitive, requiring targeted interventions. Even though natural factors play a role, human negligence remain the primary cause, suggesting significant potential for prevention through policy and education. The ARIMA model's forecast of continued high fire frequency (2100-2400 annually) highlights the urgency for action. Future decisions should focus on reducing fire occurrence through rapid prevention and developing response capabilities to limit damage when fires occur.
 
+The integration of geographical and time-based analysis with causal factors provides a robust foundation with evidence for forest management policies that could significantly reduce Turkey's fire-related ecological and economic losses in coming decades.
 
----
-
-## 🎯 Politika ve Uygulama Önerileri
-
--
-
-## 📌 Genel Değerlendirme
-
-
-
-**Not:** Bu projede belirli kod bloklarının hazırlanması ve veri yükleme yöntemlerinin düzenlenmesi aşamasında ChatGPT'den destek alınmıştır.
+Note: R codes were developed with ChatGPT assistance; all report texts were written by the author.

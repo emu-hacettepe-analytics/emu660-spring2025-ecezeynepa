@@ -184,7 +184,7 @@ neden_df <- df |>
 ggplot(neden_df, aes(x = yil, y = number, fill = cause)) +
   geom_area(alpha = 0.8) +
   labs(
-    title = "  Fire Cause Distribution Between 1988-2023 (Stacked Area Chart)",
+    title = "   Fire Cause Distribution (1988-2023) (Stacked Area Chart)",
     x = "Year",
     y = "Number of Fires",
     fill = "Cause of Fire"
@@ -516,7 +516,7 @@ ggplot(df, aes(x = yil, y = adet)) +
   geom_smooth(method = "lm", se = TRUE, color = "black", linetype = "dashed") +
   labs(
     title = "Number of Forest Fires by Year and Trend Analysis (1988-2023)",
-    x = "Y?l",
+    x = "Year",
     y = "Number of Fires"
   ) +
   theme_minimal(base_size = 12) +
@@ -532,7 +532,7 @@ ggplot(df, aes(x = yil, y = adet)) +
 #----------------------------------------------------------
 
 # Grafik 2: Yanan Alan
-ggplot(df, aes(x = year, y = hectar)) +
+ggplot(df, aes(x = yil, y = hektar)) +
   geom_line(color = "darkgreen", linewidth = 1.2) +
   geom_point(color = "forestgreen") +
   geom_smooth(method = "lm", se = TRUE, color = "black", linetype = "dashed") +

@@ -1,0 +1,474 @@
+---
+title: "PROJECT: Analysis of Forest Fires in Turkey (1988–2023)"
+lang: en
+author:   
+  - Ece Zeynep Aktaş  
+  - İrem Çatalkaya
+format: 
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    papersize: a4
+    fontsize: 10pt
+    margin-left: 2cm
+    margin-right: 2cm
+    margin-top: 2cm
+    margin-bottom: 2cm
+editor: visual
+---
+
+## Abstract
+
+The problem we have chose to inspect is investigating causes of forest fires occurred in Turkey and creating actionable insights to prevent them. The reason we have chose to study this particular problem is; data being official source that offers us years of multi-faceted content to explore and is suitable to working with the R programming language. The structure of data consists of distribution of forest fires across counties, the categorization of their causes, and the silvicultural practices employed for forest management and establishment. The data we have studied on is taken from [Orman Genel Müdürlüğü](https://www.ogm.gov.tr) official website.
+
+## Access to Data
+
+You can access the relevant .RData file from the link:
+
+[Forest fires .RData file](https://github.com/ecezeynepa/yangin_verileri/raw/main/yangin_verileri.RData)
+
+## Description of Data
+
+Let's take a look at the characteristics of data:
+
+```{r}
+#| include: false
+# Gerekli paketleri yükle ve çağır
+library(readxl)
+
+# Çalışma dizinini ayarla
+setwd("C:/Users/aktas/OneDrive/yangin_verisi")
+
+# Verileri oku (uyarıları engellemek için .name_repair = "minimal" ekledik)
+iller_2023 <- read_excel("iller_2023.xlsx", .name_repair = "minimal")
+orman_yanginlari <- read_excel("orman_yanginlari1988_2023.xlsx", skip = 3, range = cell_rows(1:40), .name_repair = "minimal")
+vasfina_2023 <- read_excel("vasfina_2023.xlsx", .name_repair = "minimal")
+silvikulturel_2023 <- read_excel("silvikulturel_2023.xlsx", .name_repair = "minimal")
+sebep_mudurluk_sayisal_2023 <- read_excel("sebep_mudurluk_sayisal_2023.xlsx", .name_repair = "minimal")
+sebep_mudurluk_alan_2023 <- read_excel("sebep_mudurluk_alan_2023.xlsx", .name_repair = "minimal")
+bolge_mudurluklerine_sayisal <- read_excel("bolge_mudurluklerine_sayisal_olarak_2004_2023.xlsx", .name_repair = "minimal")
+bolge_mudurluklerine_alan <- read_excel("bolge_mudurluklerine_alan_olarak_2004_2023.xlsx", .name_repair = "minimal")
+silvikultur_yillar <- read_excel("silvikultur_faaliyetler_1988_2023.xlsx", .name_repair = "minimal")
+# Verilerin yapısını kontrol et
+str(iller_2023)
+str(orman_yanginlari)
+str(vasfina_2023)
+str(silvikulturel_2023)
+str(sebep_mudurluk_sayisal_2023)
+str(sebep_mudurluk_alan_2023)
+str(bolge_mudurluklerine_sayisal)
+str(bolge_mudurluklerine_alan)
+
+# Verileri kaydet
+save(iller_2023, orman_yanginlari, vasfina_2023, silvikulturel_2023,
+     sebep_mudurluk_sayisal_2023, sebep_mudurluk_alan_2023,
+     bolge_mudurluklerine_sayisal, bolge_mudurluklerine_alan,
+     file = "C:/Users/aktas/OneDrive/yangin_verisi/yangin_verileri.RData")
+
+```
+
+## Preprocessing Data
+
+The following steps were taken when transferring data to the R environment:
+
+1.  **Editing File Names:** Since Turkish characters (ç, ğ, ü, ö, ş, ı) in file names in Turkish can cause errors, the Turkish characters in the file names were converted to English characters. For example: "b?lge_mudurluklerine_sayisal_olarak_2004_2023.xlsx" file was changed to "bolge_mudurluklerine_sayisal_olarak_2004_2023.xlsx".
+
+2.  **Data Cleaning:** Irrelevant explanations, visuals and empty lines in the Excel files is deleted to make datasets easily readable and processable.
+
+3.  **Editing Column Names:** Turkish characters in the column names are replaced with English characters (such as Sehir instead of City, Bolge instead of Region). Column names are replaced with more descriptive ones. For example: Main categories of negligence, accident, and intent got more detailed according to the causes of fire and got named as: ihmal_copluk, ihmal_avcilik, kaza_trafik, kaza_energy, kaza_yangin, kaza_aniz
+
+4.  **Editing the Data Structure:** Data in the same category were brought together.
+
+5.  **Data Import:** Data was imported from the xlsx package with the `read.xlsx()` function (`encoding = "UTF-8"` was used).
+
+```{r}
+#| echo: false
+library(readxl)
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+library(scales)
+
+df <- orman_yanginlari
+
+df$yil <- suppressWarnings(as.numeric(df$yil))
+df$adet <- suppressWarnings(as.numeric(gsub("[^0-9.]", "", df$adet)))
+df$hektar <- suppressWarnings(as.numeric(gsub("[^0-9.]", "", df$hektar)))
+
+df <- df |> filter(!is.na(yil), !is.na(adet), !is.na(hektar))
+
+# Grafik 1: 
+print(
+  ggplot(df, aes(x = yil, y = adet)) +
+    geom_line(linewidth = 1.2, color = "firebrick") +
+    geom_point(color = "darkred") +
+    scale_x_continuous(breaks = seq(min(df$yil), max(df$yil), by = 1)) +
+    labs(title = "Number of Forest Fires by Year",
+         x = "Year", y = "Number of Fires") +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
+)
+
+# Grafik 2: 
+print(
+  ggplot(df, aes(x = yil, y = hektar)) +
+    geom_line(linewidth = 1.2, color = "darkgreen") +
+    geom_point(color = "forestgreen") +
+    scale_x_continuous(breaks = seq(min(df$yil), max(df$yil), by = 1)) +
+    scale_y_continuous(labels = label_comma()) +
+    labs(title = "Burned Area by Year (Hectares)",
+         x = "Year", y = "Area") +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
+)
+
+# Grafik 3:
+neden_df <- df |>
+  select(yil, kasit_adet, ihmal_kaza_adet, dogal_adet, `sebebi_bilinmeyen_ adet`) |>
+  mutate(across(-yil, ~ suppressWarnings(as.numeric(gsub("[^0-9.]", "", .))))) |>
+  pivot_longer(cols = -yil, names_to = "Cause", values_to = "adet") |>
+  filter(!is.na(adet))
+
+print(
+  ggplot(neden_df, aes(x = yil, y = adet, color = Cause)) +
+    geom_line(linewidth = 1.1) +
+    scale_x_continuous(breaks = seq(min(neden_df$yil), max(neden_df$yil), by = 1)) +
+    labs(title = "Annual Distribution by Fire Causes",
+         x = "Year", y = "Number of Fires") +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
+)
+
+
+```
+
+```{r}
+#| include: false
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(scales)
+
+# Veriyi oku
+df <- orman_yanginlari |>
+  mutate(
+    yil = as.numeric(yil),
+    kasit_adet = as.numeric(gsub("[^0-9.]", "", kasit_adet)),
+    ihmal_kaza_adet = as.numeric(gsub("[^0-9.]", "", ihmal_kaza_adet)),
+    dogal_adet = as.numeric(gsub("[^0-9.]", "", dogal_adet)),
+    sebebi_bilinmeyen_adet = as.numeric(gsub("[^0-9.]", "", `sebebi_bilinmeyen_ adet`))
+  ) |>
+  select(yil, kasit_adet, ihmal_kaza_adet, dogal_adet, sebebi_bilinmeyen_adet)
+
+neden_df <- df |>
+  pivot_longer(cols = -yil, names_to = "cause", values_to = "number") |>
+  filter(!is.na(number))
+
+# Grafik
+ggplot(neden_df, aes(x = yil, y = number, fill = cause)) +
+  geom_area(alpha = 0.8) +
+  labs(
+    title = "  Distribution of Fire Causes Between 1988-2023 (Stacked Area Chart)",
+    x = "Year",
+    y = "Number of Fires",
+    fill = "Cause of Fire"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5),
+    plot.title = element_text(face = "bold", hjust = 0.5)
+  ) +
+  scale_y_continuous(labels = label_comma()) +
+  scale_x_continuous(breaks = seq(min(neden_df$yil), max(neden_df$yil), by = 1))
+
+```
+
+```{r}
+#| echo: false
+library(readxl)
+library(dplyr)
+library(ggplot2)
+library(scales)
+
+# Veriyi oku
+iller <- (iller_2023)
+
+iller <- iller |>
+  filter(sehir != "Türkiye") |>
+  mutate(
+    adet = as.numeric(gsub(",", ".", adet)),
+    hektar = as.numeric(gsub(",", ".", hektar))
+  ) |>
+  filter(adet > 0, hektar > 0) |>
+  mutate(orani = hektar / adet)
+
+# Grafik 1: En Çok Yangın Çıkan İlk 15 İl
+print(
+  iller |>
+    arrange(desc(adet)) |>
+    slice_head(n = 15) |>
+    ggplot(aes(x = reorder(sehir, -adet), y = adet)) +
+    geom_bar(stat = "identity", fill = "#d73027") +
+    labs(title = "15 Cities with the Most Fires in 2023",
+         x = NULL, y = "Number of Fires") +
+    theme_minimal(base_size = 12) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      plot.title = element_text(face = "bold", hjust = 0.5)
+    ) +
+    scale_y_continuous(labels = label_comma(accuracy = 1))
+)
+
+# Grafik 2: En Fazla Alan Yanan İlk 15 İl
+print(
+  iller |>
+    arrange(desc(hektar)) |>
+    slice_head(n = 15) |>
+    ggplot(aes(x = reorder(sehir, -hektar), y = hektar)) +
+    geom_bar(stat = "identity", fill = "#1a9850") +
+    labs(title = "The Top 15 Cities with the Most Area Burned in 2023",
+         x = NULL, y = "Area Burned (Hectares)") +
+    theme_minimal(base_size = 12) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      plot.title = element_text(face = "bold", hjust = 0.5)
+    ) +
+    scale_y_continuous(labels = label_comma(accuracy = 1))
+)
+
+# Grafik 3: Yangın Başına Ortalama Yanan Alan (etkililik)
+print(
+  iller |>
+    arrange(desc(orani)) |>
+    slice_head(n = 15) |>
+    ggplot(aes(x = reorder(sehir, -orani), y = orani)) +
+    geom_bar(stat = "identity", fill = "#4575b4") +
+    labs(title = "Average Area Burned per Fire in 2023",
+         x = NULL, y = "Hectares / Fires") +
+    theme_minimal(base_size = 12) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      plot.title = element_text(face = "bold", hjust = 0.5)
+    ) +
+    scale_y_continuous(labels = label_comma(accuracy = 1))
+)
+
+```
+
+### Leaflet Map: Number of Fires and Areas by Cities in 2023
+
+```{r}
+#| include: false
+library(readr)
+library(readxl)
+library(dplyr)
+library(leaflet)
+library(stringi)
+
+# Türkçe karakter düzeltme fonksiyonu
+duzelt <- function(x) {
+  tolower(stri_trans_general(x, "Latin-ASCII"))
+}
+
+# 1. İl koordinat verisini yükle (il.csv dosyan)
+koord <- read_csv("C:/Users/aktas/OneDrive/yangin_verisi/il.csv") |>
+  mutate(il_adi = duzelt(il_adi)) |>
+  select(sehir = il_adi, lat, lon)
+
+# 2. 2023 yılı yangın verisini oku ve temizle
+iller <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/iller_2023.xlsx") |>
+  filter(sehir != "Türkiye") |>
+  mutate(
+    sehir = duzelt(sehir),
+    adet = as.numeric(gsub(",", ".", adet)),
+    hektar = as.numeric(gsub(",", ".", hektar))
+  )
+
+# 3. Koordinatlar ile yangın verisini birleştir
+iller_map <- left_join(koord, iller, by = "sehir") |> filter(!is.na(lat), !is.na(hektar))
+
+# 4. Leaflet haritası oluştur
+leaflet(data = iller_map) |>
+  addProviderTiles("CartoDB.Positron") |>
+  addCircleMarkers(
+    lng = ~lon, lat = ~lat,
+    radius = ~sqrt(hektar)/2,
+    color = "darkred",
+    stroke = FALSE,
+    fillOpacity = 0.7,
+    popup = ~paste0(
+      "<b>", toupper(sehir), "</b><br>",
+      "Number of Fires: ", adet, "<br>",
+      "Areas Burned: ", hektar, " ha"
+    )
+  )
+
+
+```
+
+### Leaflet Map: Average Area Burned per Fire by Cities in 2023
+
+This interactive map shows the average area burned per fire (hectares / number of fires) by cities in 2023. The bigger the point, the severe the fires are.
+
+```{r}
+#| include: false
+library(readr)
+library(readxl)
+library(dplyr)
+library(leaflet)
+library(stringi)
+
+# Karakter düzeltme fonksiyonu
+duzelt <- function(x) {
+  tolower(stri_trans_general(x, "Latin-ASCII"))
+}
+
+# 1. Koordinat verisini oku
+koord <- read_csv("C:/Users/aktas/OneDrive/yangin_verisi/il.csv") |>
+  mutate(sehir = duzelt(il_adi)) |>
+  select(sehir, lat, lon)
+
+# 2. İl yangın verisini oku ve ortalama hesapla
+iller <- read_excel("C:/Users/aktas/OneDrive/yangin_verisi/iller_2023.xlsx") |>
+  filter(sehir != "Türkiye") |>
+  mutate(
+    sehir = duzelt(sehir),
+    adet = as.numeric(gsub(",", ".", adet)),
+    hektar = as.numeric(gsub(",", ".", hektar)),
+    oran = hektar / adet
+  ) |>
+  filter(!is.na(oran), oran > 0)
+
+# 3. Birleştir
+veri <- left_join(koord, iller, by = "sehir") |> filter(!is.na(lat), !is.na(oran))
+
+# 4. Renk paleti oluştur (kırmızı tonları)
+pal <- colorNumeric(palette = "YlOrRd", domain = veri$oran)
+
+# 5. Haritayı çiz
+leaflet(veri) |>
+  addProviderTiles("CartoDB.Positron") |>
+  addCircleMarkers(
+    lng = ~lon,
+    lat = ~lat,
+    radius = ~sqrt(oran)*2.5, # daha fark edilir hale gelir
+    fillColor = ~pal(oran),
+    fillOpacity = 0.8,
+    color = "#444", weight = 1,
+    stroke = TRUE,
+    popup = ~paste0(
+      "<b>", toupper(sehir), "</b><br>",
+      "Yangın Sayısı: ", adet, "<br>",
+      "Yanan Alan: ", hektar, " ha<br>",
+      "<b>🔥 Ortalama Hektar / Yangın:</b> ", round(oran, 2)
+    )
+  ) |>
+  addLegend(
+    pal = pal, values = ~oran,
+    title = "Average Hectares / Fires",
+    position = "bottomright"
+  )
+
+
+```
+
+```{r}
+#| include: false
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(scales)
+
+vasif_df <- vasfina_2023
+
+colnames(vasif_df) <- c(
+  "bolge", "toplam_hektar", "normal_koru", "bos_kapali_koru",
+  "normal_bataklik", "bos_kapali_bataklik", "makilik",
+  "agaclandirma_sahasi", "milli_park", "orman_topragi"
+)
+
+vasif_df <- vasif_df |> filter(bolge != "Toplam-Total")
+
+vasif_df <- vasif_df |>
+  mutate(across(-bolge, ~ as.numeric(gsub("-", NA, .))))
+
+vasif_long <- vasif_df |>
+  pivot_longer(cols = -c(bolge, toplam_hektar),
+               names_to = "vasif_turu",
+               values_to = "alan") |>
+  filter(!is.na(alan), alan > 0)
+
+ggplot(vasif_long, aes(x = reorder(bolge, -toplam_hektar), y = alan, fill = vasif_turu)) +
+  geom_bar(stat = "identity") +
+  labs(
+    title = "Burned Forest Area by Qualification Type and Region (2023)",
+    x = "Regional Directorates",
+    y = "Areas Burned (ha)",
+    fill = "Qualification Type"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    plot.title = element_text(face = "bold", hjust = 0.5)
+  ) +
+  scale_y_continuous(labels = label_comma())
+
+
+```
+
+```{r, echo=TRUE, eval=TRUE}
+
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(scales)
+
+# Veriyi oku
+silvi_df <- silvikulturel_2023
+
+colnames(silvi_df) <- c(
+  "bolge", "toplam_alan", "ortuye_zarar_gormeyen",
+  "dogal_genclestirme", "suni_genclestirme", "rehabilitasyon",
+  "agaclandirma", "koruma_altina_alinan", "gelecek_yila_birakilan"
+)
+
+silvi_df <- silvi_df |> filter(bolge != "Toplaml")
+silvi_df <- silvi_df |> mutate(across(-bolge, ~ as.numeric(gsub("-", NA, .))))
+turkiye_geneli <- silvi_df |>
+  select(-toplam_alan) |>
+  pivot_longer(cols = -bolge,
+               names_to = "mudahale_turu",
+               values_to = "alan") |>
+  filter(!is.na(alan)) |>
+  group_by(mudahale_turu) |>
+  summarise(toplam_alan = sum(alan)) |>
+  arrange(desc(toplam_alan))
+cat(" Graph: Distribution of Post-Fire Intervention Types Across Turkey (2023)\n")
+
+# Grafik
+print(
+  ggplot(turkiye_geneli, aes(x = reorder(mudahale_turu, toplam_alan), y = toplam_alan)) +
+    geom_bar(stat = "identity", fill = "darkolivegreen4") +
+    coord_flip() +
+    labs(
+      title = "Distribution of Post-Fire Intervention Types (2023)",
+      x = "Intervention Type", y = "Total Area (ha)"
+    ) +
+    theme_minimal(base_size = 11) +
+    theme(plot.title = element_text(face = "bold", hjust = 0.5)) +
+    scale_y_continuous(labels = label_comma())
+)
+
+```
+
+**Interpretation of the Graph:** The number of forest fires shows high variability but an overall upward trend and is peaking in 2021, on the other hand burned area demonstrates even more dramatic growth, particularly in recent years. The average area burned per fire has increased substantially, suggesting fires are becoming more and more severe.
+
+Normal forest areas (koru) suffer the most damage across regional directorates.
+
+"Areas left for next year" and "undamaged cover areas" are the most common interventions.
+
+We also performed a location-based analysis focusing on 2023. The top 15 cities were ranked by total fire count, area burned, and average area burned per fire. These metrics highlighted regions particularly vulnerable to fires, with some cities suffering from disproportionately large burned areas per incident. This suggests inefficiencies in early detection or fire management systems.

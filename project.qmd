@@ -26,6 +26,13 @@ knitr::opts_chunk$set(
 
 Please follow this page for updates.
 
+## 🎥 Teaser Video: Forest Fire Project
+
+<video width="720" controls style="display: block; margin: 0 auto; border-radius: 16px; box-shadow: 0 0 8px rgba(0,0,0,0.4); margin-bottom: 20px;">
+  <source src="assets/videos/teaser.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ## Abstract
 
 The problem we have chose to inspect is investigating causes of forest fires occurred in Turkey and creating actionable insights to prevent them. The reason we have chose to study this particular problem is; data being official source that offers us years of multi-faceted content to explore and is suitable to working with the R programming language. The structure of data consists of distribution of forest fires across counties, the categorization of their causes, and the silvicultural practices employed for forest management and establishment. The data we have studied on is taken from [Orman Genel Müdürlüğü](https://www.ogm.gov.tr) official website.   

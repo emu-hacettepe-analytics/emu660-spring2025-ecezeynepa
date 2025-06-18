@@ -6,9 +6,6 @@
 ---
 title: "PROJECT: Analysis of Forest Fires in Turkey (1988-2023)"
 lang: eng
-author:   
-  - Ece Zeynep Aktaş  
-  - İrem Çatalkaya
 format: 
   html:
     toc: true
@@ -26,12 +23,6 @@ knitr::opts_chunk$set(
 
 Please follow this page for updates.
 
-## 🎥 Teaser Video: Forest Fire Project
-
-<video width="720" controls style="display: block; margin: 0 auto; border-radius: 16px; box-shadow: 0 0 8px rgba(0,0,0,0.4); margin-bottom: 20px;">
-  <source src="assets/videos/teaser.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 ## Abstract
 
